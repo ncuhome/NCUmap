@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -43,4 +43,3 @@ jobs:
         bucket: ncu-map
         endpoint: oss-cn-hangzhou.aliyuncs.com
         skipSetting: true
- 
