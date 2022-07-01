@@ -6,6 +6,7 @@ import * as THREE from "three";
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
+import modelUrl from '/school-collabrate-2.glb?url'
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -142,7 +143,7 @@ type GLTFResult = GLTF & {
 export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
   const group = useRef<THREE.Group>(null);
   const { nodes, materials } = useGLTF(
-    "/school-collabrate-2.glb"
+    modelUrl
   ) as GLTFResult;
   return (
     <group ref={group} {...props} dispose={null}>
@@ -1119,4 +1120,4 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/school-collabrate-2.glb");
+useGLTF.preload(modelUrl);
