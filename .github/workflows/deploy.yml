@@ -43,3 +43,4 @@ jobs:
         bucket: ncu-map
         endpoint: oss-cn-hangzhou.aliyuncs.com
         skipSetting: true
+ 
