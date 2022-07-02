@@ -1,6 +1,6 @@
 import { Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls, useHelper } from "@react-three/drei";
+import { Environment, OrbitControls, useHelper,Stats } from "@react-three/drei";
 import {
   DirectionalLightHelper,
   HemisphereLight,
@@ -71,6 +71,7 @@ export default function App() {
       <Suspense fallback={null}>
         <Model />
         <Lights />
+        <Stats/>
       </Suspense>
       <OrbitControls maxPolarAngle={Math.PI / 2}   />
     </Canvas>
