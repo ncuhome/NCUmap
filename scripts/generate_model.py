@@ -1,4 +1,7 @@
-import re 
+import re
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 with open('../src/Map.tsx', 'r') as f:
     s = f.read()
@@ -20,16 +23,17 @@ for match in matches:
     if name:
         name = name.group(1)
         if MATCH_CN.search(name):
+            name = name.replace('"', r'\"')
             lines.insert(
                 -1, f'''
-            children={{<Html>{name}</Html>}}
-            ''')
+        children={{<Label text="{name}"></Label>}}''')
             s = s.replace(match, '\n'.join(lines), 1)
 
 lines = s.splitlines()
 
 # Add import for gltf file
-lines.insert(0, '''import modelUrl from "/map.glb?url";''')
+lines.insert(0, '''import modelUrl from "/map.glb?url";
+import Label from "./Label";''')
 lines = [line.replace('"/map.glb"', 'modelUrl') for line in lines]
 
 # Fix ref error
