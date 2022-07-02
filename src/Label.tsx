@@ -7,7 +7,7 @@ interface LabelProps {
 export default function Label({ text }: LabelProps) {
   return (
     <Html style={{ width: "50px" }}>
-      <label htmlFor="" style={{ userSelect: "none", display: "none" }}>
+      <label htmlFor="" style={{ userSelect: "none" }}>
         {text}
       </label>
     </Html>
