@@ -1,6 +1,6 @@
 import { Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useHelper } from "@react-three/drei";
+import { Environment, OrbitControls, useHelper } from "@react-three/drei";
 import {
   DirectionalLightHelper,
   HemisphereLight,
@@ -28,12 +28,18 @@ function Lights() {
   return (
     <>
       <directionalLight
-        intensity={2}
+        intensity={3}
         castShadow
         position={new Vector3(10, 10, 10)}
         shadow-mapSize={[4096, 4096]}
         color={sunColor}
         ref={sunLight}
+      />
+      <directionalLight
+        intensity={0.5}
+        position={new Vector3(-10, 10, -10)}
+        color={skyColor}
+        ref={skyLight}
       />
       <directionalLight
         intensity={0.3}
@@ -43,16 +49,10 @@ function Lights() {
       />
       <directionalLight
         intensity={0.5}
-        position={new Vector3(-10, 10, -10)}
-        color={skyColor}
-        ref={skyLight}
-      />
-      <directionalLight
-        intensity={0.5}
         position={new Vector3(100)}
         ref={light2}
       />
-      <hemisphereLight intensity={1} castShadow ref={light3} />
+      <hemisphereLight intensity={1} ref={light3} />
     </>
   );
 }
@@ -65,12 +65,14 @@ export default function App() {
       }}
       shadows
       dpr={[1, 1.5]}
+      camera={{ position: [5, 5, -5] }}
+
     >
       <Suspense fallback={null}>
         <Model />
         <Lights />
       </Suspense>
-      <OrbitControls />
+      <OrbitControls maxPolarAngle={Math.PI / 2}   />
     </Canvas>
   );
 }
