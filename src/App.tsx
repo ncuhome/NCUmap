@@ -1,44 +1,48 @@
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment, Text, Cloud } from "@react-three/drei";
-import DatGui, { DatNumber, DatSelect, DatButton } from "react-dat-gui";
+import { OrbitControls } from "@react-three/drei";
 
-import Map from "./Map";
+import Model from "./Map";
+import { DirectionalLight, Vector3 } from "three";
 
 export default function App() {
-  useEffect(() => {
-    // gui.add(ambLightRef.current, "intensity", 0, 10);
-  }, []);
-  return (
-    <Suspense fallback={null}>
-      <Canvas
-        shadows
-        gl={{ alpha: false }}
-        camera={{ position: [5, 5, 12], fov: 50 }}
-        onCreated={({ gl, camera }) => {
-          camera.lookAt(0, 0, 0);
-        }}
-      >
-        {/* <hemisphereLight intensity={0.125} color="#8040df" groundColor="red" /> */}
-        <ambientLight intensity={0.1}  />
-        <spotLight
-          castShadow
-          color="white"
-          intensity={20}
-          position={[-50, 50, 40]}
-          angle={0.25}
-          penumbra={1}
-          shadow-mapSize={[128, 128]}
-          shadow-bias={0.00005}
-        />
+  const sunColor = "#fffdf0";
+  const skyColor = "#c8e3fa";
 
-        <Map />
-        <color attach="background" args={["#fff0ea"]} />
-        <OrbitControls />
-        {/* <fog attach="fog" args={["#fff0ea", 10, 60]} /> */}
-        {/* <Cloud></Cloud> */}
-        {/* <Environment preset="apartment" background /> */}
-      </Canvas>
-    </Suspense>
+  const sunLight = useRef<DirectionalLight>(null);
+
+  return (
+    <Canvas
+      gl={{
+        preserveDrawingBuffer: true,
+      }}
+      shadows
+      dpr={[1, 1.5]}
+    >
+      <Suspense fallback={null}>
+        <Model />
+        <directionalLight
+          intensity={2}
+          castShadow
+          position={new Vector3(100, 100, 100)}
+          shadow-mapSize={[4096, 4096]}
+          color={sunColor}
+          ref={sunLight}
+        />
+        <directionalLight
+          intensity={0.3}
+          position={new Vector3(-100, -100, 100)}
+          color={skyColor}
+        />
+        <directionalLight
+          intensity={0.5}
+          position={new Vector3(-100, 100, -100)}
+          color={skyColor}
+        />
+        <directionalLight intensity={0.5} position={new Vector3(100)} />
+        <hemisphereLight intensity={1} castShadow />
+      </Suspense>
+      <OrbitControls />
+    </Canvas>
   );
 }
