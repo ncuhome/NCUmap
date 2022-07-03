@@ -1,6 +1,7 @@
 import { Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls, useHelper,Stats } from "@react-three/drei";
+import { OrbitControls, useHelper, Stats, Sky,  } from "@react-three/drei";
+import { DirectionalLight, Vector3 } from "three";
 import {
   DirectionalLightHelper,
   HemisphereLight,
@@ -8,7 +9,7 @@ import {
 } from "three";
 
 import Model from "./Map";
-import { DirectionalLight, Vector3 } from "three";
+
 
 function Lights() {
   const sunColor = "#fffdf0";
@@ -66,14 +67,14 @@ export default function App() {
       shadows
       dpr={[1, 1.5]}
       camera={{ position: [5, 5, -5] }}
-
     >
       <Suspense fallback={null}>
         <Model />
         <Lights />
-        <Stats/>
+        <Sky />
+        <Stats />
+        <OrbitControls maxPolarAngle={Math.PI / 2} />
       </Suspense>
-      <OrbitControls maxPolarAngle={Math.PI / 2}   />
     </Canvas>
   );
 }
