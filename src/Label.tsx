@@ -9,7 +9,7 @@ interface LabelProps {
 
 export default function Label({ text }: LabelProps) {
   return (
-    <Billboard follow>
+    <Billboard>
       <Text
         font={fontUrl}
         color="#ff0000"

@@ -158,7 +158,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲6栋.geometry}
         material={nodes.休闲6栋.material}
-        position={[-7.93878, -0.6026, -1.09133]}
+        position={[-7.93878, 0.30451, -1.0913]}
         children={<Label text="休闲6栋"></Label>}
       />
       <mesh
@@ -167,7 +167,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲7栋.geometry}
         material={nodes.休闲7栋.material}
-        position={[-8.3775, -0.60317, -1.05936]}
+        position={[-8.3775, 0.30394, -1.05933]}
         children={<Label text="休闲7栋"></Label>}
       />
       <mesh
@@ -176,7 +176,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲8栋.geometry}
         material={nodes.休闲8栋.material}
-        position={[-8.63422, -0.60092, -1.01442]}
+        position={[-8.63422, 0.30619, -1.01439]}
         children={<Label text="休闲8栋"></Label>}
       />
       <mesh
@@ -185,7 +185,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲10栋.geometry}
         material={nodes.休闲10栋.material}
-        position={[-8.62762, -0.61124, -2.48799]}
+        position={[-8.62762, 0.4146, -2.48796]}
         children={<Label text="休闲10栋"></Label>}
       />
       <mesh
@@ -194,7 +194,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲9栋.geometry}
         material={nodes.休闲9栋.material}
-        position={[-8.3298, -0.61124, -2.54012]}
+        position={[-8.3298, 0.29588, -2.54012]}
         children={<Label text="休闲9栋"></Label>}
       />
       <mesh
@@ -203,7 +203,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲11栋.geometry}
         material={nodes.休闲11栋.material}
-        position={[-8.90491, -0.61124, -2.43941]}
+        position={[-8.90491, 0.29588, -2.43938]}
         children={<Label text="休闲11栋"></Label>}
       />
       <mesh
@@ -212,7 +212,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲12栋.geometry}
         material={nodes.休闲12栋.material}
-        position={[-9.21198, -0.61124, -2.38566]}
+        position={[-9.21198, 0.29588, -2.38563]}
         children={<Label text="休闲12栋"></Label>}
       />
       <mesh
@@ -221,7 +221,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲16栋.geometry}
         material={nodes.休闲16栋.material}
-        position={[-9.51007, -0.61124, -2.31756]}
+        position={[-9.51007, 0.29588, -2.31753]}
         children={<Label text="休闲16栋"></Label>}
       />
       <mesh
@@ -230,7 +230,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲17栋.geometry}
         material={nodes.休闲17栋.material}
-        position={[-9.78952, -0.61124, -2.30039]}
+        position={[-9.78952, 0.29588, -2.30036]}
         children={<Label text="休闲17栋"></Label>}
       />
       <mesh
@@ -239,7 +239,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.三四食堂.geometry}
         material={nodes.三四食堂.material}
-        position={[-8.63651, -0.61883, -1.83305]}
+        position={[-8.63651, 0.39759, -1.83302]}
         children={<Label text="三四食堂"></Label>}
       />
       <mesh
@@ -248,7 +248,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.六七食堂.geometry}
         material={nodes.六七食堂.material}
-        position={[-9.4563, -0.58446, -1.68052]}
+        position={[-9.4563, 0.32266, -1.68049]}
         children={<Label text="六七食堂"></Label>}
       />
       <mesh
@@ -257,7 +257,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲14栋.geometry}
         material={nodes.休闲14栋.material}
-        position={[-9.45645, -0.51467, -0.99253]}
+        position={[-9.45645, 0.39244, -0.9925]}
         children={<Label text="休闲14栋"></Label>}
       />
       <mesh
@@ -266,7 +266,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲15栋.geometry}
         material={nodes.休闲15栋.material}
-        position={[-9.80728, -0.51467, -1.62953]}
+        position={[-9.80728, 0.39244, -1.6295]}
         children={<Label text="休闲15栋"></Label>}
       />
       <mesh
@@ -275,7 +275,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲18栋.geometry}
         material={nodes.休闲18栋.material}
-        position={[-10.15396, -0.51467, -2.25903]}
+        position={[-10.15396, 0.39244, -2.259]}
         children={<Label text="休闲18栋"></Label>}
       />
       <mesh
@@ -284,7 +284,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.学工楼.geometry}
         material={nodes.学工楼.material}
-        position={[-8.35504, -0.51467, -0.42934]}
+        position={[-8.3551, 0.62558, -0.42931]}
         children={<Label text="学工楼"></Label>}
       />
       <mesh
@@ -293,7 +293,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲4栋.geometry}
         material={nodes.休闲4栋.material}
-        position={[-8.64749, -0.50145, 0.01579]}
+        position={[-8.64749, 0.40567, 0.01582]}
         children={<Label text="休闲4栋"></Label>}
       />
       <mesh
@@ -302,7 +302,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes["休闲6-7连接"].geometry}
         material={nodes["休闲6-7连接"].material}
-        position={[-8.22339, -0.53299, -1.16637]}
+        position={[-8.22339, 0.3937, -1.16634]}
       />
       <mesh
         name="休闲5栋"
@@ -310,7 +310,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲5栋.geometry}
         material={nodes.休闲5栋.material}
-        position={[-8.14334, -0.59763, -1.72823]}
+        position={[-8.14334, 0.41091, -1.72822]}
         children={<Label text="休闲5栋"></Label>}
       />
       <mesh
@@ -319,7 +319,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲1栋.geometry}
         material={nodes.休闲1栋.material}
-        position={[-7.12204, -0.53234, 1.44863]}
+        position={[-7.12204, 0.54541, 1.44865]}
         children={<Label text="休闲1栋"></Label>}
       />
       <mesh
@@ -328,7 +328,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲2栋.geometry}
         material={nodes.休闲2栋.material}
-        position={[-7.45792, -0.53234, 1.51835]}
+        position={[-7.45792, 0.37477, 1.51838]}
         children={<Label text="休闲2栋"></Label>}
       />
       <mesh
@@ -337,7 +337,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.休闲3栋.geometry}
         material={nodes.休闲3栋.material}
-        position={[-7.93033, -0.53234, 0.86551]}
+        position={[-7.93033, 0.37477, 0.86553]}
         children={<Label text="休闲3栋"></Label>}
       />
       <mesh
@@ -346,7 +346,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.一二食堂.geometry}
         material={nodes.一二食堂.material}
-        position={[-7.57446, -0.60568, 0.52891]}
+        position={[-7.57446, 0.38597, 0.52894]}
         children={<Label text="一二食堂"></Label>}
       />
       <mesh
@@ -355,7 +355,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.慧源楼.geometry}
         material={nodes.慧源楼.material}
-        position={[-6.83875, -0.58391, 0.29314]}
+        position={[-6.83875, 0.42833, 0.29317]}
         children={<Label text="慧源楼"></Label>}
       />
       <mesh
@@ -364,7 +364,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.外经楼.geometry}
         material={nodes.外经楼.material}
-        position={[-5.71619, -0.55682, -0.92072]}
+        position={[-5.71619, 0.47335, -0.92069]}
         children={<Label text="外经楼"></Label>}
       />
       <mesh
@@ -373,7 +373,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.艺术楼.geometry}
         material={nodes.艺术楼.material}
-        position={[-5.40189, -0.55623, -2.61808]}
+        position={[-5.40189, 0.48214, -2.61805]}
         children={<Label text="艺术楼"></Label>}
       />
       <mesh
@@ -382,7 +382,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.校医院.geometry}
         material={nodes.校医院.material}
-        position={[-7.46002, -0.5589, -2.81573]}
+        position={[-7.46002, 0.47947, -2.8157]}
         children={<Label text="校医院"></Label>}
       />
       <mesh
@@ -391,7 +391,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.游泳馆.geometry}
         material={nodes.游泳馆.material}
-        position={[-8.2608, -0.56651, -3.89922]}
+        position={[-8.2608, 0.58716, -3.89916]}
         children={<Label text="游泳馆"></Label>}
       />
       <mesh
@@ -400,7 +400,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.人文楼.geometry}
         material={nodes.人文楼.material}
-        position={[-4.94403, -0.49516, -0.26168]}
+        position={[-4.944, 0.60992, -0.26165]}
         children={<Label text="人文楼"></Label>}
       />
       <mesh
@@ -409,7 +409,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.法学楼.geometry}
         material={nodes.法学楼.material}
-        position={[-4.94403, -0.49516, -0.26168]}
+        position={[-4.944, 0.60971, -0.26165]}
         children={<Label text="法学楼"></Label>}
       />
       <mesh
@@ -418,7 +418,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.前湖大道门.geometry}
         material={materials["Material.019"]}
-        position={[-9.14227, -0.60547, -4.69695]}
+        position={[-9.14227, 0.38437, -4.69691]}
         children={<Label text="前湖大道门"></Label>}
       />
       <mesh
@@ -427,7 +427,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.学府大道正门.geometry}
         material={materials["Material.001"]}
-        position={[-0.29987, -0.73279, -0.22498]}
+        position={[-0.29987, 0.21737, -0.22495]}
         children={<Label text="学府大道正门"></Label>}
       />
       <mesh
@@ -436,7 +436,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.白帆运动场.geometry}
         material={nodes.白帆运动场.material}
-        position={[-6.47467, -0.64385, -4.6403]}
+        position={[-6.47467, 0.5153, -4.64024]}
         children={<Label text="白帆运动场"></Label>}
       />
       <mesh
@@ -445,7 +445,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.嘉言路北门.geometry}
         material={materials["Material.019"]}
-        position={[4.92142, -0.56582, 3.27858]}
+        position={[4.92142, 0.3413, 3.27861]}
         children={<Label text="嘉言路北门"></Label>}
       />
       <mesh
@@ -454,7 +454,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.嘉言路北门001.geometry}
         material={materials["Material.019"]}
-        position={[7.37543, -0.56582, 1.52348]}
+        position={[7.37543, 0.3413, 1.52351]}
         children={<Label text="嘉言路北门001"></Label>}
       />
       <mesh
@@ -463,7 +463,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.网球羽毛球场.geometry}
         material={nodes.网球羽毛球场.material}
-        position={[-7.75519, -0.58854, -4.69297]}
+        position={[-7.75519, 0.41475, -4.69292]}
         children={<Label text="网球羽毛球场"></Label>}
       />
       <mesh
@@ -472,7 +472,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.体育馆.geometry}
         material={nodes.体育馆.material}
-        position={[-4.3544, -0.5634, -4.80036]}
+        position={[-4.3544, 0.46859, -4.80031]}
         children={<Label text="体育馆"></Label>}
       />
       <mesh
@@ -481,7 +481,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.留园.geometry}
         material={nodes.留园.material}
-        position={[-4.52295, -0.59353, -5.49389]}
+        position={[-4.52295, 0.40977, -5.49388]}
         children={<Label text="留园"></Label>}
       />
       <mesh
@@ -490,7 +490,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.水利馆.geometry}
         material={nodes.水利馆.material}
-        position={[-6.71799, -0.62755, 2.28748]}
+        position={[-6.71799, 0.33978, 2.28751]}
         children={<Label text="水利馆"></Label>}
       />
       <mesh
@@ -499,7 +499,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.建工楼A区.geometry}
         material={nodes.建工楼A区.material}
-        position={[-6.1279, -0.55854, 2.14138]}
+        position={[-6.1279, 0.47732, 2.14141]}
         children={<Label text="建工楼A区"></Label>}
       />
       <mesh
@@ -508,7 +508,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.建工楼B区.geometry}
         material={nodes.建工楼B区.material}
-        position={[-6.49533, -0.55854, 1.94082]}
+        position={[-6.49533, 0.47732, 1.94085]}
         children={<Label text="建工楼B区"></Label>}
       />
       <mesh
@@ -517,7 +517,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.汽车电子楼.geometry}
         material={nodes.汽车电子楼.material}
-        position={[-5.72778, -0.55854, 2.75252]}
+        position={[-5.72778, 0.47732, 2.75255]}
         children={<Label text="汽车电子楼"></Label>}
       />
       <mesh
@@ -526,7 +526,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.机电楼.geometry}
         material={nodes.机电楼.material}
-        position={[-5.4006, -0.55854, 2.54738]}
+        position={[-5.4006, 0.47732, 2.54741]}
         children={<Label text="机电楼"></Label>}
       />
       <mesh
@@ -535,7 +535,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.信工楼B区.geometry}
         material={nodes.信工楼B区.material}
-        position={[-4.44742, -0.53234, 3.23164]}
+        position={[-4.44742, 0.54541, 3.23167]}
         children={<Label text="信工楼B区"></Label>}
       />
       <mesh
@@ -544,7 +544,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.信工楼A区.geometry}
         material={nodes.信工楼A区.material}
-        position={[-4.44742, -0.53234, 3.23164]}
+        position={[-4.44742, 0.54541, 3.23167]}
         children={<Label text="信工楼A区"></Label>}
       />
       <mesh
@@ -553,7 +553,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.信工楼C区.geometry}
         material={nodes.信工楼C区.material}
-        position={[-4.35995, -0.53234, 3.61105]}
+        position={[-4.35995, 0.54541, 3.61108]}
         children={<Label text="信工楼C区"></Label>}
       />
       <mesh
@@ -562,7 +562,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.信工楼E区.geometry}
         material={nodes.信工楼E区.material}
-        position={[-5.19568, -0.53234, 3.40414]}
+        position={[-5.19568, 0.54541, 3.40417]}
         children={<Label text="信工楼E区"></Label>}
       />
       <mesh
@@ -571,7 +571,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.材料楼.geometry}
         material={nodes.材料楼.material}
-        position={[-3.62854, -0.55854, 3.44625]}
+        position={[-3.62854, 0.52723, 3.44628]}
         children={<Label text="材料楼"></Label>}
       />
       <mesh
@@ -580,7 +580,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.环境楼.geometry}
         material={nodes.环境楼.material}
-        position={[-3.47693, -0.55854, 4.18649]}
+        position={[-3.47693, 0.52723, 4.1865]}
         children={<Label text="环境楼"></Label>}
       />
       <mesh
@@ -589,7 +589,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.理科生命大楼B区.geometry}
         material={nodes.理科生命大楼B区.material}
-        position={[-3.02612, -0.49461, 3.66904]}
+        position={[-3.02612, 0.60401, 3.66908]}
         children={<Label text="理科生命大楼B区"></Label>}
       />
       <mesh
@@ -598,7 +598,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.理科生命大楼A区.geometry}
         material={nodes.理科生命大楼A区.material}
-        position={[-2.69281, -0.49461, 3.60313]}
+        position={[-2.69281, 0.60401, 3.60316]}
         children={<Label text="理科生命大楼A区"></Label>}
       />
       <mesh
@@ -607,7 +607,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健19栋.geometry}
         material={nodes.天健19栋.material}
-        position={[-2.34476, -0.33315, 4.64504]}
+        position={[-2.34476, 0.93458, 4.64506]}
         children={<Label text="天健19栋"></Label>}
       />
       <mesh
@@ -616,7 +616,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健20栋.geometry}
         material={nodes.天健20栋.material}
-        position={[-1.9942, -0.33315, 4.70782]}
+        position={[-1.9942, 0.93458, 4.70783]}
         children={<Label text="天健20栋"></Label>}
       />
       <mesh
@@ -625,7 +625,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健21栋.geometry}
         material={nodes.天健21栋.material}
-        position={[-1.6188, -0.33315, 4.7728]}
+        position={[-1.6188, 0.93458, 4.77282]}
         children={<Label text="天健21栋"></Label>}
       />
       <mesh
@@ -634,7 +634,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健22栋.geometry}
         material={nodes.天健22栋.material}
-        position={[-1.21695, -0.33315, 4.83105]}
+        position={[-1.21695, 0.93458, 4.83106]}
         children={<Label text="天健22栋"></Label>}
       />
       <mesh
@@ -643,7 +643,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健23栋.geometry}
         material={nodes.天健23栋.material}
-        position={[-0.797, -0.33315, 4.91976]}
+        position={[-0.797, 0.93458, 4.91978]}
         children={<Label text="天健23栋"></Label>}
       />
       <mesh
@@ -652,7 +652,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健24栋.geometry}
         material={nodes.天健24栋.material}
-        position={[-0.25903, -0.33315, 4.99387]}
+        position={[-0.25903, 0.57397, 4.99392]}
         children={<Label text="天健24栋"></Label>}
       />
       <mesh
@@ -661,7 +661,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健27栋.geometry}
         material={nodes.天健27栋.material}
-        position={[0.14517, -0.33315, 4.94263]}
+        position={[0.14517, 0.57397, 4.94263]}
         children={<Label text="天健27栋"></Label>}
       />
       <mesh
@@ -670,7 +670,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健26栋.geometry}
         material={nodes.天健26栋.material}
-        position={[0.0433, -0.33315, 4.27776]}
+        position={[0.0433, 0.57397, 4.27776]}
         children={<Label text="天健26栋"></Label>}
       />
       <mesh
@@ -679,7 +679,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健25栋.geometry}
         material={nodes.天健25栋.material}
-        position={[-0.35284, -0.33315, 4.35511]}
+        position={[-0.35284, 0.57397, 4.35516]}
         children={<Label text="天健25栋"></Label>}
       />
       <mesh
@@ -688,7 +688,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.基础实验大楼.geometry}
         material={nodes.基础实验大楼.material}
-        position={[-1.72675, -0.49685, 3.58196]}
+        position={[-1.72675, 0.60176, 3.58199]}
         children={<Label text="基础实验大楼"></Label>}
       />
       <mesh
@@ -697,7 +697,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.服务大楼.geometry}
         material={nodes.服务大楼.material}
-        position={[-1.60287, -0.62467, 4.37029]}
+        position={[-1.60287, 0.34388, 4.37029]}
         children={<Label text="服务大楼"></Label>}
       />
       <mesh
@@ -706,7 +706,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes["天健园餐厅（九十食堂）"].geometry}
         material={nodes["天健园餐厅（九十食堂）"].material}
-        position={[-0.97888, -0.53457, 4.31568]}
+        position={[-0.97888, 0.52351, 4.3157]}
       />
       <mesh
         name="工程训练中心1"
@@ -714,7 +714,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.工程训练中心1.geometry}
         material={nodes.工程训练中心1.material}
-        position={[-0.58948, -0.4704, 3.21751]}
+        position={[-0.58948, 0.65182, 3.21754]}
         children={<Label text="工程训练中心1"></Label>}
       />
       <mesh
@@ -723,7 +723,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.工程训练中心2.geometry}
         material={nodes.工程训练中心2.material}
-        position={[-0.13028, -0.4704, 3.3113]}
+        position={[-0.13028, 0.65182, 3.31135]}
         children={<Label text="工程训练中心2"></Label>}
       />
       <mesh
@@ -732,7 +732,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.研究生院.geometry}
         material={nodes.研究生院.material}
-        position={[0.64618, -0.62467, 3.51875]}
+        position={[0.64618, 0.36904, 3.51878]}
         children={<Label text="研究生院"></Label>}
       />
       <mesh
@@ -741,7 +741,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健28栋.geometry}
         material={nodes.天健28栋.material}
-        position={[1.83902, -0.33315, 4.06762]}
+        position={[1.83902, 0.93458, 4.06763]}
         children={<Label text="天健28栋"></Label>}
       />
       <mesh
@@ -750,7 +750,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健29栋.geometry}
         material={nodes.天健29栋.material}
-        position={[2.2233, -0.33315, 3.95277]}
+        position={[2.2233, 0.93458, 3.9528]}
         children={<Label text="天健29栋"></Label>}
       />
       <mesh
@@ -759,7 +759,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健30栋.geometry}
         material={nodes.天健30栋.material}
-        position={[2.63458, -0.33315, 3.99333]}
+        position={[2.63458, 0.93458, 3.99339]}
         children={<Label text="天健30栋"></Label>}
       />
       <mesh
@@ -768,7 +768,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.国际公寓楼.geometry}
         material={nodes.国际公寓楼.material}
-        position={[2.99576, -0.33315, 3.17147]}
+        position={[2.99576, 0.93458, 3.1715]}
         children={<Label text="国际公寓楼"></Label>}
       />
       <mesh
@@ -777,7 +777,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.国际学术交流中心.geometry}
         material={nodes.国际学术交流中心.material}
-        position={[3.03635, -0.46881, 2.42907]}
+        position={[3.03635, 0.66267, 2.4291]}
         children={<Label text="国际学术交流中心"></Label>}
       />
       <mesh
@@ -786,7 +786,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.昌海楼.geometry}
         material={nodes.昌海楼.material}
-        position={[2.53033, -0.56949, 2.97822]}
+        position={[2.53033, 0.46038, 2.97825]}
         children={<Label text="昌海楼"></Label>}
       />
       <mesh
@@ -795,7 +795,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.空间研究院.geometry}
         material={nodes.空间研究院.material}
-        position={[-0.71817, -0.58282, 2.32669]}
+        position={[-0.71817, 0.42921, 2.32672]}
         children={<Label text="空间研究院"></Label>}
       />
       <mesh
@@ -804,7 +804,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.图书馆.geometry}
         material={nodes.图书馆.material}
-        position={[-1.49487, -0.04506, 2.49129]}
+        position={[-1.49487, 1.5139, 2.49133]}
         children={<Label text="图书馆"></Label>}
       />
       <mesh
@@ -813,7 +813,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.安保楼.geometry}
         material={nodes.安保楼.material}
-        position={[-2.63907, -0.58282, 2.56246]}
+        position={[-2.63907, 0.42921, 2.56249]}
         children={<Label text="安保楼"></Label>}
       />
       <mesh
@@ -822,7 +822,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.天健垃圾场.geometry}
         material={nodes.天健垃圾场.material}
-        position={[-2.71802, -0.6365, 4.61585]}
+        position={[-2.71802, 0.32366, 4.61587]}
         children={<Label text="天健垃圾场"></Label>}
       />
       <mesh
@@ -831,7 +831,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.第12实验大楼.geometry}
         material={nodes.第12实验大楼.material}
-        position={[6.02777, -0.69002, 3.55833]}
+        position={[6.02777, 0.62687, 3.55836]}
         children={<Label text="第12实验大楼"></Label>}
       />
       <mesh
@@ -840,7 +840,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.第56实验大楼.geometry}
         material={nodes.第56实验大楼.material}
-        position={[5.96411, -0.69002, 5.06081]}
+        position={[5.96411, 0.62687, 5.06083]}
         children={<Label text="第56实验大楼"></Label>}
       />
       <mesh
@@ -849,7 +849,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.水电楼.geometry}
         material={nodes.水电楼.material}
-        position={[-4.25363, -0.55854, 0.95917]}
+        position={[-4.25363, 0.47732, 0.9592]}
         children={<Label text="水电楼"></Label>}
       />
       <mesh
@@ -858,7 +858,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.办公楼.geometry}
         material={nodes.办公楼.material}
-        position={[-2.25519, -0.55854, -0.47302]}
+        position={[-2.25519, 0.47732, -0.47299]}
         children={<Label text="办公楼"></Label>}
       />
       <mesh
@@ -867,9 +867,9 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.swimPool.geometry}
         material={materials["Swimming Pool Tile Procedural.001"]}
-        position={[-8.2608, -0.55623, -3.89922]}
+        position={[-8.2608, 0.35089, -3.89916]}
       />
-      <group name="白求恩广场" position={[7.32333, -0.76969, 3.39439]}>
+      <group name="白求恩广场" position={[7.32333, 0.21737, 3.39442]}>
         <mesh
           name="Circle001"
           castShadow
@@ -898,7 +898,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.人才公寓1栋.geometry}
         material={nodes.人才公寓1栋.material}
-        position={[9.37268, -0.17467, 6.56145]}
+        position={[9.37268, 1.50611, 6.56151]}
         children={<Label text="人才公寓1栋"></Label>}
       />
       <mesh
@@ -907,7 +907,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.map_2osm_forest.geometry}
         material={materials["forest.001"]}
-        position={[-0.38123, -0.68909, 0.79992]}
+        position={[-0.38123, 0.21803, 0.79995]}
       />
       <mesh
         name="map_2osm_roads_primary"
@@ -915,7 +915,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.map_2osm_roads_primary.geometry}
         material={materials["roads_primary.001"]}
-        position={[-0.38123, -0.68777, 0.79992]}
+        position={[-0.38123, 0.21934, 0.79995]}
       />
       <mesh
         name="map_2osm_roads_residential"
@@ -923,7 +923,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.map_2osm_roads_residential.geometry}
         material={materials["roads_residential.001"]}
-        position={[-0.38123, -0.68777, 0.79992]}
+        position={[-0.38123, 0.21934, 0.79995]}
       />
       <mesh
         name="map_2osm_roads_secondary"
@@ -931,7 +931,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.map_2osm_roads_secondary.geometry}
         material={materials["roads_secondary.001"]}
-        position={[-0.38123, -0.68777, 0.79992]}
+        position={[-0.38123, 0.21934, 0.79995]}
       />
       <mesh
         name="map_2osm_roads_service"
@@ -939,7 +939,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.map_2osm_roads_service.geometry}
         material={materials["roads_service.001"]}
-        position={[-0.38123, -0.68777, 0.79992]}
+        position={[-0.38123, 0.21934, 0.79995]}
       />
       <mesh
         name="湖"
@@ -947,7 +947,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.湖.geometry}
         material={materials["water.001"]}
-        position={[-0.38123, -0.77613, 0.79992]}
+        position={[-0.38123, 0.21737, 0.79995]}
         children={<Label text="湖"></Label>}
       />
       <mesh
@@ -956,7 +956,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.正气广场.geometry}
         material={materials["forest.001"]}
-        position={[-4.02313, -0.68029, -1.54203]}
+        position={[-4.02313, 0.24942, -1.54202]}
         children={<Label text="正气广场"></Label>}
       />
       <mesh
@@ -965,7 +965,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.Plane014.geometry}
         material={materials["forest.001"]}
-        position={[-3.76456, -0.68191, 2.74373]}
+        position={[-3.76456, 0.22521, 2.74376]}
       />
       <mesh
         name="网球场"
@@ -973,7 +973,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.网球场.geometry}
         material={materials["Material.003"]}
-        position={[1.20068, -0.68791, 4.77879]}
+        position={[1.20068, 0.2192, 4.77883]}
         children={<Label text="网球场"></Label>}
       />
       <mesh
@@ -982,7 +982,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.basketballCount.geometry}
         material={materials["Material.003"]}
-        position={[1.51385, -0.68791, 5.19718]}
+        position={[1.51385, 0.2192, 5.1972]}
       />
       <mesh
         name="篮球场"
@@ -990,7 +990,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.篮球场.geometry}
         material={materials["Material.003"]}
-        position={[0.93365, -0.68791, 5.30565]}
+        position={[0.93365, 0.2192, 5.30566]}
         children={<Label text="篮球场"></Label>}
       />
       <mesh
@@ -999,9 +999,9 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.basketballCourt.geometry}
         material={materials["Material.003"]}
-        position={[0.91586, -0.68791, 5.30897]}
+        position={[0.91586, 0.2192, 5.30901]}
       />
-      <group name="休闲运动场" position={[-9.46924, -0.71391, -3.26392]}>
+      <group name="休闲运动场" position={[-9.46924, 0.21737, -3.26391]}>
         <mesh
           name="Circle005"
           castShadow
@@ -1031,7 +1031,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
           material={materials["Football Playground Light.003"]}
         />
       </group>
-      <group name="运动场" position={[6.147, -0.71391, 6.22567]}>
+      <group name="运动场" position={[6.147, 0.21737, 6.22569]}>
         <mesh
           name="Circle014"
           castShadow
@@ -1061,7 +1061,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
           material={materials["Football Playground Light.003"]}
         />
       </group>
-      <group name="sportsField" position={[0.95148, -0.68997, 4.14494]}>
+      <group name="sportsField" position={[0.95148, 0.21714, 4.14498]}>
         <mesh
           name="Circle013"
           castShadow
@@ -1091,7 +1091,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
           material={materials["Football Playground Light.003"]}
         />
       </group>
-      <group name="sportsField001" position={[-6.47137, -0.62831, -4.64417]}>
+      <group name="sportsField001" position={[-6.47137, 0.2788, -4.64413]}>
         <mesh
           name="Circle016"
           castShadow
@@ -1127,7 +1127,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.月亮湖.geometry}
         material={materials["water.001"]}
-        position={[7.96533, -0.78462, 4.01884]}
+        position={[7.96533, 0.21737, 4.01887]}
         children={<Label text="月亮湖"></Label>}
       />
       <mesh
@@ -1136,7 +1136,7 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
         receiveShadow
         geometry={nodes.floor.geometry}
         material={nodes.floor.material}
-        position={[-0.38123, -0.82411, 0.79992]}
+        position={[-0.38123, 0.08301, 0.79995]}
       />
     </group>
   );

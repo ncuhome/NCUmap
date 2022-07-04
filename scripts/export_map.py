@@ -1,6 +1,33 @@
 from mathutils import *
 from math import *
 import bpy
+import re
+
+MATCH_CN = re.compile(r'[\u4e00-\u9fff]+')
+
+
+# Set origin to the highest point of the object
+def max_z_in_obj(obj):
+    max_z = 0
+    for v in obj.data.vertices:
+        z = (obj.matrix_world @ v.co).z
+        if z > max_z:
+            max_z = z
+    return max_z
+
+
+def set_origin_to_upper(obj):
+    v = (obj.location.x, obj.location.y, max_z_in_obj(obj))
+    bpy.context.scene.cursor.location = v
+    print(obj.name, v)
+    obj.select_set(True)
+    bpy.ops.object.origin_set(type='ORIGIN_CURSOR', center='MEDIAN')
+    obj.select_set(False)
+
+
+for obj in bpy.data.objects:
+    if obj.type == 'MESH' and MATCH_CN.match(obj.name):
+        set_origin_to_upper(obj)
 
 # Select all objects in the scene
 bpy.ops.object.select_all(action='SELECT')
@@ -99,5 +126,17 @@ bpy.ops.transform.translate(value=(-0, -0, -20.1202),
                             use_proportional_edit=False,
                             proportional_edit_falloff='SMOOTH',
                             proportional_size=23.2252,
+                            use_proportional_connected=False,
+                            use_proportional_projected=False)
+bpy.ops.transform.translate(value=(-0, -0, -48.4323),
+                            orient_axis_ortho='X',
+                            orient_type='GLOBAL',
+                            orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)),
+                            orient_matrix_type='GLOBAL',
+                            constraint_axis=(False, False, True),
+                            mirror=False,
+                            use_proportional_edit=False,
+                            proportional_edit_falloff='SMOOTH',
+                            proportional_size=72.8905,
                             use_proportional_connected=False,
                             use_proportional_projected=False)

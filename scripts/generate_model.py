@@ -20,7 +20,6 @@ matches: list[str] = MATCH_JSX.findall(s)
 # Add labels for all mesh with Chinese name
 for match in matches:
     lines = match.splitlines()
-    print(lines, '\n')
 
     name = MATCH_NAME.search(match)
     if name:
