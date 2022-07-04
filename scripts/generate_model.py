@@ -36,7 +36,7 @@ lines = s.splitlines()
 
 # Add import for gltf file
 lines.insert(
-    0, '''import modelUrl from "/map.glb?url";
+    0, '''import modelUrl from "/models/map.glb?url";
 import Label from "./Label";''')
 lines = [line.replace('"/map.glb"', 'modelUrl') for line in lines]
 
