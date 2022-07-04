@@ -1,4 +1,4 @@
-import { Suspense, useRef } from "react";
+import { ReactNode, Suspense, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   OrbitControls,
@@ -17,6 +17,10 @@ import {
 
 import Map from "./Map";
 import { useTrackedStore } from "./store";
+
+interface IProps {
+  children: ReactNode;
+}
 
 function Lights() {
   const sunColor = "#fffdf0";
@@ -65,7 +69,7 @@ function Lights() {
   );
 }
 
-function SelectZoom({ children }) {
+function SelectZoom({ children }:IProps) {
   const api = useBounds();
   return (
     <group
