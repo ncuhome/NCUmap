@@ -1,9 +1,12 @@
+from calendar import c
 import re
 import os
 
+codec = 'utf-8'
+
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-with open('../src/Map.tsx', 'r') as f:
+with open('../src/Map.tsx', 'r', encoding=codec) as f:
     s = f.read()
 
 MATCH_JSX = re.compile(r'<mesh(.*?)/>', re.DOTALL)
@@ -46,5 +49,5 @@ s = s.replace('const group = useRef<THREE.Group>();',
 s = s.replace('import React, { useRef } from "react";',
               'import { useRef } from "react";', 1)
 
-with open('../src/Map.tsx', 'w') as f:
+with open('../src/Map.tsx', 'w', encoding=codec) as f:
     f.write(s)
