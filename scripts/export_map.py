@@ -74,8 +74,8 @@ bpy.ops.object.make_single_user(object=True,
                                 animation=False,
                                 obdata_animation=False)
 
-# Apply all transforms
-bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
+# Apply transforms
+bpy.ops.object.transform_apply(location=False, rotation=True, scale=True)
 
 bpy.ops.transform.translate(value=(-384.297, -107.979, 0),
                             orient_axis_ortho='X',
