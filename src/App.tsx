@@ -1,6 +1,13 @@
 import { Suspense, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useHelper, Stats, Sky } from "@react-three/drei";
+import {
+  OrbitControls,
+  useHelper,
+  Stats,
+  Sky,
+  Bounds,
+  useBounds,
+} from "@react-three/drei";
 import { DirectionalLight, Vector3 } from "three";
 import {
   DirectionalLightHelper,
@@ -58,6 +65,22 @@ function Lights() {
   );
 }
 
+function SelectZoom({ children }) {
+  const api = useBounds();
+  return (
+    <group
+      onClick={(e) => (
+        e.stopPropagation(), e.delta <= 2 && api.refresh(e.object).fit()
+      )}
+      onPointerMissed={(e) => (
+        e.button === 0 && api.refresh().fit(), console.log(1)
+      )}
+    >
+      {children}
+    </group>
+  );
+}
+
 export default function App() {
   const state = useTrackedStore();
 
@@ -74,11 +97,16 @@ export default function App() {
       }}
     >
       <Suspense fallback={null}>
-        <Model />
+        <Bounds>
+          <SelectZoom>
+            <Model />
+          </SelectZoom>
+        </Bounds>
         <Lights />
         <Sky />
         <Stats />
         <OrbitControls
+          makeDefault
           maxPolarAngle={Math.PI / 2}
           onChange={() => state.setCameraChanged(true)}
         />
