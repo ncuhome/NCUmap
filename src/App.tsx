@@ -27,11 +27,11 @@ function Lights() {
   const light2 = useRef<DirectionalLight>(null);
   const light3 = useRef<HemisphereLight>(null);
 
-  useHelper(sunLight, DirectionalLightHelper, 5);
-  useHelper(skyLight, DirectionalLightHelper, 5);
-  useHelper(light1, DirectionalLightHelper, 5);
-  useHelper(light2, DirectionalLightHelper, 5);
-  useHelper(light3, HemisphereLightHelper, 5);
+  // useHelper(sunLight, DirectionalLightHelper, 5);
+  // useHelper(skyLight, DirectionalLightHelper, 5);
+  // useHelper(light1, DirectionalLightHelper, 5);
+  // useHelper(light2, DirectionalLightHelper, 5);
+  // useHelper(light3, HemisphereLightHelper, 5);
 
   return (
     <>
