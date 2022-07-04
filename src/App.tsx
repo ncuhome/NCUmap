@@ -1,5 +1,5 @@
 import { ReactNode, Suspense, useRef } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import {
   OrbitControls,
   useHelper,
@@ -9,6 +9,7 @@ import {
   useBounds,
 } from "@react-three/drei";
 import { DirectionalLight, Vector3 } from "three";
+import * as THREE from "three";
 import {
   DirectionalLightHelper,
   HemisphereLight,
@@ -17,6 +18,7 @@ import {
 
 import Map from "./Map";
 import { useTrackedStore } from "./store";
+import Post from "./Post";
 
 interface IProps {
   children: ReactNode;
@@ -69,7 +71,7 @@ function Lights() {
   );
 }
 
-function SelectZoom({ children }:IProps) {
+function SelectZoom({ children }: IProps) {
   const api = useBounds();
   return (
     <group
@@ -85,8 +87,25 @@ function SelectZoom({ children }:IProps) {
   );
 }
 
+
+
 export default function App() {
-  const state = useTrackedStore();
+  // const { selectedObjects, setSelectedObjects } = useTrackedStore();
+  // const { scene, camera } = useThree();
+  // const mouse = new THREE.Vector2();
+  // const raycaster = new THREE.Raycaster();
+
+  // const checkIntersection = () => {
+  //   raycaster.setFromCamera(mouse, camera);
+  //   const intersects = raycaster.intersectObject(scene, true);
+  //   if (intersects.length > 0) {
+  //     const selectedObject = intersects[0].object;
+  //     setSelectedObjects([selectedObject]);
+  //     console.log(selectedObject);
+  //   } else {
+  //     // outlinePass.selectedObjects = [];
+  //   }
+  // };
 
   return (
     <Canvas
@@ -99,8 +118,15 @@ export default function App() {
         position: new Vector3(5, 5, -5),
         fov: 40,
       }}
+      // onPointerMove={(event) => {
+      //   if (event.isPrimary === false) return;
+      //   mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+      //   mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+      //   checkIntersection();
+      // }}
     >
-      <Suspense fallback={null}>
+      <Suspense fallback={null} >
+
         <Bounds>
           <SelectZoom>
             <Map />
@@ -109,11 +135,8 @@ export default function App() {
         <Lights />
         <Sky />
         <Stats />
-        <OrbitControls
-          makeDefault
-          maxPolarAngle={Math.PI / 2}
-          onChange={() => state.setCameraChanged(true)}
-        />
+        <OrbitControls makeDefault maxPolarAngle={Math.PI / 2} />
+        <Post/>
       </Suspense>
     </Canvas>
   );
