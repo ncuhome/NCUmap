@@ -6,14 +6,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "map2tsx":"npx gltfjsx ./models/map.glb --shadows --types --keepnames --precision=5 --printwidth=80 && move Map.tsx ./src",
-    "fixMapTsx":"python ./scripts/generate_model.py",
-    "maptsx": "yarn map2tsx && yarn fixMapTsx"
+    "map2tsx": "npx gltfjsx ./models/map.glb --shadows --types --keepnames --precision=5 --printwidth=80 && python ./scripts/generate_model.py && yarn prettier -w ./src/Map.tsx"
   },
   "dependencies": {
     "@react-three/drei": "^9.14.3",
     "@react-three/fiber": "^8.0.27",
-    "@types/three": "^0.141.0",
     "react": "^18.0.0",
     "react-dat-gui": "^4.1.1",
     "react-dom": "^18.0.0",
@@ -24,7 +21,9 @@
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@types/three": "^0.141.0",
     "@vitejs/plugin-react": "^1.3.0",
+    "prettier": "^2.7.1",
     "typescript": "^4.6.3",
     "vite": "^2.9.9"
   }

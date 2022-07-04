@@ -6,7 +6,7 @@ codec = 'utf-8'
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-with open('../src/Map.tsx', 'r', encoding=codec) as f:
+with open('../Map.tsx', 'r', encoding=codec) as f:
     s = f.read()
 
 MATCH_JSX = re.compile(r'<mesh(.*?)/>', re.DOTALL)
@@ -38,16 +38,18 @@ lines = s.splitlines()
 lines.insert(
     0, '''import modelUrl from "/models/map.glb?url";
 import Label from "./Label";''')
-lines = [line.replace("'/map.glb'", 'modelUrl') for line in lines]
 
 # Fix ref error
 s = '\n'.join(lines)
+s = s.replace("'/map.glb'", 'modelUrl')
 s = s.replace('const group = useRef<THREE.Group>()',
-              'const group = useRef<THREE.Group>(null);', 1)
+              'const group = useRef<THREE.Group>(null)', 1)
 
 # Fix lint
-s = s.replace('import React, { useRef } from "react";',
-              'import { useRef } from "react";', 1)
+s = s.replace('import React, { useRef } from "react"',
+              'import { useRef } from "react"', 1)
 
 with open('../src/Map.tsx', 'w', encoding=codec) as f:
     f.write(s)
+
+os.unlink('../Map.tsx')
