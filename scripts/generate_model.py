@@ -38,11 +38,11 @@ lines = s.splitlines()
 lines.insert(
     0, '''import modelUrl from "/models/map.glb?url";
 import Label from "./Label";''')
-lines = [line.replace('"/map.glb"', 'modelUrl') for line in lines]
+lines = [line.replace("'/map.glb'", 'modelUrl') for line in lines]
 
 # Fix ref error
 s = '\n'.join(lines)
-s = s.replace('const group = useRef<THREE.Group>();',
+s = s.replace('const group = useRef<THREE.Group>()',
               'const group = useRef<THREE.Group>(null);', 1)
 
 # Fix lint
