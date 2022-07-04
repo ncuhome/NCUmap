@@ -15,8 +15,9 @@ export default function Label({ text }: LabelProps) {
         color="#ff0000"
         outlineColor={"#00ff00"}
         outlineWidth={0.005}
+        anchorY={-0.3}
       >
-        {text + "\n\n\n\n\n\n"}
+        {text}
       </Text>
     </Billboard>
   );
