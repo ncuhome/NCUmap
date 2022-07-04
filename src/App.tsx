@@ -15,7 +15,7 @@ import {
   HemisphereLightHelper,
 } from "three";
 
-import Model from "./Map";
+import Map from "./Map";
 import { useTrackedStore } from "./store";
 
 function Lights() {
@@ -99,7 +99,7 @@ export default function App() {
       <Suspense fallback={null}>
         <Bounds>
           <SelectZoom>
-            <Model />
+            <Map />
           </SelectZoom>
         </Bounds>
         <Lights />
