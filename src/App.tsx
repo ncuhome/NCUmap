@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useRef } from "react";
+import { Suspense, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useHelper, Stats, Sky } from "@react-three/drei";
 import { DirectionalLight, Vector3 } from "three";
@@ -60,6 +60,7 @@ function Lights() {
 
 export default function App() {
   const state = useTrackedStore();
+
   return (
     <Canvas
       gl={{
@@ -67,7 +68,10 @@ export default function App() {
       }}
       shadows
       dpr={[1, 1.5]}
-      camera={{ position: [5, 5, -5] }}
+      camera={{
+        position: new Vector3(5, 5, -5),
+        fov: 40,
+      }}
     >
       <Suspense fallback={null}>
         <Model />
@@ -76,7 +80,7 @@ export default function App() {
         <Stats />
         <OrbitControls
           maxPolarAngle={Math.PI / 2}
-          onChange={(e) => state.setCameraChanged(true)}
+          onChange={() => state.setCameraChanged(true)}
         />
       </Suspense>
     </Canvas>

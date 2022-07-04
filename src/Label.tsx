@@ -1,4 +1,5 @@
-import { Html } from "@react-three/drei";
+import { Billboard, Text } from "@react-three/drei";
+import fontUrl from "/SourceHanSansCN-Regular.otf?url";
 
 interface LabelProps {
   text: string;
@@ -6,15 +7,17 @@ interface LabelProps {
   children?: any;
 }
 
-export default function Label({ text, show = true }: LabelProps) {
+export default function Label({ text }: LabelProps) {
   return (
-    <Html style={{ width: "50px" }}>
-      <label
-        htmlFor=""
-        style={{ userSelect: "none", display: show ? "inline" : "none" }}
+    <Billboard follow>
+      <Text
+        font={fontUrl}
+        color="#ff0000"
+        outlineColor={"#00ff00"}
+        outlineWidth={0.005}
       >
-        {text}
-      </label>
-    </Html>
+        {text + "\n\n\n\n\n\n"}
+      </Text>
+    </Billboard>
   );
 }

@@ -32,7 +32,8 @@ for match in matches:
 lines = s.splitlines()
 
 # Add import for gltf file
-lines.insert(0, '''import modelUrl from "/map.glb?url";
+lines.insert(
+    0, '''import modelUrl from "/map.glb?url";
 import Label from "./Label";''')
 lines = [line.replace('"/map.glb"', 'modelUrl') for line in lines]
 
@@ -40,5 +41,10 @@ lines = [line.replace('"/map.glb"', 'modelUrl') for line in lines]
 s = '\n'.join(lines)
 s = s.replace('const group = useRef<THREE.Group>();',
               'const group = useRef<THREE.Group>(null);', 1)
+
+# Fix lint
+s = s.replace('import React, { useRef } from "react";',
+              'import { useRef } from "react";', 1)
+
 with open('../src/Map.tsx', 'w') as f:
     f.write(s)
