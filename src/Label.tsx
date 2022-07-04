@@ -12,8 +12,8 @@ export default function Label({ text }: LabelProps) {
     <Billboard>
       <Text
         font={fontUrl}
-        color="#ff0000"
-        outlineColor={"#00ff00"}
+        color="#1B2430"
+        outlineColor={"#D6D5A8"}
         outlineWidth={0.005}
         anchorY={-0.3}
       >
