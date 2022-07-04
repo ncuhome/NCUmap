@@ -5,6 +5,7 @@ import re
 
 MATCH_CN = re.compile(r'[\u4e00-\u9fff]+')
 
+bpy.ops.object.select_all(action='DESELECT')
 
 # Set origin to the highest point of the object
 def max_z_in_obj(obj):
