@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "map2tsx":"npx gltfjsx ./models/map.glb --shadows --types --keepnames --precision=5 --printwidth=80 && move Map.tsx ./src",
+    "fixMapTsx":"python ./scripts/generate_model.py",
+    "maptsx": "yarn map2tsx && yarn fixMapTsx"
   },
   "dependencies": {
     "@react-three/drei": "^9.14.3",
