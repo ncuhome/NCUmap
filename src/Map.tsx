@@ -1132,7 +1132,6 @@ export default function Model({ ...props }: JSX.IntrinsicElements["group"]) {
       />
       <mesh
         name="floor"
-        castShadow
         receiveShadow
         geometry={nodes.floor.geometry}
         material={nodes.floor.material}

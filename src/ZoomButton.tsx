@@ -7,9 +7,9 @@ export default function ZoomButton() {
     <div
       style={{
         position: "absolute",
-        display:'flex',
-        width:'100vw',
-        justifyContent:'center',
+        display: "flex",
+        width: "100vw",
+        justifyContent: "center",
         bottom: 10,
         transform: isZoomed ? "" : "translate(0,50px)",
         transition: "all 0.5s ease-in-out",
