@@ -48,6 +48,12 @@ s = s.replace('const group = useRef<THREE.Group>()',
 s = s.replace('import React, { useRef } from "react"',
               'import { useRef } from "react"', 1)
 
+# Fix shadow on ground
+s = s.replace('''<mesh
+        name="floor"
+        castShadow''', '''<mesh
+        name="floor"''', 1)
+
 with open('../src/Map.tsx', 'w', encoding=codec) as f:
     f.write(s)
 
