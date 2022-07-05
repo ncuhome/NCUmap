@@ -74,11 +74,10 @@ function SelectZoom({ children }: IProps) {
   return (
     <group
       onClick={(e) => (
-        e.stopPropagation(), e.delta <= 2 && api.refresh(e.object).fit()
+        e.stopPropagation(),
+        e.delta <= 2 && e.object.name && api.refresh(e.object).fit()
       )}
-      onPointerMissed={(e) => (
-        e.button === 0 && api.refresh().fit(), console.log(1)
-      )}
+      onPointerMissed={(e) => e.button === 0 && api.refresh().fit()}
     >
       {children}
     </group>
@@ -87,34 +86,38 @@ function SelectZoom({ children }: IProps) {
 
 export default function App() {
   const state = useTrackedStore();
+  const handleBack = () => {};
 
   return (
-    <Canvas
-      gl={{
-        preserveDrawingBuffer: true,
-      }}
-      shadows
-      dpr={[1, 1.5]}
-      camera={{
-        position: new Vector3(5, 5, -5),
-        fov: 40,
-      }}
-    >
-      <Suspense fallback={null}>
-        <Bounds>
-          <SelectZoom>
-            <Map />
-          </SelectZoom>
-        </Bounds>
-        <Lights />
-        <Sky />
-        <Stats />
-        <OrbitControls
-          makeDefault
-          maxPolarAngle={Math.PI / 2}
-          onChange={() => state.setCameraChanged(true)}
-        />
-      </Suspense>
-    </Canvas>
+    <>
+      <Canvas
+        gl={{
+          preserveDrawingBuffer: true,
+        }}
+        shadows
+        dpr={[1, 1.5]}
+        camera={{
+          position: new Vector3(5, 5, -5),
+          fov: 40,
+        }}
+      >
+        <Suspense fallback={null}>
+          <Bounds>
+            <SelectZoom>
+              <Map />
+            </SelectZoom>
+          </Bounds>
+          <Lights />
+          <Sky />
+          <Stats />
+          <OrbitControls
+            makeDefault
+            maxPolarAngle={Math.PI / 2}
+            // onChange={() => state.setCameraChanged(true)}
+          />
+        </Suspense>
+      </Canvas>
+
+    </>
   );
 }
