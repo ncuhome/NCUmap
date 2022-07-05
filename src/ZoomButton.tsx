@@ -15,7 +15,7 @@ export default function ZoomButton(){
             display:isZoomed?'block':'none'
         }}>
             <button onClick={()=>(setZoomed(false))}>
-                Back
+                OverView 
             </button>
         </div>
     )

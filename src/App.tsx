@@ -78,14 +78,17 @@ function SelectZoom({ children }: IProps) {
       api.refresh().fit();
     }
   }, [isZoomed]);
-  
+
   return (
     <group
-      onClick={(e) => (
-        e.stopPropagation(),
-        e.delta <= 2 && e.object.name && api.refresh(e.object).fit(),
-        setZoomed(true)
-      )}
+      onClick={(e) => {
+        e.stopPropagation();
+        console.log(e.delta);
+        e.delta <= 2 &&
+          e.object.name &&
+          api.refresh(e.object).fit() &&
+          setZoomed(true);
+      }}
       onPointerMissed={(e) => {
         setZoomed(false);
       }}
