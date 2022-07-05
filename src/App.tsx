@@ -64,12 +64,12 @@ function Lights() {
         position={new Vector3(100)}
         ref={light2}
       />
-      <hemisphereLight intensity={1} ref={light3} />
+      <hemisphereLight intensity={0.3} color={skyColor} ref={light3} />
     </>
   );
 }
 
-function SelectZoom({ children }:IProps) {
+function SelectZoom({ children }: IProps) {
   const api = useBounds();
   return (
     <group
