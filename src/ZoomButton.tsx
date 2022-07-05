@@ -1,7 +1,8 @@
 import { useBounds } from "@react-three/drei"
-
+import { useTrackedStore } from "./store"
 
 export default function ZoomButton(){
+    const {isZoomed,setZoomed} = useTrackedStore()
     const api = useBounds()
     const handleBack = ()=>{
         api.refresh().fit()
@@ -11,9 +12,9 @@ export default function ZoomButton(){
             position:'absolute',
             bottom: 10,
             left:'48%',
-            // display:'none'
+            display:isZoomed?'block':'none'
         }}>
-            <button onClick={handleBack}>
+            <button onClick={()=>(setZoomed(false))}>
                 Back
             </button>
         </div>

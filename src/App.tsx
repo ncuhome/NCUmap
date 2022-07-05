@@ -1,4 +1,4 @@
-import { ReactNode, Suspense, useRef } from "react";
+import { ReactNode, Suspense, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   OrbitControls,
@@ -17,7 +17,7 @@ import {
 
 import Map from "./Map";
 import { useTrackedStore } from "./store";
-import ZoomButton from './ZoomButton'
+import ZoomButton from "./ZoomButton";
 
 interface IProps {
   children: ReactNode;
@@ -71,14 +71,24 @@ function Lights() {
 }
 
 function SelectZoom({ children }: IProps) {
+  const { isZoomed, setZoomed } = useTrackedStore();
   const api = useBounds();
+  useEffect(() => {
+    if (!isZoomed) {
+      api.refresh().fit();
+    }
+  }, [isZoomed]);
+  
   return (
     <group
       onClick={(e) => (
         e.stopPropagation(),
-        e.delta <= 2 && e.object.name && api.refresh(e.object).fit()
+        e.delta <= 2 && e.object.name && api.refresh(e.object).fit(),
+        setZoomed(true)
       )}
-      onPointerMissed={(e) => e.button === 0 && api.refresh().fit()}
+      onPointerMissed={(e) => {
+        setZoomed(false);
+      }}
     >
       {children}
     </group>
