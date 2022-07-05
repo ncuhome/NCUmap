@@ -22,6 +22,7 @@ export default function ZoomButton() {
           borderRadius: "5px",
           transform: " scale(1.5)",
           cursor: "pointer",
+          border:'1px solid'
         }}
       >
         OverView
