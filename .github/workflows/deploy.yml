@@ -2,44 +2,46 @@ name: Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
+    paths-ignore:
+      - "README.md"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      
-    - name: Use Node.js 12.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
+      - uses: actions/checkout@v2
 
-    - name: Get yarn cache directory path
-      id: yarn-cache-dir-path
-      run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
 
-    - uses: actions/cache@v2
-      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-      with:
-        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-yarn-
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
 
-    - name: Build project
-      run: |
-        echo install dependencies
-        yarn
-        echo build project
-        yarn build
+      - uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
 
-    - name: aliyun-oss-website-action
-      uses: fangbinwei/aliyun-oss-website-action@v1
-      with:
-        folder: dist
-        accessKeyId: ${{ secrets.ACCESSKEYID }}
-        accessKeySecret: ${{ secrets.ACCESSKEYSECRET }}
-        bucket: ncu-map
-        endpoint: oss-cn-hangzhou.aliyuncs.com
-        skipSetting: true
+      - name: Build project
+        run: |
+          echo install dependencies
+          yarn
+          echo build project
+          yarn build
+
+      - name: aliyun-oss-website-action
+        uses: fangbinwei/aliyun-oss-website-action@v1
+        with:
+          folder: dist
+          accessKeyId: ${{ secrets.ACCESSKEYID }}
+          accessKeySecret: ${{ secrets.ACCESSKEYSECRET }}
+          bucket: ncu-map
+          endpoint: oss-cn-hangzhou.aliyuncs.com
+          skipSetting: true
