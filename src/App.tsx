@@ -17,6 +17,7 @@ import {
 
 import Map from "./Map";
 import { useTrackedStore } from "./store";
+import ZoomButton from './ZoomButton'
 
 interface IProps {
   children: ReactNode;
@@ -117,7 +118,7 @@ export default function App() {
           />
         </Suspense>
       </Canvas>
-
+      <ZoomButton />
     </>
   );
 }
