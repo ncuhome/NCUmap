@@ -8,6 +8,10 @@ main,
   padding: 0;
 }
 
+body{
+  overflow-y: hidden;
+}
+
 code {
   font-family: sans-serif;
 }
