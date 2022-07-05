@@ -83,7 +83,6 @@ function SelectZoom({ children }: IProps) {
     <group
       onClick={(e) => {
         e.stopPropagation();
-        console.log(e.delta);
         e.delta <= 2 &&
           e.object.name &&
           api.refresh(e.object).fit() &&
