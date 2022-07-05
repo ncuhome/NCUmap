@@ -112,7 +112,7 @@ export default function App() {
         <OrbitControls
           makeDefault
           maxPolarAngle={Math.PI / 2}
-          onChange={() => state.setCameraChanged(true)}
+          // onChange={() => state.setCameraChanged(true)}
         />
       </Suspense>
     </Canvas>
