@@ -37,6 +37,7 @@ function Lights() {
   // useHelper(light2, DirectionalLightHelper, 5);
   // useHelper(light3, HemisphereLightHelper, 5);
 
+  const shadowRange = 9;
   return (
     <>
       <directionalLight
@@ -44,6 +45,10 @@ function Lights() {
         castShadow
         position={new Vector3(10, 10, 10)}
         shadow-mapSize={[4096, 4096]}
+        shadow-camera-top={shadowRange}
+        shadow-camera-bottom={-shadowRange}
+        shadow-camera-left={shadowRange}
+        shadow-camera-right={-shadowRange}
         color={sunColor}
         ref={sunLight}
       />
