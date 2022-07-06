@@ -6,7 +6,7 @@ import re
 MATCH_CN = re.compile(r'[\u4e00-\u9fff]+')
 
 
-# Set origin to the highest point of the object
+
 def max_z_in_obj(obj):
     max_z = 0
     for v in obj.data.vertices:
@@ -25,13 +25,16 @@ def set_origin_to_upper(obj):
     obj.select_set(False)
 
 
+# Set objects origin to the highest point of the object
 bpy.ops.object.select_all(action='DESELECT')
 for obj in bpy.data.objects:
     if obj.type == 'MESH' and MATCH_CN.match(obj.name):
         set_origin_to_upper(obj)
 
+
+# scale map max width to about 10 meters
 bpy.ops.object.select_all(action='SELECT')
-bpy.ops.transform.resize(value=(0.0325174, 0.0325174, 0.0325174),
+bpy.ops.transform.resize(value=(0.003, 0.003, 0.003),
                          orient_type='GLOBAL',
                          orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)),
                          orient_matrix_type='GLOBAL',
@@ -41,100 +44,14 @@ bpy.ops.transform.resize(value=(0.0325174, 0.0325174, 0.0325174),
                          proportional_size=1,
                          use_proportional_connected=False,
                          use_proportional_projected=False)
-bpy.ops.transform.translate(value=(207.095, -1.98522e-06, -14.7755),
-                            orient_axis_ortho='X',
-                            orient_type='GLOBAL',
-                            orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)),
-                            orient_matrix_type='GLOBAL',
-                            mirror=False,
-                            use_proportional_edit=False,
-                            proportional_edit_falloff='SMOOTH',
-                            proportional_size=1,
-                            use_proportional_connected=False,
-                            use_proportional_projected=False)
-bpy.ops.transform.translate(value=(-3.93219, 68.8729, 0),
-                            orient_axis_ortho='X',
-                            orient_type='GLOBAL',
-                            orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)),
-                            orient_matrix_type='GLOBAL',
-                            mirror=False,
-                            use_proportional_edit=False,
-                            proportional_edit_falloff='SMOOTH',
-                            proportional_size=1,
-                            use_proportional_connected=False,
-                            use_proportional_projected=False)
-bpy.ops.transform.resize(value=(0.379003, 0.379003, 0.379003),
-                         orient_type='GLOBAL',
-                         orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)),
-                         orient_matrix_type='GLOBAL',
-                         mirror=False,
-                         use_proportional_edit=False,
-                         proportional_edit_falloff='SMOOTH',
-                         proportional_size=1,
-                         use_proportional_connected=False,
-                         use_proportional_projected=False)
-bpy.ops.transform.resize(value=(0.66837, 0.66837, 0.66837),
-                         orient_type='GLOBAL',
-                         orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)),
-                         orient_matrix_type='GLOBAL',
-                         mirror=False,
-                         use_proportional_edit=False,
-                         proportional_edit_falloff='SMOOTH',
-                         proportional_size=1,
-                         use_proportional_connected=False,
-                         use_proportional_projected=False)
-bpy.ops.transform.translate(value=(8.341, 6.91112, 0),
-                            orient_axis_ortho='X',
-                            orient_type='GLOBAL',
-                            orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)),
-                            orient_matrix_type='GLOBAL',
-                            mirror=False,
-                            use_proportional_edit=False,
-                            proportional_edit_falloff='SMOOTH',
-                            proportional_size=1,
-                            use_proportional_connected=False,
-                            use_proportional_projected=False)
-bpy.ops.transform.translate(value=(0.0445476, 4.18975e-08, -0.311833),
-                            orient_axis_ortho='X',
-                            orient_type='GLOBAL',
-                            orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)),
-                            orient_matrix_type='GLOBAL',
-                            mirror=False,
-                            use_proportional_edit=False,
-                            proportional_edit_falloff='SMOOTH',
-                            proportional_size=1,
-                            use_proportional_connected=False,
-                            use_proportional_projected=False)
-bpy.ops.transform.translate(value=(-195.173, -112.844, 0),
-                            orient_axis_ortho='X',
-                            orient_type='GLOBAL',
-                            orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)),
-                            orient_matrix_type='GLOBAL',
-                            mirror=False,
-                            use_proportional_edit=False,
-                            proportional_edit_falloff='SMOOTH',
-                            proportional_size=1,
-                            use_proportional_connected=False,
-                            use_proportional_projected=False)
-bpy.ops.transform.translate(value=(-4.79805e-14, -5.96919, -216.085),
-                            orient_axis_ortho='X',
-                            orient_type='GLOBAL',
-                            orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)),
-                            orient_matrix_type='GLOBAL',
-                            mirror=False,
-                            use_proportional_edit=False,
-                            proportional_edit_falloff='SMOOTH',
-                            proportional_size=1,
-                            use_proportional_connected=False,
-                            use_proportional_projected=False)
-bpy.ops.transform.translate(value=(-1.54885e-15, 3.23857, -6.97539),
-                            orient_axis_ortho='X',
-                            orient_type='GLOBAL',
-                            orient_matrix=((1, 0, 0), (0, 1, 0), (0, 0, 1)),
-                            orient_matrix_type='GLOBAL',
-                            mirror=False,
-                            use_proportional_edit=False,
-                            proportional_edit_falloff='SMOOTH',
-                            proportional_size=1,
-                            use_proportional_connected=False,
-                            use_proportional_projected=False)
+
+
+# translate the map to world's origin
+area = bpy.context.area
+old_type = area.type
+area.type = 'VIEW_3D'
+bpy.ops.view3d.snap_cursor_to_center()
+bpy.ops.object.select_all(action='SELECT')
+bpy.ops.view3d.snap_selected_to_cursor(use_offset=True)
+area.type = old_type
+
