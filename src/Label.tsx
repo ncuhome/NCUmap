@@ -5,11 +5,12 @@ interface LabelProps {
   text: string;
   show?: boolean;
   children?: any;
+  position: [number, number, number];
 }
 
-export default function Label({ text }: LabelProps) {
+export default function Label({ text, position }: LabelProps) {
   return (
-    <Billboard>
+    <Billboard position={position}>
       <Text
         font={fontUrl}
         color="#1B2430"

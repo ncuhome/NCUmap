@@ -6,29 +6,30 @@ codec = 'utf-8'
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-with open('../Map.tsx', 'r', encoding=codec) as f:
+with open('../Map.js', 'r', encoding=codec) as f:
     s = f.read()
 
-MATCH_JSX = re.compile(r'<mesh(.*?)/>', re.DOTALL)
+MATCH_JSX = re.compile(r'<mesh.*?/>', re.DOTALL)
 
 MATCH_CN = re.compile(r'[\u4e00-\u9fff]+')
 
-MATCH_NAME = re.compile(r'geometry={nodes\.(.+?)\.geometry}')
+MATCH_NAME = re.compile(r'name="(.+?)"')
+
+MATCH_POSITION = re.compile(r'position={(.+?)}')
 
 matches: list[str] = MATCH_JSX.findall(s)
 
 # Add labels for all mesh with Chinese name
 for match in matches:
-    lines = match.splitlines()
 
     name = MATCH_NAME.search(match)
     if name:
         name = name.group(1)
         if MATCH_CN.search(name):
-            name = name.replace('"', r'\"')
-            lines.insert(
-                -1, f'''
-        children={{<Label text="{name}"></Label>}}''')
+            lines = match.splitlines()
+            name = name.replace('"', '')
+            position = MATCH_POSITION.search(match).group(1)
+            lines.append(f'<Label text="{name}" position={{{position}}} />')
             s = s.replace(match, '\n'.join(lines), 1)
 
 lines = s.splitlines()
@@ -41,20 +42,24 @@ import Label from "./Label";''')
 # Fix ref error
 s = '\n'.join(lines)
 s = s.replace("'/map.glb'", 'modelUrl')
-s = s.replace('const group = useRef<THREE.Group>()',
+s = s.replace('const group = useRef()',
               'const group = useRef<THREE.Group>(null)', 1)
 
+s = s.replace('const { nodes, materials } = useGLTF(modelUrl)',
+              'const { nodes, materials } = useGLTF(modelUrl) as any', 1)
 # Fix lint
-s = s.replace('import React, { useRef } from "react"',
-              'import { useRef } from "react"', 1)
+s = s.replace('import React, { useRef } from', 'import { useRef } from', 1)
 
 # Fix shadow on ground
 s = s.replace('''<mesh
-        name="floor"
+        name="grassFloor"
         castShadow''', '''<mesh
-        name="floor"''', 1)
-
+        name="grassFloor"''', 1)
+s = s.replace('''<mesh
+        name="grassFloor001"
+        castShadow''', '''<mesh
+        name="grassFloor001"''', 1)
 with open('../src/Map.tsx', 'w', encoding=codec) as f:
     f.write(s)
 
-os.unlink('../Map.tsx')
+os.unlink('../Map.js')
