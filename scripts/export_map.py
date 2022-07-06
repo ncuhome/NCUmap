@@ -5,8 +5,6 @@ import re
 
 MATCH_CN = re.compile(r'[\u4e00-\u9fff]+')
 
-
-
 def max_z_in_obj(obj):
     max_z = 0
     for v in obj.data.vertices:
@@ -24,6 +22,8 @@ def set_origin_to_upper(obj):
     bpy.ops.object.origin_set(type='ORIGIN_CURSOR', center='MEDIAN')
     obj.select_set(False)
 
+# To setting Origin without affecting location of linked duplicates,unlink objects
+bpy.ops.object.make_single_user(type='ALL', object=True, obdata=True, material=False, animation=False, obdata_animation=False)
 
 # Set objects origin to the highest point of the object
 bpy.ops.object.select_all(action='DESELECT')
