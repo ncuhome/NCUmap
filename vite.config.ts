@@ -13,7 +13,9 @@ const minifyFont = (target: string[]) => {
       "dist/assets/" +
       readdirSync("dist/assets").filter((f) => f.endsWith("otf"))[0];
     execSync(`pyftsubset ${file} --text=${text}`);
+    console.log(readdirSync("dist/assets"));
     renameSync(file.replace(".otf", ".subset.otf"), file);
+    execSync("ls -l dist/assets");
   }
 };
 
