@@ -32,6 +32,7 @@ jobs:
       - name: Build project
         run: |
           echo install dependencies
+          pip install fonttools
           yarn
           echo build project
           yarn build
