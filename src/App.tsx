@@ -10,6 +10,8 @@ import {
   GizmoHelper,
   GizmoViewport,
   BakeShadows,
+  AdaptiveDpr,
+  AdaptiveEvents,
 } from "@react-three/drei";
 import { DirectionalLight, Vector3 } from "three";
 import {
@@ -43,6 +45,8 @@ export default function App() {
         }}
       >
         <Suspense fallback={null}>
+          <AdaptiveDpr pixelated />
+          <AdaptiveEvents />
           <Bounds damping={3} margin={isZoomed ? 1.2 : 0.5}>
             <SelectZoom>
               <Map />
