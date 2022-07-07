@@ -1,3 +1,5 @@
+# 运行脚本时，不要隐藏‘湖’，否则导致 Boolean 修改器不生效，地面出错
+
 from mathutils import *
 from math import *
 import bpy
