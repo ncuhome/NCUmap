@@ -23,6 +23,7 @@ import {
 import Map from "./Map";
 import { useTrackedStore } from "./store";
 import ZoomButton from "./ZoomButton";
+import {hasChinese} from "../scripts/regexp";
 
 interface IProps {
   children: ReactNode;
@@ -135,8 +136,10 @@ export default function App() {
       <group
         onClick={(e) => {
           e.stopPropagation();
+          console.log(e.object.name)
           e.delta <= 2 &&
             e.object.name &&
+            hasChinese(e.object.name) &&
             api.refresh(e.object).fit() &&
             setZoomed(true);
         }}
