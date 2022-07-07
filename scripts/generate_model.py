@@ -59,6 +59,18 @@ s = s.replace('''<mesh
         name="grassFloor001"
         castShadow''', '''<mesh
         name="grassFloor001"''', 1)
+
+# Add refs to meshs
+s = s.replace('<mesh','''<mesh
+        ref={mesh}''')
+# UseBVH
+s = s.replace("import { useGLTF } from '@react-three/drei'",'import { useBVH, useGLTF } from "@react-three/drei";',1)
+s = s.replace('''const group = useRef<THREE.Group>(null)''',
+'''const group = useRef<THREE.Group>(null);
+   const mesh = useRef<THREE.Mesh>(null);
+   useBVH(mesh as any)''',1)
+
+
 with open('../src/Map.tsx', 'w', encoding=codec) as f:
     f.write(s)
 
