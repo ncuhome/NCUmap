@@ -7,6 +7,8 @@ import {
   Sky,
   Bounds,
   useBounds,
+  GizmoHelper,
+  GizmoViewport,
 } from "@react-three/drei";
 import { DirectionalLight, Vector3 } from "three";
 import {
@@ -23,88 +25,8 @@ interface IProps {
   children: ReactNode;
 }
 
-function Lights() {
-  const sunColor = "#fffdf0";
-  const skyColor = "#c8e3fa";
-  const sunLight = useRef<DirectionalLight>(null);
-  const skyLight = useRef<DirectionalLight>(null);
-  const light1 = useRef<DirectionalLight>(null);
-  const light2 = useRef<DirectionalLight>(null);
-  const light3 = useRef<HemisphereLight>(null);
-
-  // useHelper(sunLight, DirectionalLightHelper, 5);
-  // useHelper(skyLight, DirectionalLightHelper, 5);
-  // useHelper(light1, DirectionalLightHelper, 5);
-  // useHelper(light2, DirectionalLightHelper, 5);
-  // useHelper(light3, HemisphereLightHelper, 5);
-
-  const shadowRange = 9;
-  return (
-    <>
-      <directionalLight
-        intensity={3}
-        castShadow
-        position={new Vector3(10, 10, 10)}
-        shadow-mapSize={[4096, 4096]}
-        shadow-camera-top={shadowRange}
-        shadow-camera-bottom={-shadowRange}
-        shadow-camera-left={shadowRange}
-        shadow-camera-right={-shadowRange}
-        color={sunColor}
-        ref={sunLight}
-      />
-      <directionalLight
-        intensity={0.5}
-        position={new Vector3(-10, 10, -10)}
-        color={skyColor}
-        ref={skyLight}
-      />
-      <directionalLight
-        intensity={0.3}
-        position={new Vector3(-10, -10, 10)}
-        color={skyColor}
-        ref={light1}
-      />
-      <directionalLight
-        intensity={0.5}
-        position={new Vector3(100)}
-        ref={light2}
-      />
-      <hemisphereLight intensity={0.3} color={skyColor} ref={light3} />
-    </>
-  );
-}
-
-function SelectZoom({ children }: IProps) {
-  const { isZoomed, setZoomed } = useTrackedStore();
-  const api = useBounds();
-  useEffect(() => {
-    if (!isZoomed) {
-      api.refresh().fit();
-    }
-  }, [isZoomed]);
-
-  return (
-    <group
-      onClick={(e) => {
-        e.stopPropagation();
-        e.delta <= 2 &&
-          e.object.name &&
-          api.refresh(e.object).fit() &&
-          setZoomed(true);
-      }}
-      onPointerMissed={(e) => {
-        setZoomed(false);
-      }}
-    >
-      {children}
-    </group>
-  );
-}
-
 export default function App() {
   const state = useTrackedStore();
-  const handleBack = () => {};
 
   return (
     <>
@@ -129,13 +51,117 @@ export default function App() {
           <Sky />
           <Stats />
           <OrbitControls
+            // autoRotate
+            autoRotateSpeed={0.3}
             makeDefault
             maxPolarAngle={Math.PI / 2}
             // onChange={() => state.setCameraChanged(true)}
           />
+          <AxisHelper />
         </Suspense>
       </Canvas>
       <ZoomButton />
     </>
   );
+
+
+
+
+  
+  function Lights() {
+    const sunColor = "#fffdf0";
+    const skyColor = "#c8e3fa";
+    const sunLight = useRef<DirectionalLight>(null);
+    const skyLight = useRef<DirectionalLight>(null);
+    const light1 = useRef<DirectionalLight>(null);
+    const light2 = useRef<DirectionalLight>(null);
+    const light3 = useRef<HemisphereLight>(null);
+
+    // useHelper(sunLight, DirectionalLightHelper, 5);
+    // useHelper(skyLight, DirectionalLightHelper, 5);
+    // useHelper(light1, DirectionalLightHelper, 5);
+    // useHelper(light2, DirectionalLightHelper, 5);
+    // useHelper(light3, HemisphereLightHelper, 5);
+
+    const shadowRange = 9;
+    return (
+      <>
+        <directionalLight
+          intensity={3}
+          castShadow
+          position={new Vector3(10, 10, 10)}
+          shadow-mapSize={[4096, 4096]}
+          shadow-camera-top={shadowRange}
+          shadow-camera-bottom={-shadowRange}
+          shadow-camera-left={shadowRange}
+          shadow-camera-right={-shadowRange}
+          color={sunColor}
+          ref={sunLight}
+        />
+        <directionalLight
+          intensity={0.5}
+          position={new Vector3(-10, 10, -10)}
+          color={skyColor}
+          ref={skyLight}
+        />
+        <directionalLight
+          intensity={0.3}
+          position={new Vector3(-10, -10, 10)}
+          color={skyColor}
+          ref={light1}
+        />
+        <directionalLight
+          intensity={0.5}
+          position={new Vector3(100)}
+          ref={light2}
+        />
+        <hemisphereLight intensity={0.3} color={skyColor} ref={light3} />
+      </>
+    );
+  }
+
+  function SelectZoom({ children }: IProps) {
+    const { isZoomed, setZoomed } = useTrackedStore();
+    const api = useBounds();
+    useEffect(() => {
+      if (!isZoomed) {
+        api.refresh().fit();
+      }
+    }, [isZoomed]);
+
+    return (
+      <group
+        onClick={(e) => {
+          e.stopPropagation();
+          e.delta <= 2 &&
+            e.object.name &&
+            api.refresh(e.object).fit() &&
+            setZoomed(true);
+        }}
+        onPointerMissed={(e) => {
+          setZoomed(false);
+        }}
+      >
+        {children}
+      </group>
+    );
+  }
+
+  function AxisHelper() {
+    return (
+      <GizmoHelper
+        alignment="bottom-right" // widget alignment within scene
+        margin={[80, 80]} // widget margins (X, Y)
+        // onUpdate={/* called during camera animation  */}
+        // onTarget={/* return current camera target (e.g. from orbit controls) to center animation */}
+        // renderPriority={/* use renderPriority to prevent the helper from disappearing if there is another useFrame(..., 1)*/}
+      >
+        <GizmoViewport
+          axisColors={["red", "green", "blue"]}
+          labelColor="black"
+        />
+        {/* alternative: <GizmoViewcube /> */}
+      </GizmoHelper>
+    );
+  }
 }
