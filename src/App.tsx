@@ -9,6 +9,7 @@ import {
   useBounds,
   GizmoHelper,
   GizmoViewport,
+  BakeShadows,
 } from "@react-three/drei";
 import { DirectionalLight, Vector3 } from "three";
 import {
@@ -26,7 +27,7 @@ interface IProps {
 }
 
 export default function App() {
-  const {isZoomed} = useTrackedStore();
+  const { isZoomed } = useTrackedStore();
 
   return (
     <>
@@ -42,9 +43,10 @@ export default function App() {
         }}
       >
         <Suspense fallback={null}>
-          <Bounds damping={3} margin={isZoomed?1.2:0.5}>
+          <Bounds damping={3} margin={isZoomed ? 1.2 : 0.5}>
             <SelectZoom>
               <Map />
+              <BakeShadows />
             </SelectZoom>
           </Bounds>
           <Lights />
@@ -63,10 +65,6 @@ export default function App() {
       <ZoomButton />
     </>
   );
-
-
-
-
 
   function Lights() {
     const sunColor = "#fffdf0";
