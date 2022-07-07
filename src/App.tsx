@@ -26,7 +26,7 @@ interface IProps {
 }
 
 export default function App() {
-  const state = useTrackedStore();
+  const {isZoomed} = useTrackedStore();
 
   return (
     <>
@@ -37,12 +37,12 @@ export default function App() {
         shadows
         dpr={[1, 1.5]}
         camera={{
-          position: new Vector3(5, 5, -5),
+          position: new Vector3(4, 6, -3),
           fov: 40,
         }}
       >
         <Suspense fallback={null}>
-          <Bounds>
+          <Bounds damping={3} margin={isZoomed?1.2:0.5}>
             <SelectZoom>
               <Map />
             </SelectZoom>
@@ -51,7 +51,7 @@ export default function App() {
           <Sky />
           <Stats />
           <OrbitControls
-            // autoRotate
+            autoRotate
             autoRotateSpeed={0.3}
             makeDefault
             maxPolarAngle={Math.PI / 2}
@@ -67,7 +67,7 @@ export default function App() {
 
 
 
-  
+
   function Lights() {
     const sunColor = "#fffdf0";
     const skyColor = "#c8e3fa";
