@@ -39,7 +39,7 @@ export default function App() {
         shadows
         dpr={[1, 1.5]}
         camera={{
-          position: new Vector3(4, 6, -3),
+          position: new Vector3(14, 7, -8),
           fov: 40,
         }}
       >
@@ -59,7 +59,10 @@ export default function App() {
             autoRotate
             autoRotateSpeed={0.3}
             makeDefault
-            maxPolarAngle={Math.PI / 2}
+            zoomSpeed={2}
+            minDistance={1}
+            maxDistance={12}
+            maxPolarAngle={(Math.PI * 1.4) / 3}
             // onChange={() => state.setCameraChanged(true)}
           />
           <AxisHelper />
@@ -125,8 +128,8 @@ export default function App() {
     const { isZoomed, setZoomed } = useTrackedStore();
     const api = useBounds();
     const { scene } = useThree();
-    const floor = scene.getObjectByName("grassFloor");
     useEffect(() => {
+      const floor = scene.getObjectByName("FocusPlane");
       if (!isZoomed) {
         api.refresh(floor).fit();
       }
