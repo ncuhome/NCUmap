@@ -130,8 +130,8 @@ export default function App() {
     const { isZoomed, setZoomed } = useTrackedStore();
     const api = useBounds();
     const {scene} = useThree()
-    const floor = scene.getObjectByName('FocusPlane')
     useEffect(() => {
+      const floor = scene.getObjectByName('FocusPlane')
       if (!isZoomed) {
         api.refresh(floor).fit();
       }
