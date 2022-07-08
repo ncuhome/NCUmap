@@ -2,7 +2,6 @@ import { ReactNode, Suspense, useEffect, useRef } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import {
   OrbitControls,
-  useHelper,
   Stats,
   Sky,
   Bounds,
@@ -23,7 +22,7 @@ import {
 import Map from "./Map";
 import { useTrackedStore } from "./store";
 import ZoomButton from "./ZoomButton";
-import {hasChinese} from "../scripts/regexp";
+import { hasChinese } from "../scripts/regexp";
 
 interface IProps {
   children: ReactNode;
@@ -31,7 +30,6 @@ interface IProps {
 
 export default function App() {
   const { isZoomed } = useTrackedStore();
-
   return (
     <>
       <Canvas
@@ -126,8 +124,8 @@ export default function App() {
   function SelectZoom({ children }: IProps) {
     const { isZoomed, setZoomed } = useTrackedStore();
     const api = useBounds();
-    const {scene} = useThree()
-    const floor = scene.getObjectByName('grassFloor')
+    const { scene } = useThree();
+    const floor = scene.getObjectByName("grassFloor");
     useEffect(() => {
       if (!isZoomed) {
         api.refresh(floor).fit();
