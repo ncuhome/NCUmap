@@ -37,7 +37,8 @@ lines = s.splitlines()
 # Add import for gltf file
 lines.insert(
     0, '''import modelUrl from "/models/map.glb?url";
-import Label from "./Label";''')
+import Label from "./Label";
+import { MeshStandardMaterial } from "three";''')
 
 # Fix ref error
 s = '\n'.join(lines)
@@ -70,6 +71,10 @@ s = s.replace('''const group = useRef<THREE.Group>(null)''',
    const mesh = useRef<THREE.Mesh>(null);
    useBVH(mesh as any)''',1)
 
+#Make FocusPlane transparent
+s = s.replace('''geometry={nodes.FocusPlane.geometry}
+        material={materials.Material}''','''geometry={nodes.FocusPlane.geometry}
+        material={new MeshStandardMaterial({transparent:true,opacity:0})}''')
 
 with open('../src/Map.tsx', 'w', encoding=codec) as f:
     f.write(s)
