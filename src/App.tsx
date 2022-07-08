@@ -41,7 +41,7 @@ export default function App() {
         shadows
         dpr={[1, 1.5]}
         camera={{
-          // position: new Vector3(4, 6, -3),
+          position: new Vector3(14, 7, -8),
           fov: 40,
         }}
       >

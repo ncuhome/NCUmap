@@ -72,8 +72,8 @@ s = s.replace('''const group = useRef<THREE.Group>(null)''',
    useBVH(mesh as any)''',1)
 
 #Make FocusPlane transparent
-s = s.replace('''geometry={nodes.FocusPlane.geometry}
-        material={materials.Material}''','''geometry={nodes.FocusPlane.geometry}
+s = s.replace('''        geometry={nodes.FocusPlane.geometry}
+        material={materials.FocusPlane}''','''geometry={nodes.FocusPlane.geometry}
         material={new MeshStandardMaterial({transparent:true,opacity:0})}''')
 
 with open('../src/Map.tsx', 'w', encoding=codec) as f:

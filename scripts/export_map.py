@@ -34,7 +34,7 @@ for obj in bpy.data.objects:
         set_origin_to_upper(obj)
 
 
-# scale map max width to about 20 meters
+# scale map max width to about 30 meters
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.transform.resize(value=(0.03, 0.03, 0.03),
                          orient_type='GLOBAL',
