@@ -61,7 +61,10 @@ export default function App() {
             autoRotate
             autoRotateSpeed={0.3}
             makeDefault
-            maxPolarAngle={Math.PI / 2}
+            zoomSpeed={2}
+            minDistance={1}
+            maxDistance={11}
+            maxPolarAngle={(Math.PI)*1.1 / 3}
             // onChange={() => state.setCameraChanged(true)}
           />
           <AxisHelper />
