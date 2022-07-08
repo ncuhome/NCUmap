@@ -29,8 +29,8 @@
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "node",
 	"features": {
-		"git": "latest",
-		"python": "latest"
+		"git": "os-provided",
+		"python": "os-provided"
 	},
 	"postCreateCommand": "yarn && pip install fonttools"
 }
