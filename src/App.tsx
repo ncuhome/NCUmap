@@ -1,5 +1,5 @@
 import { ReactNode, Suspense, useEffect, useRef } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import {
   OrbitControls,
   useHelper,
@@ -126,9 +126,11 @@ export default function App() {
   function SelectZoom({ children }: IProps) {
     const { isZoomed, setZoomed } = useTrackedStore();
     const api = useBounds();
+    const {scene} = useThree()
+    const floor = scene.getObjectByName('grassFloor')
     useEffect(() => {
       if (!isZoomed) {
-        api.refresh().fit();
+        api.refresh(floor).fit();
       }
     }, [isZoomed]);
 
@@ -136,7 +138,7 @@ export default function App() {
       <group
         onClick={(e) => {
           e.stopPropagation();
-          console.log(e.object.name)
+          // console.log(e.object.name)
           e.delta <= 2 &&
             e.object.name &&
             hasChinese(e.object.name) &&

@@ -16,50 +16,16 @@ export default function Model({ ...props }) {
     <group ref={group} {...props} dispose={null}>
       <mesh
         ref={mesh}
-        name="cloud"
-        castShadow
-        receiveShadow
-        geometry={nodes.cloud.geometry}
-        material={materials.cloud}
-        position={[6.048313, 0.255692, 4.923748]}
-        rotation={[1.977499, 0.06209, 0.162898]}
-        scale={[0.629864, 0.50744, 0.461131]}
-      />
-      <group
-        name="Leaf"
-        position={[5.312107, 0.302841, 2.819134]}
-        rotation={[-0.093855, -0.04305, 0.428822]}
-        scale={0.051544}
-      >
-        <mesh
-          ref={mesh}
-          name="Cube017"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube017.geometry}
-          material={materials.leaf}
-        />
-        <mesh
-          ref={mesh}
-          name="Cube017_1"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube017_1.geometry}
-          material={materials["Material.004"]}
-        />
-      </group>
-      <mesh
-        ref={mesh}
         name="三四食堂"
         castShadow
         receiveShadow
         geometry={nodes.三四食堂.geometry}
         material={materials.buildings_white}
-        position={[-6.181728, -0.009033, -2.869465]}
+        position={[-6.269104, -0.162323, -2.889091]}
         rotation={[-Math.PI, 1.389061, -Math.PI]}
         scale={[0.157192, 0.077027, 0.153732]}
       />
-      <Label text="三四食堂" position={[-6.181728, -0.009033, -2.869465]} />
+      <Label text="三四食堂" position={[-6.269104, -0.162323, -2.889091]} />
       <mesh
         ref={mesh}
         name="六七食堂"
@@ -67,11 +33,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.六七食堂.geometry}
         material={materials.buildings_white}
-        position={[-6.931362, 0.058426, -2.73]}
+        position={[-7.018616, -0.094879, -2.749657]}
         rotation={[-Math.PI, 1.202987, -Math.PI]}
         scale={[0.146686, 0.104806, 0.143457]}
       />
-      <Label text="六七食堂" position={[-6.931362, 0.058426, -2.73]} />
+      <Label text="六七食堂" position={[-7.018616, -0.094879, -2.749657]} />
       <mesh
         ref={mesh}
         name="休闲14栋"
@@ -79,11 +45,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲14栋.geometry}
         material={materials.buildings_white}
-        position={[-6.931484, 0.194595, -2.100971]}
+        position={[-7.018738, 0.04129, -2.120613]}
         rotation={[-Math.PI, 1.067395, -Math.PI]}
         scale={[0.229634, 0.160583, 0.071309]}
       />
-      <Label text="休闲14栋" position={[-6.931484, 0.194595, -2.100971]} />
+      <Label text="休闲14栋" position={[-7.018738, 0.04129, -2.120613]} />
       <mesh
         ref={mesh}
         name="休闲15栋"
@@ -91,11 +57,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲15栋.geometry}
         material={materials.buildings_white}
-        position={[-7.252163, 0.194595, -2.683399]}
+        position={[-7.339539, 0.04129, -2.703026]}
         rotation={[-Math.PI, 1.067395, -Math.PI]}
         scale={[0.229634, 0.160583, 0.071309]}
       />
-      <Label text="休闲15栋" position={[-7.252163, 0.194595, -2.683399]} />
+      <Label text="休闲15栋" position={[-7.339539, 0.04129, -2.703026]} />
       <mesh
         ref={mesh}
         name="休闲18栋"
@@ -103,11 +69,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲18栋.geometry}
         material={materials.buildings_white}
-        position={[-7.56918, 0.194595, -3.25893]}
+        position={[-7.656555, 0.04129, -3.278557]}
         rotation={[-Math.PI, 1.067395, -Math.PI]}
         scale={[0.229634, 0.160583, 0.071309]}
       />
-      <Label text="休闲18栋" position={[-7.56918, 0.194595, -3.25893]} />
+      <Label text="休闲18栋" position={[-7.656555, 0.04129, -3.278557]} />
       <mesh
         ref={mesh}
         name="学工楼"
@@ -115,11 +81,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.学工楼.geometry}
         material={materials.buildings_white}
-        position={[-5.924404, 0.199417, -1.586063]}
+        position={[-6.01178, 0.046112, -1.605698]}
         rotation={[-Math.PI, 1.376332, -Math.PI]}
         scale={[0.229634, 0.160583, 0.071309]}
       />
-      <Label text="学工楼" position={[-5.924404, 0.199417, -1.586063]} />
+      <Label text="学工楼" position={[-6.01178, 0.046112, -1.605698]} />
       <mesh
         ref={mesh}
         name="休闲4栋"
@@ -127,11 +93,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲4栋.geometry}
         material={materials.buildings_white}
-        position={[-6.19186, 0.154373, -1.179073]}
+        position={[-6.279114, 0.001068, -1.198708]}
         rotation={[0, 0.242182, 0]}
         scale={0.006}
       />
-      <Label text="休闲4栋" position={[-6.19186, 0.154373, -1.179073]} />
+      <Label text="休闲4栋" position={[-6.279114, 0.001068, -1.198708]} />
       <mesh
         ref={mesh}
         name="休闲6-7连接"
@@ -139,11 +105,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes["休闲6-7连接"].geometry}
         material={materials.buildings_white}
-        position={[-5.804043, -0.012573, -2.259937]}
+        position={[-5.891296, -0.165863, -2.279564]}
         rotation={[0, 0.191986, 0]}
         scale={[0.193416, 0.017901, 0.041495]}
       />
-      <Label text="休闲6-7连接" position={[-5.804043, -0.012573, -2.259937]} />
+      <Label text="休闲6-7连接" position={[-5.891296, -0.165863, -2.279564]} />
       <mesh
         ref={mesh}
         name="休闲5栋"
@@ -151,11 +117,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲5栋.geometry}
         material={materials.buildings_white}
-        position={[-5.730923, 0.003143, -2.77364]}
+        position={[-5.818176, -0.150146, -2.793266]}
         rotation={[0, 0.165049, 0]}
         scale={0.006}
       />
-      <Label text="休闲5栋" position={[-5.730923, 0.003143, -2.77364]} />
+      <Label text="休闲5栋" position={[-5.818176, -0.150146, -2.793266]} />
       <mesh
         ref={mesh}
         name="休闲1栋"
@@ -163,11 +129,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲1栋.geometry}
         material={materials.buildings_white}
-        position={[-4.797085, 0.123657, 0.130962]}
+        position={[-4.88446, -0.029633, 0.11132]}
         rotation={[0, 0.20465, 0]}
         scale={[0.005081, 0.006, 0.005081]}
       />
-      <Label text="休闲1栋" position={[-4.797085, 0.123657, 0.130962]} />
+      <Label text="休闲1栋" position={[-4.88446, -0.029633, 0.11132]} />
       <mesh
         ref={mesh}
         name="休闲2栋"
@@ -175,11 +141,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲2栋.geometry}
         material={materials.buildings_white}
-        position={[-5.104214, 0.123657, 0.194714]}
+        position={[-5.191589, -0.029633, 0.175072]}
         rotation={[0, 0.20465, 0]}
         scale={[0.005081, 0.006, 0.005081]}
       />
-      <Label text="休闲2栋" position={[-5.104214, 0.123657, 0.194714]} />
+      <Label text="休闲2栋" position={[-5.191589, -0.029633, 0.175072]} />
       <mesh
         ref={mesh}
         name="休闲3栋"
@@ -187,11 +153,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲3栋.geometry}
         material={materials.buildings_white}
-        position={[-5.536098, 0.123352, -0.402182]}
+        position={[-5.623474, -0.029938, -0.421814]}
         rotation={[0, 0.20465, 0]}
         scale={[0.005081, 0.006, 0.005081]}
       />
-      <Label text="休闲3栋" position={[-5.536098, 0.123352, -0.402182]} />
+      <Label text="休闲3栋" position={[-5.623474, -0.029938, -0.421814]} />
       <mesh
         ref={mesh}
         name="一二食堂"
@@ -199,11 +165,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.一二食堂.geometry}
         material={materials.buildings_white}
-        position={[-5.210659, -0.019638, -0.709932]}
+        position={[-5.298035, -0.172943, -0.729568]}
         rotation={[0, 0.331528, 0]}
         scale={[0.111764, 0.077299, 0.364556]}
       />
-      <Label text="一二食堂" position={[-5.210659, -0.019638, -0.709932]} />
+      <Label text="一二食堂" position={[-5.298035, -0.172943, -0.729568]} />
       <mesh
         ref={mesh}
         name="慧源楼"
@@ -211,11 +177,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.慧源楼.geometry}
         material={materials.buildings_white}
-        position={[-4.538052, 0.019073, -0.925488]}
+        position={[-4.625366, -0.134216, -0.945122]}
         rotation={[0, 0.564257, 0]}
         scale={[0.096113, 0.096113, 0.512246]}
       />
-      <Label text="慧源楼" position={[-4.538052, 0.019073, -0.925488]} />
+      <Label text="慧源楼" position={[-4.625366, -0.134216, -0.945122]} />
       <mesh
         ref={mesh}
         name="外经楼"
@@ -223,11 +189,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.外经楼.geometry}
         material={materials.buildings_white}
-        position={[-3.511745, 0.060226, -2.035328]}
+        position={[-3.59906, -0.093048, -2.05497]}
         rotation={[0, 0.173451, 0]}
         scale={[0.062252, 0.113848, 0.221097]}
       />
-      <Label text="外经楼" position={[-3.511745, 0.060226, -2.035328]} />
+      <Label text="外经楼" position={[-3.59906, -0.093048, -2.05497]} />
       <mesh
         ref={mesh}
         name="艺术楼"
@@ -235,10 +201,10 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.艺术楼.geometry}
         material={materials.buildings_white}
-        position={[-3.224331, 0.068268, -3.587238]}
+        position={[-3.311646, -0.085022, -3.606865]}
         scale={[0.233566, 0.12, 0.362374]}
       />
-      <Label text="艺术楼" position={[-3.224331, 0.068268, -3.587238]} />
+      <Label text="艺术楼" position={[-3.311646, -0.085022, -3.606865]} />
       <mesh
         ref={mesh}
         name="校医院"
@@ -246,10 +212,10 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.校医院.geometry}
         material={materials.buildings_white}
-        position={[-5.106045, 0.065826, -3.767902]}
+        position={[-5.19342, -0.087463, -3.78756]}
         scale={0.006}
       />
-      <Label text="校医院" position={[-5.106045, 0.065826, -3.767902]} />
+      <Label text="校医院" position={[-5.19342, -0.087463, -3.78756]} />
       <mesh
         ref={mesh}
         name="游泳馆"
@@ -257,11 +223,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.游泳馆.geometry}
         material={materials.buildings_white}
-        position={[-5.838223, 0.164291, -4.758564]}
+        position={[-5.925598, 0.010956, -4.778221]}
         rotation={[0, 0.49073, 0]}
         scale={0.006}
       />
-      <Label text="游泳馆" position={[-5.838223, 0.164291, -4.758564]} />
+      <Label text="游泳馆" position={[-5.925598, 0.010956, -4.778221]} />
       <mesh
         ref={mesh}
         name="人文楼"
@@ -269,11 +235,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.人文楼.geometry}
         material={materials.buildings_white}
-        position={[-2.805691, 0.185104, -1.432774]}
+        position={[-2.893005, 0.031799, -1.452408]}
         rotation={[0, 0.191256, 0]}
         scale={[0.165222, 0.177103, 0.448299]}
       />
-      <Label text="人文楼" position={[-2.805691, 0.185104, -1.432774]} />
+      <Label text="人文楼" position={[-2.893005, 0.031799, -1.452408]} />
       <mesh
         ref={mesh}
         name="法学楼"
@@ -281,11 +247,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.法学楼.geometry}
         material={materials.buildings_white}
-        position={[-2.805691, 0.184921, -1.432774]}
+        position={[-2.893005, 0.031616, -1.452408]}
         rotation={[0, 0.191256, 0]}
         scale={[0.165222, 0.177103, 0.448299]}
       />
-      <Label text="法学楼" position={[-2.805691, 0.184921, -1.432774]} />
+      <Label text="法学楼" position={[-2.893005, 0.031616, -1.452408]} />
       <mesh
         ref={mesh}
         name="前湖大道门"
@@ -293,11 +259,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.前湖大道门.geometry}
         material={materials.buildings_white}
-        position={[-6.644131, -0.021118, -5.487934]}
+        position={[-6.731506, -0.174408, -5.507591]}
         rotation={[Math.PI / 2, 0, -0.60944]}
         scale={[0.067659, 0.067659, 0.075634]}
       />
-      <Label text="前湖大道门" position={[-6.644131, -0.021118, -5.487934]} />
+      <Label text="前湖大道门" position={[-6.731506, -0.174408, -5.507591]} />
       <mesh
         ref={mesh}
         name="学府大道正门"
@@ -305,10 +271,10 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.学府大道正门.geometry}
         material={materials.buildings_white}
-        position={[1.440407, -0.173798, -1.399212]}
+        position={[1.353088, -0.327087, -1.418846]}
         scale={0.008469}
       />
-      <Label text="学府大道正门" position={[1.440407, -0.173798, -1.399212]} />
+      <Label text="学府大道正门" position={[1.353088, -0.327087, -1.418846]} />
       <mesh
         ref={mesh}
         name="白帆运动场"
@@ -316,10 +282,10 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.白帆运动场.geometry}
         material={materials.buildings_white}
-        position={[-4.205227, 0.098618, -5.436115]}
+        position={[-4.29248, -0.054688, -5.455772]}
         scale={0.006}
       />
-      <Label text="白帆运动场" position={[-4.205227, 0.098618, -5.436115]} />
+      <Label text="白帆运动场" position={[-4.29248, -0.054688, -5.455772]} />
       <mesh
         ref={mesh}
         name="嘉言路北门"
@@ -327,11 +293,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.嘉言路北门.geometry}
         material={materials.buildings_white}
-        position={[6.214207, 0.082016, 1.804089]}
+        position={[6.126892, -0.071289, 1.784462]}
         rotation={[Math.PI / 2, 0, -1.796659]}
         scale={[0.127486, 0.127486, 0.142514]}
       />
-      <Label text="嘉言路北门" position={[6.214207, 0.082016, 1.804089]} />
+      <Label text="嘉言路北门" position={[6.126892, -0.071289, 1.784462]} />
       <mesh
         ref={mesh}
         name="嘉言路北门001"
@@ -339,11 +305,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.嘉言路北门001.geometry}
         material={materials.buildings_white}
-        position={[8.45792, 0.082016, 0.199406]}
+        position={[8.370667, -0.07132, 0.179764]}
         rotation={[Math.PI / 2, 0, -3.063096]}
         scale={[0.127486, 0.127486, 0.142514]}
       />
-      <Label text="嘉言路北门001" position={[8.45792, 0.082016, 0.199406]} />
+      <Label text="嘉言路北门001" position={[8.370667, -0.07132, 0.179764]} />
       <mesh
         ref={mesh}
         name="网球羽毛球场"
@@ -351,11 +317,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.网球羽毛球场.geometry}
         material={materials.buildings_white}
-        position={[-5.375942, 0.006668, -5.484272]}
+        position={[-5.463318, -0.146637, -5.503929]}
         rotation={[-Math.PI, 1.161795, -Math.PI]}
         scale={0.006}
       />
-      <Label text="网球羽毛球场" position={[-5.375942, 0.006668, -5.484272]} />
+      <Label text="网球羽毛球场" position={[-5.463318, -0.146637, -5.503929]} />
       <mesh
         ref={mesh}
         name="体育馆"
@@ -363,11 +329,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.体育馆.geometry}
         material={materials.buildings_white}
-        position={[-2.266628, 0.055893, -5.582478]}
+        position={[-2.353943, -0.097412, -5.602074]}
         rotation={[Math.PI, -0.231687, Math.PI]}
         scale={[0.222229, 0.114175, 0.344784]}
       />
-      <Label text="体育馆" position={[-2.266628, 0.055893, -5.582478]} />
+      <Label text="体育馆" position={[-2.353943, -0.097412, -5.602074]} />
       <mesh
         ref={mesh}
         name="留园"
@@ -375,11 +341,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.留园.geometry}
         material={materials.buildings_white}
-        position={[-2.420742, 0.002106, -6.216572]}
+        position={[-2.508057, -0.151215, -6.236229]}
         rotation={[Math.PI, -0.231687, Math.PI]}
         scale={[0.105757, 0.087942, 0.15869]}
       />
-      <Label text="留园" position={[-2.420742, 0.002106, -6.216572]} />
+      <Label text="留园" position={[-2.508057, -0.151215, -6.236229]} />
       <mesh
         ref={mesh}
         name="水利馆"
@@ -387,11 +353,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.水利馆.geometry}
         material={materials.buildings_white}
-        position={[-4.4277, -0.066437, 0.897915]}
+        position={[-4.515015, -0.219757, 0.878273]}
         rotation={[0, 0.761388, 0]}
         scale={[0.137884, 0.055048, 0.129075]}
       />
-      <Label text="水利馆" position={[-4.4277, -0.066437, 0.897915]} />
+      <Label text="水利馆" position={[-4.515015, -0.219757, 0.878273]} />
       <mesh
         ref={mesh}
         name="建工楼A区"
@@ -399,11 +365,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.建工楼A区.geometry}
         material={materials.buildings_white}
-        position={[-3.888149, 0.063889, 0.764339]}
+        position={[-3.975403, -0.089417, 0.744713]}
         rotation={[0, 0.182907, 0]}
         scale={[0.119964, 0.117711, 0.322754]}
       />
-      <Label text="建工楼A区" position={[-3.888149, 0.063889, 0.764339]} />
+      <Label text="建工楼A区" position={[-3.975403, -0.089417, 0.744713]} />
       <mesh
         ref={mesh}
         name="建工楼B区"
@@ -411,11 +377,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.建工楼B区.geometry}
         material={materials.buildings_white}
-        position={[-4.224087, 0.059311, 0.580959]}
+        position={[-4.311401, -0.093994, 0.561333]}
         rotation={[0, 0.41275, 0]}
         scale={[0.077496, 0.117711, 0.097613]}
       />
-      <Label text="建工楼B区" position={[-4.224087, 0.059311, 0.580959]} />
+      <Label text="建工楼B区" position={[-4.311401, -0.093994, 0.561333]} />
       <mesh
         ref={mesh}
         name="汽车电子楼"
@@ -423,11 +389,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.汽车电子楼.geometry}
         material={materials.buildings_white}
-        position={[-3.522305, 0.063873, 1.323101]}
+        position={[-3.609619, -0.089417, 1.303474]}
         rotation={[0, 0.155171, 0]}
         scale={[0.066869, 0.117711, 0.391332]}
       />
-      <Label text="汽车电子楼" position={[-3.522305, 0.063873, 1.323101]} />
+      <Label text="汽车电子楼" position={[-3.609619, -0.089417, 1.303474]} />
       <mesh
         ref={mesh}
         name="机电楼"
@@ -435,11 +401,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.机电楼.geometry}
         material={materials.buildings_white}
-        position={[-3.223171, 0.063889, 1.13554]}
+        position={[-3.310486, -0.089417, 1.115913]}
         rotation={[0, 0.155171, 0]}
         scale={[0.174362, 0.117711, 0.281306]}
       />
-      <Label text="机电楼" position={[-3.223171, 0.063889, 1.13554]} />
+      <Label text="机电楼" position={[-3.310486, -0.089417, 1.115913]} />
       <mesh
         ref={mesh}
         name="信工楼B区"
@@ -447,11 +413,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.信工楼B区.geometry}
         material={materials.buildings_white}
-        position={[-2.35165, 0.126129, 1.761181]}
+        position={[-2.439026, -0.027191, 1.741524]}
         rotation={[0, 0.226584, 0]}
         scale={[0.013699, 0.006, 0.004359]}
       />
-      <Label text="信工楼B区" position={[-2.35165, 0.126129, 1.761181]} />
+      <Label text="信工楼B区" position={[-2.439026, -0.027191, 1.741524]} />
       <mesh
         ref={mesh}
         name="信工楼A区"
@@ -459,11 +425,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.信工楼A区.geometry}
         material={materials.buildings_white}
-        position={[-2.35165, 0.126129, 1.761181]}
+        position={[-2.439026, -0.027191, 1.741524]}
         rotation={[0, 0.226584, 0]}
         scale={[0.013699, 0.006, 0.004359]}
       />
-      <Label text="信工楼A区" position={[-2.35165, 0.126129, 1.761181]} />
+      <Label text="信工楼A区" position={[-2.439026, -0.027191, 1.741524]} />
       <mesh
         ref={mesh}
         name="信工楼C区"
@@ -471,11 +437,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.信工楼C区.geometry}
         material={materials.buildings_white}
-        position={[-2.271694, 0.126129, 2.108044]}
+        position={[-2.359009, -0.027191, 2.088417]}
         rotation={[0, 0.226584, 0]}
         scale={[0.013699, 0.006, 0.004359]}
       />
-      <Label text="信工楼C区" position={[-2.271694, 0.126129, 2.108044]} />
+      <Label text="信工楼C区" position={[-2.359009, -0.027191, 2.088417]} />
       <mesh
         ref={mesh}
         name="信工楼E区"
@@ -483,11 +449,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.信工楼E区.geometry}
         material={materials.buildings_white}
-        position={[-3.035793, 0.126129, 1.918896]}
+        position={[-3.123169, -0.027191, 1.899269]}
         rotation={[0, 0.226584, 0]}
         scale={[0.013699, 0.006, 0.004359]}
       />
-      <Label text="信工楼E区" position={[-3.035793, 0.126129, 1.918896]} />
+      <Label text="信工楼E区" position={[-3.123169, -0.027191, 1.899269]} />
       <mesh
         ref={mesh}
         name="材料楼"
@@ -495,11 +461,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.材料楼.geometry}
         material={materials.buildings_white}
-        position={[-1.602993, 0.109497, 1.957378]}
+        position={[-1.690277, -0.043793, 1.937752]}
         rotation={[0, 0.197047, 0]}
         scale={[0.174362, 0.117711, 0.247026]}
       />
-      <Label text="材料楼" position={[-1.602993, 0.109497, 1.957378]} />
+      <Label text="材料楼" position={[-1.690277, -0.043793, 1.937752]} />
       <mesh
         ref={mesh}
         name="环境楼"
@@ -507,11 +473,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.环境楼.geometry}
         material={materials.buildings_white}
-        position={[-1.464352, 0.109497, 2.634197]}
+        position={[-1.551727, -0.043793, 2.61454]}
         rotation={[Math.PI, -0.197047, Math.PI]}
         scale={[0.174362, 0.117711, 0.247026]}
       />
-      <Label text="环境楼" position={[-1.464352, 0.109497, 2.634197]} />
+      <Label text="环境楼" position={[-1.551727, -0.043793, 2.61454]} />
       <mesh
         ref={mesh}
         name="理科生命大楼B区"
@@ -519,13 +485,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.理科生命大楼B区.geometry}
         material={materials.buildings_white}
-        position={[-1.052212, 0.179703, 2.161083]}
+        position={[-1.139526, 0.026398, 2.141457]}
         rotation={[0, 0.195201, 0]}
         scale={[0.066869, 0.175081, 0.552479]}
       />
       <Label
         text="理科生命大楼B区"
-        position={[-1.052212, 0.179703, 2.161083]}
+        position={[-1.139526, 0.026398, 2.141457]}
       />
       <mesh
         ref={mesh}
@@ -534,13 +500,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.理科生命大楼A区.geometry}
         material={materials.buildings_white}
-        position={[-0.747463, 0.179703, 2.100842]}
+        position={[-0.834778, 0.026398, 2.081184]}
         rotation={[0, 0.195201, 0]}
         scale={[0.066869, 0.175081, 0.552479]}
       />
       <Label
         text="理科生命大楼A区"
-        position={[-0.747463, 0.179703, 2.100842]}
+        position={[-0.834778, 0.026398, 2.081184]}
       />
       <mesh
         ref={mesh}
@@ -549,11 +515,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健19栋.geometry}
         material={materials.buildings_white}
-        position={[-0.429226, 0.481949, 3.053448]}
+        position={[-0.516541, 0.328644, 3.033791]}
         rotation={[0, 0.144839, 0]}
         scale={[0.066869, 0.329709, 0.166663]}
       />
-      <Label text="天健19栋" position={[-0.429226, 0.481949, 3.053448]} />
+      <Label text="天健19栋" position={[-0.516541, 0.328644, 3.033791]} />
       <mesh
         ref={mesh}
         name="天健20栋"
@@ -561,11 +527,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健20栋.geometry}
         material={materials.buildings_white}
-        position={[-0.1087, 0.481949, 3.110821]}
+        position={[-0.195984, 0.328644, 3.091225]}
         rotation={[0, 0.137293, 0]}
         scale={[0.066869, 0.329709, 0.166663]}
       />
-      <Label text="天健20栋" position={[-0.1087, 0.481949, 3.110821]} />
+      <Label text="天健20栋" position={[-0.195984, 0.328644, 3.091225]} />
       <mesh
         ref={mesh}
         name="天健21栋"
@@ -573,11 +539,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健21栋.geometry}
         material={materials.buildings_white}
-        position={[0.234501, 0.481949, 3.170269]}
+        position={[0.147186, 0.328644, 3.150612]}
         rotation={[0, 0.129261, 0]}
         scale={[0.066869, 0.329709, 0.166663]}
       />
-      <Label text="天健21栋" position={[0.234501, 0.481949, 3.170269]} />
+      <Label text="天健21栋" position={[0.147186, 0.328644, 3.150612]} />
       <mesh
         ref={mesh}
         name="天健22栋"
@@ -585,11 +551,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健22栋.geometry}
         material={materials.buildings_white}
-        position={[0.601933, 0.481949, 3.223492]}
+        position={[0.514587, 0.328644, 3.203835]}
         rotation={[0, 0.129611, 0]}
         scale={[0.066869, 0.329709, 0.166663]}
       />
-      <Label text="天健22栋" position={[0.601933, 0.481949, 3.223492]} />
+      <Label text="天健22栋" position={[0.514587, 0.328644, 3.203835]} />
       <mesh
         ref={mesh}
         name="天健23栋"
@@ -597,11 +563,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健23栋.geometry}
         material={materials.buildings_white}
-        position={[0.985889, 0.481949, 3.304607]}
+        position={[0.89856, 0.328644, 3.28495]}
         rotation={[0, 0.143465, 0]}
         scale={[0.066869, 0.329709, 0.166663]}
       />
-      <Label text="天健23栋" position={[0.985889, 0.481949, 3.304607]} />
+      <Label text="天健23栋" position={[0.89856, 0.328644, 3.28495]} />
       <mesh
         ref={mesh}
         name="天健24栋"
@@ -609,11 +575,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健24栋.geometry}
         material={materials.buildings_white}
-        position={[1.477766, 0.481949, 3.372417]}
+        position={[1.390442, 0.328644, 3.35276]}
         rotation={[0, 0.143465, 0]}
         scale={[0.066869, 0.329709, 0.18094]}
       />
-      <Label text="天健24栋" position={[1.477766, 0.481949, 3.372417]} />
+      <Label text="天健24栋" position={[1.390442, 0.328644, 3.35276]} />
       <mesh
         ref={mesh}
         name="天健27栋"
@@ -621,11 +587,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健27栋.geometry}
         material={materials.buildings_white}
-        position={[1.847324, 0.481949, 3.325481]}
+        position={[1.76001, 0.328644, 3.305885]}
         rotation={[0, 0.143465, 0]}
         scale={[0.066869, 0.329709, 0.187772]}
       />
-      <Label text="天健27栋" position={[1.847324, 0.481949, 3.325481]} />
+      <Label text="天健27栋" position={[1.76001, 0.328644, 3.305885]} />
       <mesh
         ref={mesh}
         name="天健26栋"
@@ -633,11 +599,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健26栋.geometry}
         material={materials.buildings_white}
-        position={[1.754192, 0.481949, 2.717632]}
+        position={[1.66687, 0.328644, 2.697975]}
         rotation={[0, 0.143465, 0]}
         scale={[0.066869, 0.329709, 0.214014]}
       />
-      <Label text="天健26栋" position={[1.754192, 0.481949, 2.717632]} />
+      <Label text="天健26栋" position={[1.66687, 0.328644, 2.697975]} />
       <mesh
         ref={mesh}
         name="天健25栋"
@@ -645,11 +611,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健25栋.geometry}
         material={materials.buildings_white}
-        position={[1.39197, 0.481949, 2.788372]}
+        position={[1.304657, 0.328644, 2.768715]}
         rotation={[0, 0.143465, 0]}
         scale={[0.066869, 0.329709, 0.214014]}
       />
-      <Label text="天健25栋" position={[1.39197, 0.481949, 2.788372]} />
+      <Label text="天健25栋" position={[1.304657, 0.328644, 2.768715]} />
       <mesh
         ref={mesh}
         name="基础实验大楼"
@@ -657,11 +623,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.基础实验大楼.geometry}
         material={materials.buildings_white}
-        position={[0.135822, 0.177628, 2.081463]}
+        position={[0.048492, 0.024353, 2.061836]}
         rotation={[0, 0.195201, 0]}
         scale={[0.649887, 0.175081, 0.361137]}
       />
-      <Label text="基础实验大楼" position={[0.135822, 0.177628, 2.081463]} />
+      <Label text="基础实验大楼" position={[0.048492, 0.024353, 2.061836]} />
       <mesh
         ref={mesh}
         name="服务大楼"
@@ -669,11 +635,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.服务大楼.geometry}
         material={materials.buildings_white}
-        position={[0.249073, -0.058136, 2.802227]}
+        position={[0.161743, -0.211426, 2.78257]}
         rotation={[-Math.PI, 1.5388, -Math.PI]}
         scale={[0.065046, 0.056169, 0.218244]}
       />
-      <Label text="服务大楼" position={[0.249073, -0.058136, 2.802227]} />
+      <Label text="服务大楼" position={[0.161743, -0.211426, 2.78257]} />
       <mesh
         ref={mesh}
         name="天健园餐厅（九十食堂）"
@@ -681,13 +647,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes["天健园餐厅（九十食堂）"].geometry}
         material={materials.buildings_white}
-        position={[0.819592, 0.106094, 2.7523]}
+        position={[0.732269, -0.047211, 2.732643]}
         rotation={[0, 0.181535, 0]}
         scale={[0.236906, 0.138025, 0.156366]}
       />
       <Label
         text="天健园餐厅（九十食堂）"
-        position={[0.819592, 0.106094, 2.7523]}
+        position={[0.732269, -0.047211, 2.732643]}
       />
       <mesh
         ref={mesh}
@@ -696,11 +662,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.工程训练中心1.geometry}
         material={materials.buildings_white}
-        position={[1.175631, 0.223419, 1.748241]}
+        position={[1.088318, 0.070129, 1.728615]}
         rotation={[0, 0.143465, 0]}
         scale={[0.153759, 0.196673, 0.214014]}
       />
-      <Label text="工程训练中心1" position={[1.175631, 0.223419, 1.748241]} />
+      <Label text="工程训练中心1" position={[1.088318, 0.070129, 1.728615]} />
       <mesh
         ref={mesh}
         name="工程训练中心2"
@@ -708,11 +674,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.工程训练中心2.geometry}
         material={materials.buildings_white}
-        position={[1.595467, 0.223419, 1.833996]}
+        position={[1.508148, 0.070129, 1.814369]}
         rotation={[0, 0.143465, 0]}
         scale={[0.158873, 0.196673, 0.214014]}
       />
-      <Label text="工程训练中心2" position={[1.595467, 0.223419, 1.833996]} />
+      <Label text="工程训练中心2" position={[1.508148, 0.070129, 1.814369]} />
       <mesh
         ref={mesh}
         name="研究生院"
@@ -720,11 +686,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.研究生院.geometry}
         material={materials.buildings_white}
-        position={[2.305393, -0.01944, 2.023663]}
+        position={[2.218079, -0.172729, 2.004036]}
         rotation={[0, -1.538797, 0]}
         scale={[0.091689, 0.079175, 0.307635]}
       />
-      <Label text="研究生院" position={[2.305393, -0.01944, 2.023663]} />
+      <Label text="研究生院" position={[2.218079, -0.172729, 2.004036]} />
       <mesh
         ref={mesh}
         name="天健28栋"
@@ -732,11 +698,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健28栋.geometry}
         material={materials.buildings_white}
-        position={[3.396, 0.481949, 2.525463]}
+        position={[3.308685, 0.328644, 2.505867]}
         rotation={[0, 0.192832, 0]}
         scale={[0.083363, 0.329709, 0.383516]}
       />
-      <Label text="天健28栋" position={[3.396, 0.481949, 2.525463]} />
+      <Label text="天健28栋" position={[3.308685, 0.328644, 2.505867]} />
       <mesh
         ref={mesh}
         name="天健29栋"
@@ -744,11 +710,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健29栋.geometry}
         material={materials.buildings_white}
-        position={[3.747349, 0.481949, 2.420513]}
+        position={[3.660034, 0.328644, 2.400856]}
         rotation={[0, 0.181288, 0]}
         scale={[0.082831, 0.329709, 0.265347]}
       />
-      <Label text="天健29栋" position={[3.747349, 0.481949, 2.420513]} />
+      <Label text="天健29栋" position={[3.660034, 0.328644, 2.400856]} />
       <mesh
         ref={mesh}
         name="天健30栋"
@@ -756,11 +722,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健30栋.geometry}
         material={materials.buildings_white}
-        position={[4.123386, 0.481949, 2.457592]}
+        position={[4.036072, 0.328644, 2.437935]}
         rotation={[0, 0.20802, 0]}
         scale={[0.077692, 0.329709, 0.298666]}
       />
-      <Label text="天健30栋" position={[4.123386, 0.481949, 2.457592]} />
+      <Label text="天健30栋" position={[4.036072, 0.328644, 2.437935]} />
       <mesh
         ref={mesh}
         name="国际公寓楼"
@@ -768,11 +734,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.国际公寓楼.geometry}
         material={materials.buildings_white}
-        position={[4.453587, 0.481949, 1.706158]}
+        position={[4.366272, 0.328644, 1.686531]}
         rotation={[0, 0.20802, 0]}
         scale={[0.077692, 0.329709, 0.298666]}
       />
-      <Label text="国际公寓楼" position={[4.453587, 0.481949, 1.706158]} />
+      <Label text="国际公寓楼" position={[4.366272, 0.328644, 1.686531]} />
       <mesh
         ref={mesh}
         name="国际学术交流中心"
@@ -780,13 +746,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.国际学术交流中心.geometry}
         material={materials.buildings_white}
-        position={[4.490696, 0.233337, 1.027386]}
+        position={[4.403381, 0.080048, 1.007729]}
         rotation={[Math.PI, -0.20802, Math.PI]}
         scale={[0.077692, 0.205135, 0.298666]}
       />
       <Label
         text="国际学术交流中心"
-        position={[4.490696, 0.233337, 1.027386]}
+        position={[4.403381, 0.080048, 1.007729]}
       />
       <mesh
         ref={mesh}
@@ -795,11 +761,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.昌海楼.geometry}
         material={materials.buildings_white}
-        position={[4.02808, 0.048386, 1.529461]}
+        position={[3.940765, -0.104919, 1.509834]}
         rotation={[0, 0.20802, 0]}
         scale={[0.077692, 0.112233, 0.397969]}
       />
-      <Label text="昌海楼" position={[4.02808, 0.048386, 1.529461]} />
+      <Label text="昌海楼" position={[3.940765, -0.104919, 1.509834]} />
       <mesh
         ref={mesh}
         name="空间研究院"
@@ -807,11 +773,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.空间研究院.geometry}
         material={materials.buildings_white}
-        position={[1.057976, 0.019882, 0.933758]}
+        position={[0.970642, -0.133423, 0.914131]}
         rotation={[0, -0.047882, 0]}
         scale={[0.231556, 0.095927, 0.219627]}
       />
-      <Label text="空间研究院" position={[1.057976, 0.019882, 0.933758]} />
+      <Label text="空间研究院" position={[0.970642, -0.133423, 0.914131]} />
       <mesh
         ref={mesh}
         name="图书馆"
@@ -819,11 +785,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.图书馆.geometry}
         material={materials.buildings_white}
-        position={[0.383717, 1.7892, 1.104931]}
+        position={[0.296387, 1.635895, 1.085304]}
         rotation={[0, 0.182966, 0]}
         scale={[0.184787, 0.987325, 0.193131]}
       />
-      <Label text="图书馆" position={[0.383717, 1.7892, 1.104931]} />
+      <Label text="图书馆" position={[0.296387, 1.635895, 1.085304]} />
       <mesh
         ref={mesh}
         name="安保楼"
@@ -831,11 +797,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.安保楼.geometry}
         material={materials.buildings_white}
-        position={[-0.698299, 0.019882, 1.149334]}
+        position={[-0.785614, -0.133423, 1.129707]}
         rotation={[0, 0.163631, 0]}
         scale={[0.231556, 0.095927, 0.219627]}
       />
-      <Label text="安保楼" position={[-0.698299, 0.019882, 1.149334]} />
+      <Label text="安保楼" position={[-0.785614, -0.133423, 1.129707]} />
       <mesh
         ref={mesh}
         name="天健垃圾场"
@@ -843,11 +809,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.天健垃圾场.geometry}
         material={materials.buildings_white}
-        position={[-0.770504, -0.076614, 3.026714]}
+        position={[-0.857819, -0.229919, 3.007118]}
         rotation={[0, 0.144839, 0]}
         scale={[0.059952, 0.048495, 0.099944]}
       />
-      <Label text="天健垃圾场" position={[-0.770504, -0.076614, 3.026714]} />
+      <Label text="天健垃圾场" position={[-0.857819, -0.229919, 3.007118]} />
       <mesh
         ref={mesh}
         name="第12实验大楼"
@@ -855,10 +821,10 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.第12实验大楼.geometry}
         material={materials.buildings_white}
-        position={[7.225803, 0.200607, 2.059856]}
+        position={[7.138489, 0.047302, 2.04023]}
         scale={0.006}
       />
-      <Label text="第12实验大楼" position={[7.225803, 0.200607, 2.059856]} />
+      <Label text="第12实验大楼" position={[7.138489, 0.047302, 2.04023]} />
       <mesh
         ref={mesh}
         name="第56实验大楼"
@@ -866,10 +832,10 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.第56实验大楼.geometry}
         material={materials.buildings_white}
-        position={[7.167576, 0.200607, 3.433575]}
+        position={[7.080261, 0.047302, 3.413918]}
         scale={0.006}
       />
-      <Label text="第56实验大楼" position={[7.167576, 0.200607, 3.433575]} />
+      <Label text="第56实验大楼" position={[7.080261, 0.047302, 3.413918]} />
       <mesh
         ref={mesh}
         name="水电楼"
@@ -877,11 +843,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.水电楼.geometry}
         material={materials.buildings_white}
-        position={[-2.23959, 0.063873, -0.68775]}
+        position={[-2.326904, -0.089417, -0.707382]}
         rotation={[0, 0.32016, 0]}
         scale={[0.077496, 0.117711, 0.097613]}
       />
-      <Label text="水电楼" position={[-2.23959, 0.063873, -0.68775]} />
+      <Label text="水电楼" position={[-2.326904, -0.089417, -0.707382]} />
       <mesh
         ref={mesh}
         name="办公楼"
@@ -889,11 +855,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.办公楼.geometry}
         material={materials.buildings_white}
-        position={[-0.347347, 0.063873, -1.625996]}
+        position={[-0.434692, -0.089417, -1.645638]}
         rotation={[Math.PI, -0.994599, Math.PI]}
         scale={[0.077496, 0.117711, 0.097613]}
       />
-      <Label text="办公楼" position={[-0.347347, 0.063873, -1.625996]} />
+      <Label text="办公楼" position={[-0.434692, -0.089417, -1.645638]} />
       <mesh
         ref={mesh}
         name="swimPool"
@@ -901,7 +867,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.swimPool.geometry}
         material={materials.buildings_white}
-        position={[-5.838223, -0.051727, -4.758564]}
+        position={[-5.925598, -0.205017, -4.778221]}
         rotation={[0, 0.49073, 0]}
         scale={0.006}
       />
@@ -912,10 +878,10 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.白求恩广场.geometry}
         material={materials.buildings_white}
-        position={[8.410313, -0.149109, 1.909985]}
+        position={[8.322998, -0.302399, 1.890327]}
         scale={0.003817}
       />
-      <Label text="白求恩广场" position={[8.410313, -0.149109, 1.909985]} />
+      <Label text="白求恩广场" position={[8.322998, -0.302399, 1.890327]} />
       <mesh
         ref={mesh}
         name="人才公寓1栋"
@@ -923,11 +889,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.人才公寓1栋.geometry}
         material={materials.buildings_white}
-        position={[10.284092, 1.129059, 4.805645]}
+        position={[10.196716, 0.975739, 4.785988]}
         rotation={[0, -0.181292, 0]}
         scale={0.006}
       />
-      <Label text="人才公寓1栋" position={[10.284092, 1.129059, 4.805645]} />
+      <Label text="人才公寓1栋" position={[10.196716, 0.975739, 4.785988]} />
       <mesh
         ref={mesh}
         name="智华楼"
@@ -935,11 +901,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.智华楼.geometry}
         material={materials.buildings_white}
-        position={[-2.520412, 0.126129, -0.205276]}
+        position={[-2.607788, -0.027191, -0.224907]}
         rotation={[Math.PI, -0.365149, Math.PI]}
         scale={[0.013699, 0.006, 0.004359]}
       />
-      <Label text="智华楼" position={[-2.520412, 0.126129, -0.205276]} />
+      <Label text="智华楼" position={[-2.607788, -0.027191, -0.224907]} />
       <mesh
         ref={mesh}
         name="智华经管楼"
@@ -947,11 +913,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.智华经管楼.geometry}
         material={materials.buildings_white}
-        position={[-2.137844, 0.126129, 0.203617]}
+        position={[-2.225159, -0.027191, 0.18399]}
         rotation={[Math.PI, -0.365149, Math.PI]}
         scale={[0.013699, 0.006, 0.004359]}
       />
-      <Label text="智华经管楼" position={[-2.137844, 0.126129, 0.203617]} />
+      <Label text="智华经管楼" position={[-2.225159, -0.027191, 0.18399]} />
       <mesh
         ref={mesh}
         name="智华科技楼"
@@ -959,11 +925,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.智华科技楼.geometry}
         material={materials.buildings_white}
-        position={[-1.66827, 0.680038, 0.777981]}
+        position={[-1.755554, 0.526733, 0.758369]}
         rotation={[0, 0.372273, 0]}
         scale={[0.153759, 0.429374, 0.160702]}
       />
-      <Label text="智华科技楼" position={[-1.66827, 0.680038, 0.777981]} />
+      <Label text="智华科技楼" position={[-1.755554, 0.526733, 0.758369]} />
       <mesh
         ref={mesh}
         name="休闲8栋"
@@ -971,11 +937,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲8栋.geometry}
         material={materials.buildings_white}
-        position={[-6.179653, 0.015945, -2.120991]}
+        position={[-6.266907, -0.13736, -2.140617]}
         rotation={[0, 0.192249, 0]}
         scale={[0.048936, 0.081543, 0.295018]}
       />
-      <Label text="休闲8栋" position={[-6.179653, 0.015945, -2.120991]} />
+      <Label text="休闲8栋" position={[-6.266907, -0.13736, -2.140617]} />
       <mesh
         ref={mesh}
         name="休闲7栋"
@@ -983,11 +949,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲7栋.geometry}
         material={materials.buildings_white}
-        position={[-5.944912, 0.013901, -2.162098]}
+        position={[-6.032288, -0.139404, -2.181725]}
         rotation={[0, 0.192249, 0]}
         scale={[0.048936, 0.081543, 0.295018]}
       />
-      <Label text="休闲7栋" position={[-5.944912, 0.013901, -2.162098]} />
+      <Label text="休闲7栋" position={[-6.032288, -0.139404, -2.181725]} />
       <mesh
         ref={mesh}
         name="休闲6栋"
@@ -995,11 +961,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲6栋.geometry}
         material={materials.buildings_white}
-        position={[-5.543789, 0.01442, -2.191319]}
+        position={[-5.631042, -0.138885, -2.21096]}
         rotation={[0, 0.192249, 0]}
         scale={[0.048926, 0.081543, 0.191625]}
       />
-      <Label text="休闲6栋" position={[-5.543789, 0.01442, -2.191319]} />
+      <Label text="休闲6栋" position={[-5.631042, -0.138885, -2.21096]} />
       <mesh
         ref={mesh}
         name="休闲9栋"
@@ -1007,11 +973,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲9栋.geometry}
         material={materials.buildings_white}
-        position={[-5.901333, 0.006531, -3.515949]}
+        position={[-5.988708, -0.14679, -3.535576]}
         rotation={[0, 0.192249, 0]}
         scale={[0.048936, 0.081543, 0.295018]}
       />
-      <Label text="休闲9栋" position={[-5.901333, 0.006531, -3.515949]} />
+      <Label text="休闲9栋" position={[-5.988708, -0.14679, -3.535576]} />
       <mesh
         ref={mesh}
         name="休闲10栋"
@@ -1019,11 +985,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲10栋.geometry}
         material={materials.buildings_white}
-        position={[-6.173672, 0.006531, -3.468281]}
+        position={[-6.260925, -0.14679, -3.487907]}
         rotation={[0, 0.192249, 0]}
         scale={[0.048936, 0.081543, 0.295018]}
       />
-      <Label text="休闲10栋" position={[-6.173672, 0.006531, -3.468281]} />
+      <Label text="休闲10栋" position={[-6.260925, -0.14679, -3.487907]} />
       <mesh
         ref={mesh}
         name="休闲11栋"
@@ -1031,11 +997,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲11栋.geometry}
         material={materials.buildings_white}
-        position={[-6.427212, 0.006531, -3.423878]}
+        position={[-6.514465, -0.14679, -3.443504]}
         rotation={[0, 0.192249, 0]}
         scale={[0.048936, 0.081543, 0.295018]}
       />
-      <Label text="休闲11栋" position={[-6.427212, 0.006531, -3.423878]} />
+      <Label text="休闲11栋" position={[-6.514465, -0.14679, -3.443504]} />
       <mesh
         ref={mesh}
         name="休闲12栋"
@@ -1043,11 +1009,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲12栋.geometry}
         material={materials.buildings_white}
-        position={[-6.707851, 0.006531, -3.374714]}
+        position={[-6.795227, -0.14679, -3.394341]}
         rotation={[0, 0.192249, 0]}
         scale={[0.048936, 0.081543, 0.295018]}
       />
-      <Label text="休闲12栋" position={[-6.707851, 0.006531, -3.374714]} />
+      <Label text="休闲12栋" position={[-6.795227, -0.14679, -3.394341]} />
       <mesh
         ref={mesh}
         name="休闲16栋"
@@ -1055,11 +1021,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲16栋.geometry}
         material={materials.buildings_white}
-        position={[-6.980434, 0.006531, -3.312458]}
+        position={[-7.06781, -0.14679, -3.332085]}
         rotation={[0, 0.08022, 0]}
         scale={[0.048936, 0.081543, 0.295018]}
       />
-      <Label text="休闲16栋" position={[-6.980434, 0.006531, -3.312458]} />
+      <Label text="休闲16栋" position={[-7.06781, -0.14679, -3.332085]} />
       <mesh
         ref={mesh}
         name="休闲17栋"
@@ -1067,11 +1033,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.休闲17栋.geometry}
         material={materials.buildings_white}
-        position={[-7.235928, 0.006531, -3.296772]}
+        position={[-7.323303, -0.14679, -3.316399]}
         rotation={[0, 0.08022, 0]}
         scale={[0.048936, 0.081543, 0.295018]}
       />
-      <Label text="休闲17栋" position={[-7.235928, 0.006531, -3.296772]} />
+      <Label text="休闲17栋" position={[-7.323303, -0.14679, -3.316399]} />
       <mesh
         ref={mesh}
         name="map_2osm_roads_primary"
@@ -1079,7 +1045,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.map_2osm_roads_primary.geometry}
         material={materials["roads_primary.001"]}
-        position={[1.36604, -0.171997, -0.462152]}
+        position={[1.278717, -0.325287, -0.481789]}
         rotation={[-Math.PI, 1.384667, -Math.PI]}
         scale={0.006}
       />
@@ -1090,7 +1056,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.map_2osm_roads_residential.geometry}
         material={materials["roads_residential.001"]}
-        position={[1.36604, -0.171997, -0.462152]}
+        position={[1.278717, -0.325287, -0.481789]}
         rotation={[-Math.PI, 1.384667, -Math.PI]}
         scale={0.006}
       />
@@ -1101,7 +1067,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.map_2osm_roads_secondary.geometry}
         material={materials["roads_secondary.001"]}
-        position={[1.36604, -0.171997, -0.462152]}
+        position={[1.278717, -0.325287, -0.481789]}
         rotation={[-Math.PI, 1.384667, -Math.PI]}
         scale={0.006}
       />
@@ -1112,7 +1078,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.map_2osm_roads_service.geometry}
         material={materials["roads_service.001"]}
-        position={[1.36604, -0.171997, -0.462152]}
+        position={[1.278717, -0.325287, -0.481789]}
         rotation={[-Math.PI, 1.384667, -Math.PI]}
         scale={0.006}
       />
@@ -1123,10 +1089,10 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.正气广场.geometry}
         material={materials["forest.001"]}
-        position={[-1.963772, -0.149368, -2.603413]}
+        position={[-2.051086, -0.302673, -2.623039]}
         scale={[0.532236, 0.020658, 0.532236]}
       />
-      <Label text="正气广场" position={[-1.963772, -0.149368, -2.603413]} />
+      <Label text="正气广场" position={[-2.051086, -0.302673, -2.623039]} />
       <mesh
         ref={mesh}
         name="Plane014"
@@ -1134,7 +1100,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Plane014.geometry}
         material={materials["forest.001"]}
-        position={[-1.727352, -0.166641, 1.315075]}
+        position={[-1.814697, -0.319946, 1.295448]}
         rotation={[0, 0.178779, 0]}
         scale={0.337944}
       />
@@ -1145,11 +1111,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.网球场.geometry}
         material={materials["Material.003"]}
-        position={[2.812366, -0.171524, 3.175762]}
+        position={[2.725037, -0.324829, 3.156105]}
         rotation={[0, 0.184818, 0]}
         scale={[0.472478, 0.299999, 0.220472]}
       />
-      <Label text="网球场" position={[2.812366, -0.171524, 3.175762]} />
+      <Label text="网球场" position={[2.725037, -0.324829, 3.156105]} />
       <mesh
         ref={mesh}
         name="basketballCount"
@@ -1157,7 +1123,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.basketballCount.geometry}
         material={materials["Material.003"]}
-        position={[3.098698, -0.172119, 3.55827]}
+        position={[3.011383, -0.325409, 3.538612]}
         rotation={[0, 0.184818, 0]}
         scale={[0.260118, 0.299999, 0.153067]}
       />
@@ -1168,11 +1134,11 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.篮球场.geometry}
         material={materials["Material.003"]}
-        position={[2.568226, -0.171524, 3.657452]}
+        position={[2.480927, -0.324829, 3.637794]}
         rotation={[0, 0.184818, 0]}
         scale={[0.260118, 0.299999, 0.153067]}
       />
-      <Label text="篮球场" position={[2.568226, -0.171524, 3.657452]} />
+      <Label text="篮球场" position={[2.480927, -0.324829, 3.637794]} />
       <mesh
         ref={mesh}
         name="basketballCourt"
@@ -1180,13 +1146,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.basketballCourt.geometry}
         material={materials["Material.003"]}
-        position={[2.551945, -0.173798, 3.660442]}
+        position={[2.46463, -0.327087, 3.640846]}
         rotation={[0, 0.184818, 0]}
         scale={[0.260118, 0.299999, 0.153067]}
       />
       <group
         name="休闲运动场"
-        position={[-6.943081, -0.166779, -4.177692]}
+        position={[-7.030457, -0.320099, -4.19735]}
         rotation={[Math.PI, -0.195411, Math.PI]}
         scale={0.005223}
       >
@@ -1225,7 +1191,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="运动场"
-        position={[7.334751, -0.165253, 4.498577]}
+        position={[7.247498, -0.318542, 4.478981]}
         rotation={[0, -0.173819, 0]}
         scale={0.005223}
       >
@@ -1264,7 +1230,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="sportsField"
-        position={[2.584507, -0.173798, 2.596203]}
+        position={[2.497192, -0.327087, 2.576546]}
         rotation={[0, 0.184529, 0]}
         scale={0.006}
       >
@@ -1303,7 +1269,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="sportsField001"
-        position={[-4.202175, -0.167953, -5.439655]}
+        position={[-4.289551, -0.321259, -5.459312]}
         rotation={[Math.PI, -0.00825, Math.PI]}
         scale={[0.005676, 0.005676, 0.00638]}
       >
@@ -1347,17 +1313,17 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.月亮湖.geometry}
         material={materials["water.001"]}
-        position={[8.997349, -0.171997, 2.480907]}
+        position={[8.909973, -0.325287, 2.46125]}
         scale={0.008238}
       />
-      <Label text="月亮湖" position={[8.997349, -0.171997, 2.480907]} />
+      <Label text="月亮湖" position={[8.909973, -0.325287, 2.46125]} />
       <mesh
         ref={mesh}
         name="grassFloor"
         receiveShadow
         geometry={nodes.grassFloor.geometry}
         material={materials.grass}
-        position={[1.36604, -0.173798, -0.462152]}
+        position={[1.278717, -0.327087, -0.481789]}
         scale={0.006}
       />
       <mesh
@@ -1366,12 +1332,12 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.grassFloor001.geometry}
         material={materials["water.001"]}
-        position={[1.381594, -0.176987, -0.456963]}
+        position={[1.294281, -0.330292, -0.476601]}
         scale={0.006}
       />
       <group
         name="TallTree001"
-        position={[2.675648, -0.172211, 0.553982]}
+        position={[2.588318, -0.3255, 0.53434]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={0}
       >
@@ -1394,7 +1360,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree001"
-        position={[1.442513, -0.172211, 0.49728]}
+        position={[1.355194, -0.3255, 0.477638]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={0}
       >
@@ -1422,13 +1388,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash001.geometry}
         material={materials.trees}
-        position={[1.540579, -0.172211, 0.365261]}
+        position={[1.453247, -0.3255, 0.345634]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={0}
       />
       <group
         name="ShortTree002"
-        position={[1.782024, -0.172211, 0.326626]}
+        position={[1.694702, -0.3255, 0.306999]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={0}
       >
@@ -1451,7 +1417,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree091"
-        position={[-0.697994, -0.061462, -1.65395]}
+        position={[-0.785339, -0.214752, -1.673576]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={0}
       >
@@ -1474,7 +1440,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="TallTree095"
-        position={[-1.231289, -0.061462, -1.696003]}
+        position={[-1.318604, -0.214752, -1.71563]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={0}
       >
@@ -1502,7 +1468,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash093.geometry}
         material={materials.trees}
-        position={[-1.366238, -0.061478, -1.927784]}
+        position={[-1.453583, -0.214752, -1.947411]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={0}
       />
@@ -1513,7 +1479,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash094.geometry}
         material={materials.trees}
-        position={[-1.308254, -0.061462, -2.103291]}
+        position={[-1.39563, -0.214752, -2.122932]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={0}
       />
@@ -1524,7 +1490,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bridge.geometry}
         material={materials["Material.002"]}
-        position={[-5.195889, -0.167023, -1.508854]}
+        position={[-5.283264, -0.320313, -1.528488]}
         rotation={[0, 0.409261, 0]}
         scale={[0.07617, 0.004885, 0.331629]}
       />
@@ -1535,7 +1501,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bridge001.geometry}
         material={materials["Material.002"]}
-        position={[-4.897915, -0.173401, -2.06348]}
+        position={[-4.985291, -0.326691, -2.083122]}
         rotation={[-Math.PI, 1.412763, -Math.PI]}
         scale={[0.073471, 0.004885, 0.272214]}
       />
@@ -1546,13 +1512,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash.geometry}
         material={materials.trees}
-        position={[-7.017666, -0.178284, -4.74184]}
+        position={[-7.105042, -0.331604, -4.761436]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
       <group
         name="TallTree"
-        position={[-7.383999, -0.181793, -4.637653]}
+        position={[-7.471375, -0.335083, -4.65731]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1575,7 +1541,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree"
-        position={[-7.730679, -0.185333, -4.33559]}
+        position={[-7.817932, -0.338623, -4.355247]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1598,7 +1564,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree003"
-        position={[2.06142, -0.185333, -0.318619]}
+        position={[1.974091, -0.338623, -0.338257]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1621,7 +1587,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree004"
-        position={[2.731083, -0.185333, -0.167713]}
+        position={[2.643768, -0.338623, -0.187347]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1644,7 +1610,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree006"
-        position={[3.080051, -0.185333, 0.294445]}
+        position={[2.992737, -0.338623, 0.274803]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1667,7 +1633,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree007"
-        position={[2.344379, -0.185333, 0.822628]}
+        position={[2.25705, -0.338623, 0.802986]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1690,7 +1656,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree008"
-        position={[3.768559, -0.185333, 0.426495]}
+        position={[3.681244, -0.338623, 0.406853]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1713,7 +1679,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree009"
-        position={[3.070621, -0.185333, 0.907513]}
+        position={[2.983307, -0.338623, 0.887886]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1736,7 +1702,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="TallTree002"
-        position={[1.893085, -0.181793, 0.416805]}
+        position={[1.805756, -0.335083, 0.397163]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1759,7 +1725,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="TallTree003"
-        position={[2.770237, -0.181793, 0.62431]}
+        position={[2.682922, -0.335083, 0.604683]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1782,7 +1748,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="TallTree004"
-        position={[3.619083, -0.181793, -0.045345]}
+        position={[3.531769, -0.335083, -0.064972]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1810,7 +1776,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash002.geometry}
         material={materials.trees}
-        position={[2.387653, -0.178284, 0.212658]}
+        position={[2.300323, -0.331604, 0.193031]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -1821,7 +1787,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash003.geometry}
         material={materials.trees}
-        position={[2.415943, -0.178284, 0.439022]}
+        position={[2.328613, -0.331604, 0.419395]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -1832,7 +1798,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash004.geometry}
         material={materials.trees}
-        position={[2.727192, -0.178284, 0.240963]}
+        position={[2.639862, -0.331604, 0.221336]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -1843,7 +1809,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash005.geometry}
         material={materials.trees}
-        position={[3.387424, -0.178284, 0.325848]}
+        position={[3.30011, -0.331604, 0.306221]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -1854,7 +1820,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash006.geometry}
         material={materials.trees}
-        position={[3.321384, -0.178284, 0.684246]}
+        position={[3.23407, -0.331604, 0.664619]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -1865,7 +1831,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash007.geometry}
         material={materials.trees}
-        position={[2.632877, -0.178284, 1.108685]}
+        position={[2.545563, -0.331604, 1.089058]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -1876,7 +1842,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash008.geometry}
         material={materials.trees}
-        position={[1.831181, -0.178284, 0.87289]}
+        position={[1.743866, -0.331604, 0.853249]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -1887,7 +1853,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash009.geometry}
         material={materials.trees}
-        position={[1.934933, -0.178284, 0.071194]}
+        position={[1.847595, -0.331604, 0.051552]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -1898,7 +1864,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash010.geometry}
         material={materials.trees}
-        position={[2.444248, -0.178284, -0.372105]}
+        position={[2.356934, -0.331604, -0.391739]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -1909,13 +1875,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash011.geometry}
         material={materials.trees}
-        position={[3.208225, -0.178284, -0.202328]}
+        position={[3.12088, -0.331604, -0.22197]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
       <group
         name="ShortTree005"
-        position={[1.299813, -0.185333, 0.196537]}
+        position={[1.212494, -0.338623, 0.17691]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1938,7 +1904,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree010"
-        position={[0.714573, -0.185333, -0.042355]}
+        position={[0.627258, -0.338623, -0.061996]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -1966,7 +1932,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash012.geometry}
         material={materials.trees}
-        position={[0.715794, -0.178284, 0.371288]}
+        position={[0.628479, -0.331604, 0.351646]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -1977,7 +1943,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash013.geometry}
         material={materials.trees}
-        position={[0.4659, -0.178284, 0.031139]}
+        position={[0.378601, -0.331604, 0.011497]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -1988,13 +1954,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash014.geometry}
         material={materials.trees}
-        position={[0.500309, -0.178284, -0.608274]}
+        position={[0.412994, -0.331604, -0.627907]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
       <group
         name="TallTree005"
-        position={[0.662281, -0.181793, 0.592709]}
+        position={[0.574951, -0.335083, 0.573067]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2017,7 +1983,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="TallTree006"
-        position={[0.561604, -0.181793, -0.834904]}
+        position={[0.474274, -0.335083, -0.854538]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2040,7 +2006,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="TallTree007"
-        position={[2.033756, -0.181793, -0.764812]}
+        position={[1.946442, -0.335083, -0.784447]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2063,7 +2029,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree012"
-        position={[2.379398, -0.185333, -0.885124]}
+        position={[2.292084, -0.338623, -0.904762]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2086,7 +2052,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree013"
-        position={[5.94669, -0.188324, 4.092449]}
+        position={[5.859406, -0.341614, 4.072792]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2109,7 +2075,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree014"
-        position={[6.15012, -0.193176, 3.617901]}
+        position={[6.062836, -0.346436, 3.598244]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2137,13 +2103,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash015.geometry}
         material={materials.trees}
-        position={[6.245945, -0.191193, 3.989788]}
+        position={[6.15863, -0.344513, 3.970192]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
       <group
         name="ShortTree015"
-        position={[9.775181, -0.138046, 0.831936]}
+        position={[9.687805, -0.291351, 0.812294]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2166,7 +2132,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree016"
-        position={[9.207188, -0.141052, 0.668667]}
+        position={[9.119812, -0.294342, 0.64904]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2189,7 +2155,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree017"
-        position={[8.637241, -0.171265, 3.26646]}
+        position={[8.549927, -0.324554, 3.246803]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2212,7 +2178,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="TallTree008"
-        position={[8.653599, -0.135941, 0.81152]}
+        position={[8.566345, -0.289215, 0.791878]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2240,7 +2206,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash016.geometry}
         material={materials.trees}
-        position={[9.485508, -0.131271, 0.985455]}
+        position={[9.398132, -0.284576, 0.965828]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -2251,13 +2217,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash017.geometry}
         material={materials.trees}
-        position={[9.002232, -0.131729, 0.634426]}
+        position={[8.914917, -0.285034, 0.614784]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
       <group
         name="ShortTree018"
-        position={[-1.546597, -0.206543, -1.337376]}
+        position={[-1.633911, -0.359833, -1.35701]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2280,7 +2246,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree019"
-        position={[-1.782894, -0.211792, -0.993481]}
+        position={[-1.870239, -0.365082, -1.013115]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2303,7 +2269,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree020"
-        position={[-0.730862, -0.198105, -1.531971]}
+        position={[-0.818146, -0.35141, -1.551613]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2331,7 +2297,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash018.geometry}
         material={materials.trees}
-        position={[-0.57571, -0.19014, -1.261463]}
+        position={[-0.663025, -0.343445, -1.281097]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -2342,13 +2308,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash019.geometry}
         material={materials.trees}
-        position={[-1.54858, -0.199493, -1.103024]}
+        position={[-1.635864, -0.352753, -1.122665]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
       <group
         name="ShortTree021"
-        position={[-4.345303, -0.211548, -1.994099]}
+        position={[-4.432556, -0.364868, -2.013741]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2371,7 +2337,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree022"
-        position={[-5.095181, -0.209274, -2.845417]}
+        position={[-5.182556, -0.362579, -2.865044]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2394,7 +2360,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree023"
-        position={[-3.653286, -0.191711, -3.459919]}
+        position={[-3.740662, -0.345001, -3.479576]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2422,13 +2388,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash020.geometry}
         material={materials.trees}
-        position={[-5.26791, -0.217041, -2.112553]}
+        position={[-5.355286, -0.370392, -2.132179]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
       <group
         name="TallTree009"
-        position={[-4.384731, -0.188629, -4.205219]}
+        position={[-4.472107, -0.341949, -4.224876]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2456,13 +2422,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash021.geometry}
         material={materials.trees}
-        position={[-4.253689, -0.18512, -2.905415]}
+        position={[-4.341003, -0.33844, -2.925041]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
       <group
         name="ShortTree024"
-        position={[-1.657864, -0.204712, -0.483547]}
+        position={[-1.745209, -0.358002, -0.503181]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2485,7 +2451,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree025"
-        position={[-1.506863, -0.208359, 0.015133]}
+        position={[-1.594147, -0.361664, -0.004509]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2508,7 +2474,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="TallTree010"
-        position={[-1.284023, -0.213043, -0.28928]}
+        position={[-1.371338, -0.366302, -0.308914]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2536,7 +2502,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash022.geometry}
         material={materials.trees}
-        position={[-1.418362, -0.199036, -0.791643]}
+        position={[-1.505676, -0.352325, -0.811279]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -2547,13 +2513,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash023.geometry}
         material={materials.trees}
-        position={[-1.782436, -0.207932, -0.178913]}
+        position={[-1.869751, -0.361237, -0.198547]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
       <group
         name="ShortTree026"
-        position={[-3.92532, -0.210403, -1.765308]}
+        position={[-4.012634, -0.363708, -1.784935]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2576,7 +2542,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree027"
-        position={[7.234165, -0.191711, 0.596798]}
+        position={[7.14679, -0.345001, 0.577156]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2599,7 +2565,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="TallTree011"
-        position={[7.691563, -0.135941, 0.715313]}
+        position={[7.604248, -0.289215, 0.695686]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2622,7 +2588,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree028"
-        position={[-4.132473, -0.185333, 1.343853]}
+        position={[-4.219788, -0.338623, 1.324196]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2645,7 +2611,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree029"
-        position={[-2.015896, -0.185333, 2.556072]}
+        position={[-2.10321, -0.338623, 2.536415]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2668,7 +2634,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="TallTree012"
-        position={[-3.054653, -0.181793, 2.080791]}
+        position={[-3.142029, -0.335083, 2.061165]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2691,7 +2657,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="TallTree013"
-        position={[5.491734, -0.181793, 4.213421]}
+        position={[5.404419, -0.335083, 4.193764]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2714,7 +2680,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree030"
-        position={[3.750095, -0.185333, 3.296856]}
+        position={[3.662781, -0.338623, 3.277199]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2737,7 +2703,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree031"
-        position={[4.61594, -0.185333, 2.286663]}
+        position={[4.528656, -0.338623, 2.267006]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2765,7 +2731,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash024.geometry}
         material={materials.trees}
-        position={[4.094242, -0.178284, 3.050945]}
+        position={[4.006927, -0.331604, 3.031349]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -2776,7 +2742,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash025.geometry}
         material={materials.trees}
-        position={[4.719578, -0.178284, 2.618023]}
+        position={[4.632263, -0.331604, 2.598366]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -2787,7 +2753,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash026.geometry}
         material={materials.trees}
-        position={[5.008213, -0.178284, 2.169048]}
+        position={[4.920898, -0.331604, 2.149422]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -2798,7 +2764,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash027.geometry}
         material={materials.trees}
-        position={[4.847874, -0.178284, 1.720074]}
+        position={[4.760529, -0.331604, 1.700447]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -2809,7 +2775,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash028.geometry}
         material={materials.trees}
-        position={[6.082493, -0.178284, 1.559734]}
+        position={[5.995209, -0.331604, 1.540108]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
@@ -2820,13 +2786,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bash029.geometry}
         material={materials.trees}
-        position={[4.302677, -0.178284, 2.826458]}
+        position={[4.215363, -0.331604, 2.806801]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.037166}
       />
       <group
         name="ShortTree032"
-        position={[6.315647, -0.185333, 1.052013]}
+        position={[6.228302, -0.338623, 1.032387]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2849,7 +2815,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="ShortTree033"
-        position={[5.513889, -0.185333, 0.522869]}
+        position={[5.426575, -0.338623, 0.503242]}
         rotation={[0, Math.PI / 2, 0]}
         scale={0.006}
       >
@@ -2870,6 +2836,29 @@ export default function Model({ ...props }) {
           material={materials.trunk}
         />
       </group>
+      <group
+        name="cherry"
+        position={[5.224792, 0.149536, 2.799538]}
+        rotation={[-0.093855, -0.04305, 0.428822]}
+        scale={0.051544}
+      >
+        <mesh
+          ref={mesh}
+          name="Cube017"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube017.geometry}
+          material={materials.leaf}
+        />
+        <mesh
+          ref={mesh}
+          name="Cube017_1"
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube017_1.geometry}
+          material={materials["Material.004"]}
+        />
+      </group>
       <mesh
         ref={mesh}
         name="Bench03_LP001"
@@ -2877,7 +2866,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bench03_LP001.geometry}
         material={materials["Bench03.001"]}
-        position={[-6.47665, -0.173798, -2.912098]}
+        position={[-6.563904, -0.327087, -2.931725]}
         rotation={[0, -1.343141, 0]}
         scale={0.032386}
       />
@@ -2888,7 +2877,7 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bench03_LP002.geometry}
         material={materials["Bench03.001"]}
-        position={[-6.443569, -0.173798, -2.769764]}
+        position={[-6.530945, -0.327087, -2.789391]}
         rotation={[0, -1.343141, 0]}
         scale={0.032386}
       />
@@ -2899,13 +2888,13 @@ export default function Model({ ...props }) {
         receiveShadow
         geometry={nodes.Bench04_LP.geometry}
         material={materials.Bench04}
-        position={[-6.668789, -0.173798, -2.719868]}
+        position={[-6.756165, -0.327087, -2.739494]}
         rotation={[0, -1.346857, 0]}
         scale={0.036044}
       />
       <group
         name="car002"
-        position={[0.112629, -0.164658, -0.564867]}
+        position={[0.025299, -0.317963, -0.584503]}
         rotation={[0.000001, -1.39316, -Math.PI / 2]}
         scale={0.118394}
       >
@@ -3000,7 +2989,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="car001"
-        position={[5.644505, -0.164658, 2.080822]}
+        position={[5.55722, -0.317963, 2.061195]}
         rotation={[0.000001, -1.39316, -Math.PI / 2]}
         scale={0.118394}
       >
@@ -3095,7 +3084,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="car"
-        position={[-1.29855, -0.138382, -1.897434]}
+        position={[-1.385864, -0.291687, -1.917076]}
         rotation={[0, -0.408477, 0]}
         scale={0.085189}
       >
@@ -3118,7 +3107,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="lamp2003"
-        position={[-0.15263, -0.173264, -0.79562]}
+        position={[-0.23999, -0.326569, -0.815254]}
         scale={0.057755}
       >
         <mesh
@@ -3140,7 +3129,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="lamp2001"
-        position={[2.651875, -0.173264, 2.907574]}
+        position={[2.564545, -0.326569, 2.887917]}
         scale={0.057755}
       >
         <mesh
@@ -3162,7 +3151,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="lamp2002"
-        position={[-6.520351, -0.173264, -2.469471]}
+        position={[-6.607605, -0.326569, -2.489098]}
         scale={0.057755}
       >
         <mesh
@@ -3184,7 +3173,7 @@ export default function Model({ ...props }) {
       </group>
       <group
         name="lamp2004"
-        position={[-5.236172, -0.173264, -1.911518]}
+        position={[-5.323425, -0.326569, -1.931145]}
         scale={0.057755}
       >
         <mesh
@@ -3204,6 +3193,192 @@ export default function Model({ ...props }) {
           material={materials.lampu}
         />
       </group>
+      <group
+        name="balloon"
+        position={[7.044678, 2.710541, 7.295326]}
+        scale={0.179999}
+      >
+        <mesh
+          ref={mesh}
+          name="114-0-114002"
+          castShadow
+          receiveShadow
+          geometry={nodes["114-0-114002"].geometry}
+          material={materials["114-0-114"]}
+        />
+        <mesh
+          ref={mesh}
+          name="114-0-114002_1"
+          castShadow
+          receiveShadow
+          geometry={nodes["114-0-114002_1"].geometry}
+          material={materials["124-0-124"]}
+        />
+        <mesh
+          ref={mesh}
+          name="114-0-114002_2"
+          castShadow
+          receiveShadow
+          geometry={nodes["114-0-114002_2"].geometry}
+          material={materials["119-1-119"]}
+        />
+        <mesh
+          ref={mesh}
+          name="114-0-114002_3"
+          castShadow
+          receiveShadow
+          geometry={nodes["114-0-114002_3"].geometry}
+          material={materials["120-0-120"]}
+        />
+        <mesh
+          ref={mesh}
+          name="114-0-114002_4"
+          castShadow
+          receiveShadow
+          geometry={nodes["114-0-114002_4"].geometry}
+          material={materials["120-1-120"]}
+        />
+        <mesh
+          ref={mesh}
+          name="114-0-114002_5"
+          castShadow
+          receiveShadow
+          geometry={nodes["114-0-114002_5"].geometry}
+          material={materials["122-0-122"]}
+        />
+        <mesh
+          ref={mesh}
+          name="114-0-114002_6"
+          castShadow
+          receiveShadow
+          geometry={nodes["114-0-114002_6"].geometry}
+          material={materials["122-1-122"]}
+        />
+        <mesh
+          ref={mesh}
+          name="114-0-114002_7"
+          castShadow
+          receiveShadow
+          geometry={nodes["114-0-114002_7"].geometry}
+          material={materials["123-0-123"]}
+        />
+        <mesh
+          ref={mesh}
+          name="114-0-114002_8"
+          castShadow
+          receiveShadow
+          geometry={nodes["114-0-114002_8"].geometry}
+          material={materials["123-1-123"]}
+        />
+        <mesh
+          ref={mesh}
+          name="114-0-114002_9"
+          castShadow
+          receiveShadow
+          geometry={nodes["114-0-114002_9"].geometry}
+          material={materials["127-1-127"]}
+        />
+        <mesh
+          ref={mesh}
+          name="114-0-114002_10"
+          castShadow
+          receiveShadow
+          geometry={nodes["114-0-114002_10"].geometry}
+          material={materials["132-0-132"]}
+        />
+        <mesh
+          ref={mesh}
+          name="114-0-114002_11"
+          castShadow
+          receiveShadow
+          geometry={nodes["114-0-114002_11"].geometry}
+          material={materials["132-1-132"]}
+        />
+      </group>
+      <mesh
+        ref={mesh}
+        name="cloud"
+        castShadow
+        receiveShadow
+        geometry={nodes.cloud.geometry}
+        material={materials["115-0-115"]}
+        position={[-3.857605, 3.31192, 5.041847]}
+        rotation={[0, -0.554026, 0]}
+        scale={0.5569}
+      />
+      <mesh
+        ref={mesh}
+        name="cloud001"
+        castShadow
+        receiveShadow
+        geometry={nodes.cloud001.geometry}
+        material={materials["115-0-115"]}
+        position={[-3.801514, 5.885895, -9.072227]}
+        scale={0.57136}
+      />
+      <group
+        name="seagull"
+        position={[-0.915436, 5.175079, -5.223412]}
+        scale={0.978592}
+      >
+        <mesh
+          ref={mesh}
+          name="126-0-126-126-1-126001"
+          castShadow
+          receiveShadow
+          geometry={nodes["126-0-126-126-1-126001"].geometry}
+          material={materials["126-1-126"]}
+        />
+        <mesh
+          ref={mesh}
+          name="126-0-126-126-1-126001_1"
+          castShadow
+          receiveShadow
+          geometry={nodes["126-0-126-126-1-126001_1"].geometry}
+          material={materials["134-0-134"]}
+        />
+      </group>
+      <mesh
+        ref={mesh}
+        name="seagull001"
+        castShadow
+        receiveShadow
+        geometry={nodes.seagull001.geometry}
+        material={materials["115-0-115"]}
+        position={[13.741516, 5.214752, 6.721107]}
+        scale={0.978592}
+      />
+      <mesh
+        ref={mesh}
+        name="seagull002"
+        castShadow
+        receiveShadow
+        geometry={nodes.seagull002.geometry}
+        material={materials["115-0-115"]}
+        position={[1.202972, 5.225433, -0.644608]}
+        scale={0.978592}
+      />
+      <mesh
+        ref={mesh}
+        name="cloud002"
+        castShadow
+        receiveShadow
+        geometry={nodes.cloud002.geometry}
+        material={materials["115-0-115"]}
+        position={[14.28949, 1.325226, 1.18531]}
+        scale={0.57136}
+      />
+      <mesh
+        ref={mesh}
+        name="ladder"
+        castShadow
+        receiveShadow
+        geometry={nodes.ladder.geometry}
+        material={materials.ladder}
+        position={[-3.735779, 2.930573, 3.647072]}
+        rotation={[-Math.PI, 0.155154, -Math.PI / 2]}
+        scale={[-0.015017, -0.124003, -0.004624]}
+      />
     </group>
   );
 }
