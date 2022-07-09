@@ -1,11 +1,15 @@
-import { useTrackedStore } from '../store';
-import './style.css'
-
+import { useProgress } from "@react-three/drei";
+import { useState } from "react";
+import "./style.css";
 
 export default function Loading() {
-  const {loaded} = useTrackedStore()
+  const [enter, setEnter] = useState(false);
+  const { active, progress } = useProgress();
   return (
-    <section className="loadingContainer" style={{display:loaded?'none':'block'}}>
+    <section
+      className="loadingContainer"
+      style={{ display: enter ? "none" : "block" }}
+    >
       <div className="loadingSVG">
         <svg className="svgOutline svgLoading" viewBox="0 0 33 33">
           <polygon
@@ -36,8 +40,14 @@ export default function Loading() {
         </svg>
       </div>
       <div className="loadingText">
-        <h1 className="loadingPercent">67%</h1>
-        <p className="LG">LOADING...</p>
+        <h1 className="loadingPercent">{Math.floor(progress)}%</h1>
+        {active ? (
+          <p className="LG">加载中...</p>
+        ) : (
+          <p className="LG" onClick={() => setEnter(true)}>
+            进入
+          </p>
+        )}
       </div>
       <p className="Tips">
         Use a powerful PC<s>(3090 above)</s> for a better experience

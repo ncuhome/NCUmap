@@ -11,6 +11,8 @@ import {
   BakeShadows,
   AdaptiveDpr,
   AdaptiveEvents,
+  Loader,
+  useProgress,
 } from "@react-three/drei";
 import { DirectionalLight, Vector3 } from "three";
 import {
@@ -34,7 +36,8 @@ export default function App() {
   return (
     <>
       <Loading />
-      <Suspense fallback={null}>
+      {/* <Loader/> */}
+      <Suspense fallback={<span>loading</span>}>
         <Canvas
           gl={{
             preserveDrawingBuffer: true,
@@ -71,7 +74,6 @@ export default function App() {
         </Canvas>
       </Suspense>
       <ZoomButton />
-
     </>
   );
 
