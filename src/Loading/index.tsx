@@ -1,13 +1,14 @@
-import { useProgress } from "@react-three/drei";
+import { useDetectGPU, useProgress } from "@react-three/drei";
 import { useState } from "react";
 import "./style.css";
 
 export default function Loading() {
   const [enter, setEnter] = useState(false);
   const { active, progress } = useProgress();
+  const GPUTier = useDetectGPU();
   return (
     <section
-      className="loadingContainer"
+      className={GPUTier.isMobile ? "loadingContainer mobile" : "loadingContainer"}
       style={{ display: enter ? "none" : "block" }}
     >
       <div className="loadingSVG">
