@@ -1,0 +1,130 @@
+.loadingContainer {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    z-index: 9;
+}
+
+.loadingContainer .loadingSVG {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10vw;
+}
+
+.loadingContainer .loadingSVG svg {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loadingContainer .loadingSVG svg.svgInner .svgTriangle {
+    stroke-dasharray: 17;
+    animation: dash 3.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+}
+
+.loadingContainer .loadingSVG svg.svgOutline .svgTriangle {
+    stroke: rgba(255, 255, 255, 0.2);
+    fill: none;
+    stroke-width: 1.4px;
+}
+
+.loadingContainer .loadingSVG svg.svgFill {
+    opacity: 0;
+}
+
+.loadingContainer .loadingText {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 233px;
+    text-align: center;
+}
+
+.loadingContainer .loadingText .LG {
+    margin-top: 50px;
+    position: relative;
+    font-size: 20px;
+    letter-spacing: 3px;
+    opacity: 0;
+    text-transform: uppercase;
+    animation: fadeIn 2.5s forwards;
+}
+
+.loadingContainer .loadingText .LG::before,
+.loadingContainer .loadingText .LG::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    opacity: 0;
+    height: 100%;
+    background: white;
+}
+
+.loadingContainer .loadingText .LG::before {
+    left: 50%;
+    animation: slideLeft 1s forwards;
+}
+
+.loadingContainer .loadingText .LG::after {
+    right: 50%;
+    animation: slideRight 1s forwards;
+}
+
+.loadingContainer .Tips {
+    font-size: 15px;
+    margin-top: 35px;
+    opacity: 0;
+    bottom: 5%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation: fadeInTips 1s forwards;
+}
+
+.loadingContainer.mobile .loadingSVG {
+    width: 30vw;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTips {
+    to {
+        opacity: 0.6;
+    }
+}
+
+@keyframes slideLeft {
+    to {
+        left: -2%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    to {
+        right: -2%;
+        opacity: 1;
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 136;
+    }
+}

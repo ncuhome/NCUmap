@@ -19,10 +19,11 @@ import {
   HemisphereLightHelper,
 } from "three";
 
-import Map from "./Map";
 import { useTrackedStore } from "./store";
-import ZoomButton from "./ZoomButton";
 import { hasChinese } from "../scripts/regexp";
+import ZoomButton from "./ZoomButton";
+import Map from "./Map";
+import Loading from "./Loading";
 
 interface IProps {
   children: ReactNode;
@@ -32,7 +33,8 @@ export default function App() {
   const { isZoomed } = useTrackedStore();
   return (
     <>
-      <Suspense fallback={<span>loading...</span>}>
+      <Loading />
+      <Suspense fallback={null}>
         <Canvas
           gl={{
             preserveDrawingBuffer: true,
@@ -69,6 +71,7 @@ export default function App() {
         </Canvas>
       </Suspense>
       <ZoomButton />
+
     </>
   );
 
