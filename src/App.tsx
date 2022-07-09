@@ -32,18 +32,18 @@ export default function App() {
   const { isZoomed } = useTrackedStore();
   return (
     <>
-      <Canvas
-        gl={{
-          preserveDrawingBuffer: true,
-        }}
-        shadows
-        dpr={[1, 1.5]}
-        camera={{
-          position: new Vector3(14, 7, -8),
-          fov: 40,
-        }}
-      >
-        <Suspense fallback={null}>
+      <Suspense fallback={<span>loading...</span>}>
+        <Canvas
+          gl={{
+            preserveDrawingBuffer: true,
+          }}
+          shadows
+          dpr={[1, 1.5]}
+          camera={{
+            position: new Vector3(14, 7, -8),
+            fov: 40,
+          }}
+        >
           <AdaptiveDpr pixelated />
           <AdaptiveEvents />
           <Bounds damping={3} margin={isZoomed ? 1.2 : 0.5}>
@@ -66,8 +66,8 @@ export default function App() {
             // onChange={() => state.setCameraChanged(true)}
           />
           <AxisHelper />
-        </Suspense>
-      </Canvas>
+        </Canvas>
+      </Suspense>
       <ZoomButton />
     </>
   );
