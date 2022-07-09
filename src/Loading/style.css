@@ -6,6 +6,7 @@
     color: #ffffff;
     text-align: center;
     z-index: 9;
+    transition: opacity 0.5s ;
 }
 
 .loadingContainer .loadingSVG {

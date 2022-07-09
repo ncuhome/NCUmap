@@ -1,15 +1,25 @@
 import { useDetectGPU, useProgress } from "@react-three/drei";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./style.css";
 
 export default function Loading() {
   const [enter, setEnter] = useState(false);
   const { active, progress } = useProgress();
+  const ref = useRef<HTMLDivElement>(null!);
   const GPUTier = useDetectGPU();
+  useEffect(() => {
+    enter &&
+      setTimeout(() => {
+        ref.current.style.display = "none";
+      }, 500);
+  }, [enter]);
   return (
     <section
-      className={GPUTier.isMobile ? "loadingContainer mobile" : "loadingContainer"}
-      style={{ display: enter ? "none" : "block" }}
+      ref={ref}
+      className={
+        GPUTier.isMobile ? "loadingContainer mobile" : "loadingContainer"
+      }
+      style={{ opacity: enter ? 0 : 1 }}
     >
       <div className="loadingSVG">
         <svg className="svgOutline svgLoading" viewBox="0 0 33 33">
@@ -17,7 +27,7 @@ export default function Loading() {
             className="svgTriangle"
             fill="none"
             stroke="#fff"
-            stroke-width="1"
+            strokeWidth="1"
             points="16,1 32,32 1,32"
           />
         </svg>
@@ -26,7 +36,7 @@ export default function Loading() {
             className="svgTriangle"
             fill="none"
             stroke="#fff"
-            stroke-width="1"
+            strokeWidth="1"
             points="16,1 32,32 1,32"
           />
         </svg>
@@ -35,7 +45,7 @@ export default function Loading() {
             className="svgTriangle"
             fill="none"
             stroke="#fff"
-            stroke-width="1.1"
+            strokeWidth="1.1"
             points="16,1 32,32 1,32"
           />
         </svg>
