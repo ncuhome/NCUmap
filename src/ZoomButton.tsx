@@ -10,8 +10,8 @@ export default function ZoomButton() {
         display: "flex",
         width: "100vw",
         justifyContent: "center",
-        bottom: 10,
-        transform: isZoomed ? "" : "translate(0,50px)",
+        bottom: '5vh',
+        transform: isZoomed ? "" : "translate(0,10vh)",
         transition: "all 0.5s ease-in-out",
       }}
     >

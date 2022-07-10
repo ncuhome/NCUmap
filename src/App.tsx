@@ -66,7 +66,7 @@ export default function App() {
             makeDefault
             zoomSpeed={2}
             minDistance={1}
-            maxDistance={12}
+            maxDistance={20}
             maxPolarAngle={(Math.PI * 1.4) / 3}
             // onChange={() => state.setCameraChanged(true)}
           />
