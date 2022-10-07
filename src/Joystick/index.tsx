@@ -1,5 +1,5 @@
 import { useFrame } from "@react-three/fiber";
-const JoyStick = require("./joyStick.js");
+import JoyStick from "./joyStick.js" ;
 
 export default function index({ target }: any) {
   // 轮盘控制器
