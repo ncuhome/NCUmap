@@ -1,5 +1,5 @@
 import { ReactNode, Suspense, useEffect, useRef } from "react";
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
   OrbitControls,
   Stats,
@@ -13,8 +13,10 @@ import {
   AdaptiveEvents,
   Loader,
   useProgress,
+  PerspectiveCamera,
+  useHelper,
 } from "@react-three/drei";
-import { DirectionalLight, Vector3 } from "three";
+import { CameraHelper, DirectionalLight, Vector3 } from "three";
 import {
   DirectionalLightHelper,
   HemisphereLight,
@@ -26,6 +28,7 @@ import { hasChinese } from "../scripts/regexp";
 import ZoomButton from "./ZoomButton";
 import Map from "./Map";
 import Loading from "./Loading";
+import Agent from "./Agent";
 
 interface IProps {
   children: ReactNode;
@@ -44,13 +47,11 @@ export default function App() {
           }}
           shadows
           dpr={[1, 1.5]}
-          camera={{
-            position: new Vector3(14, 7, -8),
-            fov: 40,
-          }}
         >
           <AdaptiveDpr pixelated />
           <AdaptiveEvents />
+          <OverCamera />
+          <Agent />
           <Bounds damping={3} margin={isZoomed ? 1.2 : 0.5}>
             <SelectZoom>
               <Map />
@@ -61,21 +62,26 @@ export default function App() {
           <Sky />
           <Stats />
           <OrbitControls
-            autoRotate
-            autoRotateSpeed={0.3}
-            makeDefault
-            zoomSpeed={2}
-            minDistance={1}
-            maxDistance={20}
-            maxPolarAngle={(Math.PI * 1.4) / 3}
-            // onChange={() => state.setCameraChanged(true)}
+          // autoRotate
+          // autoRotateSpeed={0.3}
+          // makeDefault
+          // zoomSpeed={2}
+          // minDistance={1}
+          // maxDistance={20}
+          // maxPolarAngle={(Math.PI * 1.4) / 3}
+          // onChange={() => state.setCameraChanged(true)}
           />
+          <PerspectiveCamera />
           <AxisHelper />
         </Canvas>
+        <ZoomButton />
       </Suspense>
-      <ZoomButton />
     </>
   );
+
+  function OverCamera() {
+    return <PerspectiveCamera fov={40} position={[14, 7, -8]} makeDefault />;
+  }
 
   function Lights() {
     const sunColor = "#fffdf0";
@@ -133,12 +139,12 @@ export default function App() {
     const { isZoomed, setZoomed } = useTrackedStore();
     const api = useBounds();
     const { scene } = useThree();
-    useEffect(() => {
-      const floor = scene.getObjectByName("FocusPlane");
-      if (!isZoomed) {
-        api.refresh(floor).fit();
-      }
-    }, [isZoomed]);
+    // useEffect(() => {
+    //   const floor = scene.getObjectByName("FocusPlane");
+    //   if (!isZoomed) {
+    //     api.refresh(floor).fit();
+    //   }
+    // }, [isZoomed]);
 
     return (
       <group
