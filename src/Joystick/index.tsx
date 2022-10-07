@@ -1,7 +1,7 @@
 import { useFrame } from "@react-three/fiber";
-import JoyStick from "./joyStick.js";
+const JoyStick = require("./joyStick.js");
 
-export default function index({target}:any) {
+export default function index({ target }: any) {
   // 轮盘控制器
   var setup = { forward: 0, turn: 0 };
   new JoyStick({
@@ -35,15 +35,15 @@ export default function index({target}:any) {
     //   target.position.z > 20 &&
     //   target.position.z < 28
     // ) {
-      // !this.state.freeDiscover && this.setState({
-      //   resultText: '成功',
-      //   showResult: true
-      // });
+    // !this.state.freeDiscover && this.setState({
+    //   resultText: '成功',
+    //   showResult: true
+    // });
     // }
   };
-  useFrame(()=>{
+  useFrame(() => {
     updateDrive();
     // console.log(target.position)
-  })
+  });
   return <></>;
 }
