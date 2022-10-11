@@ -74,8 +74,9 @@ export default function App() {
           <PerspectiveCamera />
           <AxisHelper />
         </Canvas>
-        <ZoomButton />
       </Suspense>
+      <ZoomButton />
+      <div id="joystickContainer"></div>
     </>
   );
 

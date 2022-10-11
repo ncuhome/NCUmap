@@ -1012,6 +1012,11 @@ nanoid@^3.3.4:
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.4.tgz#730b67e3cd09e2deacf03c027c81c9d9dbc5e8ab"
   integrity sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==
 
+nipplejs@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/nipplejs/-/nipplejs-0.9.1.tgz#a1e3cbae03ffa9a89ca01b100d3957f6bcbbfa99"
+  integrity sha512-Tu7ZaB1q0TgA+PH20s8i5Ngt3VmSCp8vxNVv/sOfGBAS0wwlNkJxnCD3bInC4iPg+W8dt80Pl+HU7B8y6dlXMQ==
+
 node-releases@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.6.tgz#8a7088c63a55e493845683ebf3c828d8c51c5503"

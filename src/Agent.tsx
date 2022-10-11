@@ -36,7 +36,7 @@ function FollowCamera({ target }: any) {
 
     state.camera.position.lerp(
       camera.current?.getWorldPosition(new THREE.Vector3())!,
-      0.02
+      0.03
     );
     state.camera.lookAt(
       target?.position.x,

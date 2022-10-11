@@ -1,18 +1,25 @@
-import { useFrame } from "@react-three/fiber";
-import JoyStick from "./joyStick.js" ;
+import { extend, useFrame } from "@react-three/fiber";
+import nipplejs from "nipplejs";
 
 export default function index({ target }: any) {
+  let setup = { forward: 0, turn: 0 };
+  
   // 轮盘控制器
-  var setup = { forward: 0, turn: 0 };
-  new JoyStick({
-    onMove: (forward: number, turn: number) => {
-      setup.forward = -forward;
-      setup.turn = -turn;
-    },
+  const options: nipplejs.JoystickManagerOptions = {
+    zone:document.getElementById('joystickContainer')!,
+    mode: "static",
+    position: { left: "50%", bottom: "10%" },
+  };
+  const manager = nipplejs.create(options);
+  manager.on("move", (e, data) => {
+    setup.forward = -data.vector.y;
+    setup.turn = -data.vector.x;
   });
+  manager.on("end", () => (setup = { forward: 0, turn: 0 }));
+
 
   const updateDrive = (forward = setup.forward, turn = setup.turn) => {
-    let maxSteerVal = 0.05;
+    let maxSteerVal = 0.02;
     let maxForce = 0.01;
     let force = maxForce * forward;
     let steer = maxSteerVal * turn;
