@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "map2tsx": "npx gltfjsx ./models/map.glb --shadows --keepnames --precision=6 --printwidth=80 && python ./scripts/generate_model.py && yarn prettier -w ./src/Map.tsx"
+    "map2tsx": "npx gltfjsx ./models/map.glb  --keepnames --precision=5 --printwidth=80 && python ./scripts/generate_model.py && yarn prettier -w ./src/Map.tsx"
   },
   "dependencies": {
     "@react-three/drei": "^9.32.3",
