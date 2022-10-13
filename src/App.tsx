@@ -26,7 +26,7 @@ import {
 import { useTrackedStore } from "./store";
 import { hasChinese } from "../scripts/regexp";
 import ZoomButton from "./ZoomButton";
-import Map from "./Map";
+import {Model as Map} from "./Map";
 import Loading from "./Loading";
 import Agent from "./Agent";
 

@@ -66,8 +66,8 @@ s = s.replace('<mesh','''<mesh
         ref={mesh}''')
 # UseBVH
 s = s.replace("import { useGLTF } from '@react-three/drei'",'import { useBVH, useGLTF } from "@react-three/drei";',1)
-s = s.replace('''const group = useRef<THREE.Group>(null)''',
-'''const group = useRef<THREE.Group>(null);
+s = s.replace('''const { nodes, materials } = useGLTF(modelUrl) as any''',
+'''const { nodes, materials } = useGLTF(modelUrl) as any;
    const mesh = useRef<THREE.Mesh>(null);
    useBVH(mesh as any)''',1)
 
