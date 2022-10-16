@@ -22,14 +22,16 @@ matches: list[str] = MATCH_JSX.findall(s)
 # Add labels for all mesh with Chinese name
 for match in matches:
 
+
     name = MATCH_NAME.search(match)
     if name:
         name = name.group(1)
         if MATCH_CN.search(name):
             lines = match.splitlines()
             name = name.replace('"', '')
-            position = MATCH_POSITION.search(match).group(1)
-            lines.append(f'<Label text="{name}" position={{{position}}} />')
+            if MATCH_POSITION.search(match):
+                position = MATCH_POSITION.search(match).group(1)
+                lines.append(f'<Label text="{name}" position={{{position}}} />')
             s = s.replace(match, '\n'.join(lines), 1)
 
 lines = s.splitlines()
