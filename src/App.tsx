@@ -1,5 +1,5 @@
 import { ReactNode, Suspense, useEffect, useRef } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, Object3DNode, useFrame, useThree } from "@react-three/fiber";
 import {
   OrbitControls,
   Stats,
@@ -15,24 +15,32 @@ import {
   useProgress,
   PerspectiveCamera,
   useHelper,
+  CubicBezierLine,
+  QuadraticBezierLine,
+  LineProps,
 } from "@react-three/drei";
-import { CameraHelper, DirectionalLight, Vector3 } from "three";
+import {
+  CameraHelper,
+  CubicBezierCurve3,
+  DirectionalLight,
+  QuadraticBezierCurve3,
+  Vector3,
+} from "three";
 import {
   DirectionalLightHelper,
   HemisphereLight,
   HemisphereLightHelper,
 } from "three";
+import * as THREE from "three";
 
 import { useTrackedStore } from "./store";
 import { hasChinese } from "../scripts/regexp";
 import ZoomButton from "./ZoomButton";
-import {Model as Map} from "./Map";
+import { Model as Map } from "./Map";
 import Loading from "./Loading";
 import Agent from "./Agent";
+import { Line2 } from "three-stdlib";
 
-interface IProps {
-  children: ReactNode;
-}
 
 export default function App() {
   const { isZoomed } = useTrackedStore();
@@ -71,14 +79,58 @@ export default function App() {
           // maxPolarAngle={(Math.PI * 1.4) / 3}
           // onChange={() => state.setCameraChanged(true)}
           />
-          <PerspectiveCamera />
           <AxisHelper />
+          {/* <CameraCurve /> */}
         </Canvas>
       </Suspense>
       <ZoomButton />
       <div id="joystickContainer"></div>
     </>
   );
+
+  function CameraCurve() {
+    const { scene, camera } = useThree();
+    const cameraInitPos = camera.position;
+    const curve = new THREE.CubicBezierCurve3(
+      cameraInitPos,
+      new THREE.Vector3(-15.6, 2.9, -7.5),
+      new THREE.Vector3(-7.0, 13.2, 9.0),
+      new THREE.Vector3(13.2, 7.1, 9.1)
+    );
+
+    const points = curve.getPoints(50);
+    const geometry = new THREE.BufferGeometry().setFromPoints(points);
+
+    const material = new THREE.LineBasicMaterial({ color: "#000" });
+
+    const curveObject = new THREE.Line(geometry, material);
+    scene.add(curveObject);
+    const speed = 0.1;
+
+    const pathTarget = new THREE.Vector3(0, 0, 0);
+
+    const lerpTo = (position: Vector3) => {
+      camera.position.lerp(position, 0.02);
+    };
+
+    const controlPoints = [
+      new THREE.Vector3(14, 7, -8),
+      new THREE.Vector3(-15.6, 2.9, -7.5),
+      new THREE.Vector3(-7.0, 13.2, 9.0),
+      new THREE.Vector3(13.2, 7.1, 9.1),
+    ];
+
+    return useFrame(({ clock }) => {
+      curve.getPoint((clock.getElapsedTime() * speed) % 1.0, pathTarget);
+      const step = Math.floor(clock.getElapsedTime() % 4);
+      console.log(step);
+      lerpTo(controlPoints[step]);
+      // camera.position.copy(pathTarget)
+      // camera.position.lerp(pathTarget, 0.02);
+      // console.log(camera.position)
+    });
+  }
+
 
   function OverCamera() {
     return <PerspectiveCamera fov={40} position={[14, 7, -8]} makeDefault />;
@@ -136,7 +188,7 @@ export default function App() {
     );
   }
 
-  function SelectZoom({ children }: IProps) {
+  function SelectZoom({ children }) {
     const { isZoomed, setZoomed } = useTrackedStore();
     const api = useBounds();
     const { scene } = useThree();
