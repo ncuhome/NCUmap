@@ -18,6 +18,7 @@ import {
   CubicBezierLine,
   QuadraticBezierLine,
   LineProps,
+  Plane,
 } from "@react-three/drei";
 import {
   CameraHelper,
@@ -40,13 +41,14 @@ import { Model as Map } from "./Map";
 import Loading from "./Loading";
 import Agent from "./Agent";
 import { Line2 } from "three-stdlib";
-
+// import { Debug, Physics } from "@react-three/cannon";
+import { Physics, Debug, RigidBody } from "@react-three/rapier";
 
 export default function App() {
   const { isZoomed } = useTrackedStore();
   return (
     <>
-      <Loading />
+      {/* <Loading /> */}
       {/* <Loader/> */}
       <Suspense fallback={<span>loading</span>}>
         <Canvas
@@ -59,13 +61,16 @@ export default function App() {
           <AdaptiveDpr pixelated />
           <AdaptiveEvents />
           <OverCamera />
-          <Agent />
-          <Bounds damping={3} margin={isZoomed ? 1.2 : 0.5}>
-            <SelectZoom>
-              <Map />
-              <BakeShadows />
-            </SelectZoom>
-          </Bounds>
+          <Physics>
+            <Debug />
+            <Agent />
+            <Bounds damping={3} margin={isZoomed ? 1.2 : 0.5}>
+              <SelectZoom>
+                  <Map />
+                <BakeShadows />
+              </SelectZoom>
+            </Bounds>
+          </Physics>
           <Lights />
           <Sky />
           <Stats />
@@ -130,7 +135,6 @@ export default function App() {
       // console.log(camera.position)
     });
   }
-
 
   function OverCamera() {
     return <PerspectiveCamera fov={40} position={[14, 7, -8]} makeDefault />;
