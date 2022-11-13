@@ -26,7 +26,7 @@ export default defineConfig({
     literalsCollector({
       include: [/Map\.tsx$/],
       target: CJK,
-      onResult: minifyFont,
+      // onResult: minifyFont,
     }),
   ],
 });
