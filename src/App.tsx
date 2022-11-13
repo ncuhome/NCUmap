@@ -19,6 +19,7 @@ import {
   QuadraticBezierLine,
   LineProps,
   Plane,
+  Environment,
 } from "@react-three/drei";
 import {
   CameraHelper,
@@ -43,36 +44,45 @@ import Agent from "./Agent";
 import { Line2 } from "three-stdlib";
 // import { Debug, Physics } from "@react-three/cannon";
 import { Physics, Debug, RigidBody } from "@react-three/rapier";
+import Label from "./Label";
 
 export default function App() {
   const { isZoomed } = useTrackedStore();
   return (
     <>
       {/* <Loading /> */}
-      {/* <Loader/> */}
+      <Loader />
       <Suspense fallback={<span>loading</span>}>
         <Canvas
-          gl={{
-            preserveDrawingBuffer: true,
-          }}
-          shadows
+          gl={
+            {
+              // preserveDrawingBuffer: true,
+            }
+          }
+          // shadows
           dpr={[1, 1.5]}
         >
-          <AdaptiveDpr pixelated />
-          <AdaptiveEvents />
           <OverCamera />
           <Physics>
             <Debug />
-            <Agent />
+            {/* <Agent /> */}
             <Bounds damping={3} margin={isZoomed ? 1.2 : 0.5}>
-              <SelectZoom>
-                  <Map />
-                <BakeShadows />
-              </SelectZoom>
+              {/* <SelectZoom> */}
+                <Map />
+                {/* <BakeShadows /> */}
+              {/* </SelectZoom> */}
             </Bounds>
           </Physics>
           <Lights />
-          <Sky />
+          <Environment background near={1} far={1000} resolution={256}>
+            <mesh scale={100}>
+              <sphereGeometry args={[1, 64, 64]} />
+              <meshBasicMaterial side={THREE.BackSide} color="#87CEFA" />
+            </mesh>
+          </Environment>
+          <Label text="修贤区" position={[-6.5,1,-3]} />
+          <Label text="天健区" position={[3,1,1.5]} />
+          <Label text="医学院" position={[12,1,4]} />
           <Stats />
           <OrbitControls
           // autoRotate
@@ -84,11 +94,9 @@ export default function App() {
           // maxPolarAngle={(Math.PI * 1.4) / 3}
           // onChange={() => state.setCameraChanged(true)}
           />
-          <AxisHelper />
-          {/* <CameraCurve /> */}
         </Canvas>
       </Suspense>
-      <ZoomButton />
+      {/* <ZoomButton /> */}
       <div id="joystickContainer"></div>
     </>
   );
@@ -137,7 +145,18 @@ export default function App() {
   }
 
   function OverCamera() {
-    return <PerspectiveCamera fov={40} position={[14, 7, -8]} makeDefault />;
+    // const { camera } = useThree();
+    // useFrame(() => {
+    //   console.log(camera.position);
+    // })
+    //x: -19.029467803079836, y: 15.08575775846176, z: -8.453932312930382
+    return (
+      <PerspectiveCamera
+        fov={40}
+        position={[-19.02946, 15.085757, -8.4539323]}
+        makeDefault
+      />
+    );
   }
 
   function Lights() {

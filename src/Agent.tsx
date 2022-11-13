@@ -1,4 +1,13 @@
-import { Box, PerspectiveCamera, Plane, RoundedBox, Sphere } from "@react-three/drei";
+import {
+  Billboard,
+  Box,
+  Html,
+  PerspectiveCamera,
+  Plane,
+  RoundedBox,
+  Sphere,
+  Text,
+} from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
 import { DoubleSide, Mesh } from "three";
@@ -6,6 +15,7 @@ import * as THREE from "three";
 import Joystick from "./Joystick";
 import { useTrackedStore } from "./store";
 import { RigidBody } from "@react-three/rapier";
+import Label from "./Label";
 // import { Debug, Physics, useBox, usePlane } from "@react-three/cannon";
 // import { Physics, RigidBody } from "@react-three/rapier";
 
@@ -29,16 +39,17 @@ export default function Agent() {
 
   return (
     <>
-      <RigidBody position={[0,5,0]}  >
-        <mesh ref={agent} >
-          <boxGeometry args={[.1,.1,.1]} />
+      <RigidBody position={[0, 5, 0]}>
+        <mesh ref={agent}>
+          <boxGeometry args={[0.5, 0.5, 0.5]} />
           <meshBasicMaterial color="steelBlue" />
           <FollowCamera target={agent.current} />
+          <Label/>
         </mesh>
       </RigidBody>
-      {/* <RigidBody position={[0,1,0]}>
-        <Plane rotation={[-Math.PI/2,0,0]} args={[5,5]} />
-      </RigidBody> */}
+      <RigidBody position={[0, 1, 0]}>
+        <Plane rotation={[-Math.PI / 2, 0, 0]} args={[5, 5]} />
+      </RigidBody>
       {ready && isJoy && <Joystick target={agent.current} />}
     </>
   );

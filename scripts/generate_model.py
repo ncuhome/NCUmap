@@ -20,27 +20,27 @@ MATCH_POSITION = re.compile(r'position={(.+?)}')
 matches: list[str] = MATCH_JSX.findall(s)
 
 # Add labels for all mesh with Chinese name
-for match in matches:
+# for match in matches:
 
 
-    name = MATCH_NAME.search(match)
-    if name:
-        name = name.group(1)
-        if MATCH_CN.search(name):
-            lines = match.splitlines()
-            name = name.replace('"', '')
-            if MATCH_POSITION.search(match):
-                position = MATCH_POSITION.search(match).group(1)
-                lines.append(f'<Label text="{name}" position={{{position}}} />')
-            s = s.replace(match, '\n'.join(lines), 1)
+#     name = MATCH_NAME.search(match)
+#     if name:
+#         name = name.group(1)
+#         if MATCH_CN.search(name):
+#             lines = match.splitlines()
+#             name = name.replace('"', '')
+#             if MATCH_POSITION.search(match):
+#                 position = MATCH_POSITION.search(match).group(1)
+#                 lines.append(f'<Label text="{name}" position={{{position}}} />')
+#             s = s.replace(match, '\n'.join(lines), 1)
 
 lines = s.splitlines()
 
 # Add import for gltf file
 lines.insert(
     0, '''import modelUrl from "/models/map.glb?url";
-import Label from "./Label";
 import { MeshStandardMaterial } from "three";''')
+# lines.insert(0, 'import Label from "./Label";')
 
 # Fix ref error
 s = '\n'.join(lines)
