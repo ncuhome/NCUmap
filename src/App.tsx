@@ -1,4 +1,11 @@
-import { ReactNode, Suspense, useEffect, useRef } from "react";
+import {
+  ReactNode,
+  Suspense,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { Canvas, Object3DNode, useFrame, useThree } from "@react-three/fiber";
 import {
   OrbitControls,
@@ -45,6 +52,7 @@ import { Line2 } from "three-stdlib";
 // import { Debug, Physics } from "@react-three/cannon";
 import { Physics, Debug, RigidBody } from "@react-three/rapier";
 import Label from "./Label";
+import { animated, useSpring,config } from "@react-spring/three";
 
 export default function App() {
   const { isZoomed } = useTrackedStore();
@@ -52,54 +60,61 @@ export default function App() {
     <>
       {/* <Loading /> */}
       <Loader />
-      <Suspense fallback={<span>loading</span>}>
-        <Canvas
-          gl={
-            {
-              // preserveDrawingBuffer: true,
-            }
-          }
-          // shadows
-          dpr={[1, 1.5]}
-        >
-          <OverCamera />
-          <Physics>
-            <Debug />
-            {/* <Agent /> */}
-            <Bounds damping={3} margin={isZoomed ? 1.2 : 0.5}>
-              {/* <SelectZoom> */}
-                <Map />
-                {/* <BakeShadows /> */}
-              {/* </SelectZoom> */}
-            </Bounds>
-          </Physics>
-          <Lights />
-          <Environment background near={1} far={1000} resolution={256}>
-            <mesh scale={100}>
-              <sphereGeometry args={[1, 64, 64]} />
-              <meshBasicMaterial side={THREE.BackSide} color="#87CEFA" />
-            </mesh>
-          </Environment>
-          <Label text="修贤区" position={[-6.5,1,-3]} />
-          <Label text="天健区" position={[3,1,1.5]} />
-          <Label text="医学院" position={[12,1,4]} />
-          <Stats />
-          <OrbitControls
-          // autoRotate
-          // autoRotateSpeed={0.3}
-          // makeDefault
-          // zoomSpeed={2}
-          // minDistance={1}
-          // maxDistance={20}
-          // maxPolarAngle={(Math.PI * 1.4) / 3}
-          // onChange={() => state.setCameraChanged(true)}
-          />
-        </Canvas>
-      </Suspense>
+      <Canvas
+        // shadows
+        dpr={[1, 1.5]}
+      >
+        <OverCamera />
+        <Physics>
+          <Debug />
+          {/* <Agent /> */}
+          <Bounds damping={3} margin={isZoomed ? 1.2 : 0.5}>
+            {/* <SelectZoom> */}
+            <Map />
+            {/* <BakeShadows /> */}
+            {/* </SelectZoom> */}
+          </Bounds>
+        </Physics>
+        <Lights />
+        <Environment background near={1} far={1000} resolution={256}>
+          <mesh scale={100}>
+            <sphereGeometry args={[1, 64, 64]} />
+            <meshBasicMaterial side={THREE.BackSide} color="#87CEFA" />
+          </mesh>
+        </Environment>
+        <MultiLevelLabels />
+        <Stats />
+        <Controls />
+      </Canvas>
       {/* <ZoomButton /> */}
       <div id="joystickContainer"></div>
     </>
   );
+
+  function MultiLevelLabels() {
+    const [labelClass, setLabelClass] = useState(1);
+    const camera = useThree().camera;
+    const springs = useSpring({
+      to: { position: [0, 0, 0] },
+    });
+
+    const handleXX = useCallback(() => {
+      // 点击休闲区标签，切换到休闲区视角
+      setLabelClass(2);
+    }, [labelClass]);
+    return (
+      <>
+        <Label
+          text="修贤区"
+          position={[-6.5, 1, -3]}
+          onClick={handleXX}
+          show={labelClass === 1}
+        />
+        <Label text="天健区" position={[3, 1, 1.5]} />
+        <Label text="医学院" position={[12, 1, 4]} />
+      </>
+    );
+  }
 
   function CameraCurve() {
     const { scene, camera } = useThree();
@@ -145,16 +160,39 @@ export default function App() {
   }
 
   function OverCamera() {
-    // const { camera } = useThree();
-    // useFrame(() => {
-    //   console.log(camera.position);
-    // })
-    //x: -19.029467803079836, y: 15.08575775846176, z: -8.453932312930382
+    // 俯瞰相机最佳起始位置
+    // x: -19.029467803079836, y: 15.08575775846176, z: -8.453932312930382
+    const overPosition = [-19.02946, 15.085757, -8.4539323]
+    const {position}=useSpring({
+      from: { position: [overPosition[0], overPosition[1]+300, overPosition[2]] },
+      to: { position: overPosition },
+      config: {...config.molasses,precision:0.0001},
+    })
+    const AniCamera = animated(PerspectiveCamera)
     return (
-      <PerspectiveCamera
+      <AniCamera
         fov={40}
-        position={[-19.02946, 15.085757, -8.4539323]}
+        position={position as any as number}
         makeDefault
+      />
+    );
+  }
+
+  function Controls() {
+    const { gl, camera } = useThree();
+
+    return (
+      <OrbitControls
+        // autoRotate
+        target={[0, 0, 0]}
+        args={[camera, gl.domElement]}
+        // autoRotateSpeed={0.3}
+        // makeDefault
+        // zoomSpeed={2}
+        // minDistance={1}
+        // maxDistance={20}
+        // maxPolarAngle={(Math.PI * 1.4) / 3}
+        // onChange={() => state.setCameraChanged(true)}
       />
     );
   }
