@@ -1,19 +1,10 @@
-import {
-  Billboard,
-  Box,
-  Html,
-  PerspectiveCamera,
-  Plane,
-  RoundedBox,
-  Sphere,
-  Text,
-} from "@react-three/drei";
+import { PerspectiveCamera, Plane } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
-import { DoubleSide, Mesh } from "three";
+import { Mesh } from "three";
 import * as THREE from "three";
 import Joystick from "./Joystick";
-import { useTrackedStore } from "./store";
+import { useTrackedStore } from "../store";
 import { RigidBody } from "@react-three/rapier";
 import Label from "./Label";
 // import { Debug, Physics, useBox, usePlane } from "@react-three/cannon";
@@ -44,7 +35,7 @@ export default function Agent() {
           <boxGeometry args={[0.5, 0.5, 0.5]} />
           <meshBasicMaterial color="steelBlue" />
           <FollowCamera target={agent.current} />
-          <Label/>
+          <Label />
         </mesh>
       </RigidBody>
       <RigidBody position={[0, 1, 0]}>

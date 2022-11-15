@@ -1,4 +1,4 @@
-import { useTrackedStore } from "./store";
+import { useTrackedStore } from "../store";
 
 export default function ZoomButton() {
   const { isZoomed, setZoomed } = useTrackedStore();

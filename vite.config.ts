@@ -29,4 +29,10 @@ export default defineConfig({
       // onResult: minifyFont,
     }),
   ],
+  resolve: {
+    alias: {
+      "@": `${__dirname}/src`,
+      "@components": `${__dirname}/src/components`,
+    },
+  },
 });
