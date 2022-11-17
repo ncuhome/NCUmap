@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import { Canvas, useThree } from "@react-three/fiber";
+import { useLayoutEffect, useRef } from "react";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
   OrbitControls,
   Stats,
@@ -11,16 +11,19 @@ import {
 import { DirectionalLight, Vector3 } from "three";
 import { HemisphereLight } from "three";
 import * as THREE from "three";
-import { useTrackedStore } from "./store";
 import { Physics, Debug } from "@react-three/rapier";
 import { animated, config, useSpring } from "@react-spring/three";
 
+import { initPosition } from "@/config";
+import { useTrackedStore } from "@/store";
 import { Model as Map } from "@/Map";
 import Agent from "@components/Agent";
 import MultiLevelLabels from "@components/MultiLevelLabels";
+import Back from "./components/Back";
+import Overlay from "./components/Overlay";
 
 export default function App() {
-  const { isZoomed } = useTrackedStore();
+  const { isZoomed, labelClass, setLabelClass, setLookAt } = useTrackedStore();
   return (
     <>
       {/* <Loading /> */}
@@ -48,40 +51,59 @@ export default function App() {
           </mesh>
         </Environment>
         <MultiLevelLabels />
-        <Stats />
+        {/* <Stats /> */}
         <Controls />
       </Canvas>
       {/* <ZoomButton /> */}
-      <div id="joystickContainer"></div>
+      <Overlay>
+        <div id="joystickContainer"></div>
+        {labelClass === 2 && (
+          <Back
+            onClick={() => {
+              setLabelClass(1);
+              setLookAt("");
+            }}
+          />
+        )}
+      </Overlay>
     </>
   );
 }
 
 function OverCamera() {
-  // 俯瞰相机最佳起始位置
-  // x: -19.029467803079836, y: 15.08575775846176, z: -8.453932312930382
-  const overPosition = [-19.02946, 15.085757, -8.4539323];
+  const ref = useRef<any>(null);
   const { position } = useSpring({
     from: {
-      position: [overPosition[0], overPosition[1] + 500, overPosition[2]],
+      position: [initPosition.x, initPosition.y + 500, initPosition.z],
     },
-    to: { position: overPosition },
+    to: { position: [initPosition.x, initPosition.y, initPosition.z] },
     config: { ...config.slow, precision: 0.001 },
   });
   const AniCamera = animated(PerspectiveCamera);
+
+  const set = useThree((state) => state.set);
+  useLayoutEffect(() => void set({ camera: ref.current }), []);
+
   return (
-    <AniCamera fov={40} position={position as any as number} makeDefault />
+    <AniCamera
+      ref={ref}
+      fov={40}
+      position={position as any as Vector3}
+      makeDefault
+    />
   );
 }
 
 function Controls() {
   const { gl, camera } = useThree();
+  const { lookAt } = useTrackedStore();
 
   return (
     <OrbitControls
       // autoRotate
-      target={[0, 0, 0]}
-      args={[camera, gl.domElement]}
+      // enabled={false}
+      target={[lookAt.x, lookAt.y, lookAt.z]}
+      // args={[camera, gl.domElement]}
       // autoRotateSpeed={0.3}
       // makeDefault
       // zoomSpeed={2}
