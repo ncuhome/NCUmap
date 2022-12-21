@@ -100,16 +100,16 @@ function Controls() {
 
   return (
     <OrbitControls
-      // autoRotate
+      autoRotate
       // enabled={false}
       target={[lookAt.x, lookAt.y, lookAt.z]}
       // args={[camera, gl.domElement]}
-      // autoRotateSpeed={0.3}
+      autoRotateSpeed={0.3}
       // makeDefault
       // zoomSpeed={2}
       // minDistance={1}
       // maxDistance={20}
-      // maxPolarAngle={(Math.PI * 1.4) / 3}
+      maxPolarAngle={(Math.PI * 1.4) / 3}
       // onChange={() => state.setCameraChanged(true)}
     />
   );
