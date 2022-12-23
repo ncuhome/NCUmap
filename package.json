@@ -32,9 +32,10 @@
     "@types/react-dom": "^18.0.6",
     "@types/three": "^0.144.0",
     "@vitejs/plugin-react": "^2.1.0",
+    "@vitejs/plugin-react-swc": "^3.0.1",
     "prettier": "^2.7.1",
     "typescript": "^4.8.4",
-    "vite": "^3.1.4",
+    "vite": "^4.0.3",
     "vite-plugin-literals-collector": "^1.0.0"
   }
 }

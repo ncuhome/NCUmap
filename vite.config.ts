@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import react from "@vitejs/plugin-react-swc";
 import { CJK, literalsCollector } from "vite-plugin-literals-collector";
 import { execSync } from "child_process";
 import { readdirSync, renameSync } from "fs";
