@@ -43,7 +43,9 @@ export default function Recruit() {
           >
             <Typography variant="h6">招聘公告</Typography>
             <Collapse in={!showDetails}>
-              加入我们，一起打造多维交互的校园宇宙！
+              <Typography variant="body2">
+                加入我们，一起打造多维交互的校园宇宙！
+              </Typography>
             </Collapse>
           </Stack>
           {showDetails && (
@@ -63,8 +65,8 @@ export default function Recruit() {
             }}
           >
             <Typography>
-              我们正在开发一个名为"校园宇宙"的项目，旨在为学生们打造一个全新的虚拟交互环境，通过
-              3D
+              我们正在开发一个名为<b>“校园宇宙”</b>
+              的项目，旨在为学生们打造一个全新的虚拟交互环境，通过 3D
               的数字化校园地图，实现现实与虚拟、人与环境、人与人之间的多维度交互。
             </Typography>
             <Typography>
