@@ -34,9 +34,7 @@ export default function Recruit() {
           onClick={() => setShowDetails(!showDetails)}
           spacing={2}
         >
-          <Stack>
-            <PersonIcon />
-          </Stack>
+          <PersonIcon />
 
           <Stack
             sx={{
@@ -65,14 +63,14 @@ export default function Recruit() {
             }}
           >
             <Typography>
-              我们正在开发一个名为“<b>校园宇宙</b>”
-              的项目，旨在为学生们打造一个全新的虚拟交互环境，通过 3D
+              我们正在开发一个名为"校园宇宙"的项目，旨在为学生们打造一个全新的虚拟交互环境，通过
+              3D
               的数字化校园地图，实现现实与虚拟、人与环境、人与人之间的多维度交互。
             </Typography>
             <Typography>
               我们正在寻找有才华的 <b>3D 建模和 Unity 开发人才</b>
-              加入我们的团队，共同创造这个充满创意和活力的项目。如果你掌握{" "}
-              <b>Blender</b> 等 3D 建模软件或者 Unity
+              加入我们的团队，共同创造这个充满创意和活力的项目。如果你掌握
+              Blender 等 3D 建模软件或者 Unity
               的相关技能，并且热爱数字化艺术和虚拟世界的开发，你就是我们所需要的人！
             </Typography>
             <Typography>
