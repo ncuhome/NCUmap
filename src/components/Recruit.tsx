@@ -1,7 +1,8 @@
-import { Collapse, Stack, Typography } from "@mui/material";
+import { Avatar, Collapse, Fade, Stack, Typography } from "@mui/material";
 import { useState } from "react";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import PersonIcon from "@mui/icons-material/Person";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import PersonIcon from "@mui/icons-material/PersonOutline";
+import ncuhomeSvg from "../assets/ncuhome.svg";
 
 export default function Recruit() {
   const [showDetails, setShowDetails] = useState(false);
@@ -31,28 +32,29 @@ export default function Recruit() {
           direction="row"
           alignItems="center"
           onClick={() => setShowDetails(!showDetails)}
-          spacing={1}
+          spacing={2}
         >
+          <Stack>
+            <PersonIcon />
+          </Stack>
+
           <Stack
             sx={{
               flex: 1,
             }}
           >
-            <Stack direction="row" alignItems="center" spacing={1}>
-              <PersonIcon />
-              <Typography variant="h6">招聘公告</Typography>
-            </Stack>
+            <Typography variant="h6">招聘公告</Typography>
             <Collapse in={!showDetails}>
               加入我们，一起打造多维交互的校园宇宙！
             </Collapse>
           </Stack>
-          <KeyboardArrowUpIcon
-            sx={{
-              transform: showDetails ? "rotate(180deg)" : "rotate(0deg)",
-              transition: "transform 0.3s",
-              fontSize: 32,
-            }}
-          />
+          {showDetails && (
+            <KeyboardArrowDownIcon
+              sx={{
+                fontSize: 32,
+              }}
+            />
+          )}
         </Stack>
 
         <Collapse in={showDetails}>
@@ -77,9 +79,16 @@ export default function Recruit() {
               作为我们团队的一员，你将参与设计和开发这个富有创意和交互性的数字校园宇宙，为同学们打造更便利、更丰富和更有趣的校园环境。如果你有相关技能和经验，并且对该项目感兴趣，请不要犹豫，立即加入我们的团队！
             </Typography>
             <Typography>
-              加入方式：请投递你的简历至 <b>hr@ncuhome.club</b>
+              加入方式：请投递你的简历至 <b>hr@ncuhome.club</b>{" "}
               邮箱，简历命名格式为：年级+姓名+职位
             </Typography>
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="flex-end"
+            >
+              <img src={ncuhomeSvg} alt="ncuhome" width={100} />
+            </Stack>
           </Stack>
         </Collapse>
       </Stack>
