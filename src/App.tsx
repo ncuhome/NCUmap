@@ -19,6 +19,7 @@ import { Model as Map } from "@/Map";
 import MultiLevelLabels from "@components/MultiLevelLabels";
 import Back from "./components/Back";
 import Overlay from "./components/Overlay";
+import Recruit from "./components/Recruit";
 
 export default function App() {
   const { isZoomed, labelClass, setLabelClass, setLookAt } = useTrackedStore();
@@ -64,6 +65,7 @@ export default function App() {
           />
         )}
       </Overlay>
+      <Recruit />
     </>
   );
 }

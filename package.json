@@ -9,6 +9,10 @@
     "map2tsx": "npx gltfjsx ./models/map.glb  --keepnames --precision=5 --printwidth=80 && python3 ./scripts/generate_model.py && yarn prettier -w ./src/Map.tsx"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.11.16",
     "@react-spring/three": "^9.5.5",
     "@react-three/cannon": "^6.4.0",
     "@react-three/drei": "^9.32.3",
@@ -30,11 +34,11 @@
     "@types/node": "^18.7.23",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "@types/three": "^0.144.0",
-    "@vitejs/plugin-react": "^2.1.0",
+    "@types/three": "^0.150.1",
+    "@vitejs/plugin-react": "^3.1.0",
     "prettier": "^2.7.1",
-    "typescript": "^4.8.4",
-    "vite": "^3.1.4",
+    "typescript": "^5.0.4",
+    "vite": "^4.2.1",
     "vite-plugin-literals-collector": "^1.0.0"
   }
 }
