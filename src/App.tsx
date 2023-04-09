@@ -1,8 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import {
   OrbitControls,
-  Stats,
   Bounds,
   Loader,
   Environment,
@@ -17,7 +16,6 @@ import { animated, config, useSpring } from "@react-spring/three";
 import { initPosition } from "@/config";
 import { useTrackedStore } from "@/store";
 import { Model as Map } from "@/Map";
-import Agent from "@components/Agent";
 import MultiLevelLabels from "@components/MultiLevelLabels";
 import Back from "./components/Back";
 import Overlay from "./components/Overlay";
