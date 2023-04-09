@@ -32,9 +32,13 @@ export default function Recruit() {
           direction="row"
           alignItems="center"
           onClick={() => setShowDetails(!showDetails)}
-          spacing={2}
+          spacing={1}
         >
-          <PersonIcon />
+          <PersonIcon
+            sx={{
+              mr: 1,
+            }}
+          />
 
           <Stack
             sx={{
@@ -48,13 +52,13 @@ export default function Recruit() {
               </Typography>
             </Collapse>
           </Stack>
-          {showDetails && (
-            <KeyboardArrowDownIcon
-              sx={{
-                fontSize: 32,
-              }}
-            />
-          )}
+          <KeyboardArrowDownIcon
+            sx={{
+              fontSize: 32,
+              transform: !showDetails ? "rotate(180deg)" : "rotate(0deg)",
+              transition: "transform 0.3s",
+            }}
+          />
         </Stack>
 
         <Collapse in={showDetails}>
