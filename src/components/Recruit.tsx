@@ -1,4 +1,4 @@
-import { Avatar, Collapse, Fade, Stack, Typography } from "@mui/material";
+import { Collapse, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import PersonIcon from "@mui/icons-material/PersonOutline";
