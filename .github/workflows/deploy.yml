@@ -17,7 +17,6 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.5.0
 
-
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
@@ -33,7 +32,6 @@ jobs:
       - name: Build project
         run: |
           echo install dependencies
-          pip install fonttools
           yarn
           echo build project
           yarn build

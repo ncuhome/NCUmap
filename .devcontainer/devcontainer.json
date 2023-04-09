@@ -32,5 +32,5 @@
 		"git": "os-provided",
 		"python": "os-provided"
 	},
-	"postCreateCommand": "yarn && pip install fonttools"
+	"postCreateCommand": "yarn"
 }
