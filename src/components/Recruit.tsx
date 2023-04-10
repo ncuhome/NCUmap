@@ -26,6 +26,7 @@ export default function Recruit() {
           borderRadius: 2,
           backdropFilter: "blur(32px) saturate(150%)",
           p: 2,
+          maxHeight: "80vh",
         }}
       >
         <Stack
@@ -61,7 +62,12 @@ export default function Recruit() {
           />
         </Stack>
 
-        <Collapse in={showDetails}>
+        <Collapse
+          in={showDetails}
+          sx={{
+            overflowY: "auto",
+          }}
+        >
           <Stack
             spacing={1}
             sx={{
