@@ -26,25 +26,25 @@ export default function MultiLevelLabels() {
     setAnimation(true);
   }, [labelClass]);
 
-  useFrame((state) => {
-    // console.log(state.camera.position);
-    if (!animation) {
-      state.clock.elapsedTime = 0;
-      return;
-    }
+  // useFrame((state) => {
+  //   // console.log(state.camera.position);
+  //   if (!animation) {
+  //     state.clock.elapsedTime = 0;
+  //     return;
+  //   }
 
-    const alpha = 0.1;
-    state.camera.position.lerp(
-      new THREE.Vector3(camPos.x, camPos.y, camPos.z),
-      alpha
-    );
-    lookAtPos.lerp(new THREE.Vector3(lookAt.x, lookAt.y, lookAt.z), alpha);
-    state.camera.lookAt(
-      new THREE.Vector3(lookAtPos.x, lookAtPos.y, lookAtPos.z)
-    );
-    state.camera.updateProjectionMatrix();
-    if (state.clock.getElapsedTime() > 1.2) setAnimation(false);
-  });
+  //   const alpha = 0.1;
+  //   state.camera.position.lerp(
+  //     new THREE.Vector3(camPos.x, camPos.y, camPos.z),
+  //     alpha
+  //   );
+  //   lookAtPos.lerp(new THREE.Vector3(lookAt.x, lookAt.y, lookAt.z), alpha);
+  //   state.camera.lookAt(
+  //     new THREE.Vector3(lookAtPos.x, lookAtPos.y, lookAtPos.z)
+  //   );
+  //   state.camera.updateProjectionMatrix();
+  //   if (state.clock.getElapsedTime() > 1.2) setAnimation(false);
+  // });
 
   return labelClass === 1 ? (
     <>
