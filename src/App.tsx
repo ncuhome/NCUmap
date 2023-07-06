@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
-import { Canvas, useThree } from "@react-three/fiber";
+import { Canvas, useThree, } from "@react-three/fiber";
 import {
   OrbitControls,
   Bounds,
@@ -20,6 +20,7 @@ import MultiLevelLabels from "@components/MultiLevelLabels";
 import Back from "./components/Back";
 import Overlay from "./components/Overlay";
 import Recruit from "./components/Recruit";
+import { Perf } from "r3f-perf";
 
 export default function App() {
   const { isZoomed, labelClass, setLabelClass, setLookAt } = useTrackedStore();
@@ -31,6 +32,7 @@ export default function App() {
         // shadows
         dpr={[1, 1.5]}
       >
+         {/* <Perf openByDefault trackGPU={true} position={"top-left"} /> */}
         <OverCamera />
         <Physics>
           <Debug />
@@ -42,7 +44,17 @@ export default function App() {
             {/* </SelectZoom> */}
           </Bounds>
         </Physics>
-        <Lights />
+        {/* <Lights /> */}
+        <directionalLight
+        intensity={3}
+        //castShadow
+        position={new Vector3(10, 10, 10)}
+        // shadow-mapSize={[4096, 4096]}
+        // shadow-camera-top={shadowRange}
+        // shadow-camera-bottom={-shadowRange}
+        // shadow-camera-left={shadowRange}
+        // shadow-camera-right={-shadowRange}
+      />
         <Environment background near={1} far={1000} resolution={256}>
           <mesh scale={100}>
             <sphereGeometry args={[1, 64, 64]} />
@@ -52,6 +64,8 @@ export default function App() {
         <MultiLevelLabels />
         {/* <Stats /> */}
         <Controls />
+        <ambientLight intensity={0.5} />
+      <Perf position="top-left" />
       </Canvas>
       {/* <ZoomButton /> */}
       <Overlay>
@@ -104,7 +118,7 @@ function Controls() {
       // enabled={false}
       target={[lookAt.x, lookAt.y, lookAt.z]}
       // args={[camera, gl.domElement]}
-      autoRotateSpeed={0.3}
+      // autoRotateSpeed={0.3}
       // makeDefault
       // zoomSpeed={2}
       // minDistance={1}
@@ -135,13 +149,13 @@ function Lights() {
     <>
       <directionalLight
         intensity={3}
-        castShadow
+        //castShadow
         position={new Vector3(10, 10, 10)}
-        shadow-mapSize={[4096, 4096]}
-        shadow-camera-top={shadowRange}
-        shadow-camera-bottom={-shadowRange}
-        shadow-camera-left={shadowRange}
-        shadow-camera-right={-shadowRange}
+        // shadow-mapSize={[4096, 4096]}
+        // shadow-camera-top={shadowRange}
+        // shadow-camera-bottom={-shadowRange}
+        // shadow-camera-left={shadowRange}
+        // shadow-camera-right={-shadowRange}
         color={sunColor}
         ref={sunLight}
       />
